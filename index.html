@@ -1950,24 +1950,38 @@ function obStart() {
 
     <div class="prog-bar-card">
       <div class="pb-row">
-        <span>💰 الوحدة الأولى — المال من حولي</span>
+        <span>💰 الوحدة الأولى — قيمة المال</span>
         <span id="pct1">0%</span>
       </div>
       <div class="pb-track"><div class="pb-fill pb-1" id="bar1" style="width:0%"></div></div>
     </div>
     <div class="prog-bar-card">
       <div class="pb-row">
-        <span>🧠 الوحدة الثانية — قراراتي المالية</span>
+        <span>📊 الوحدة الثانية — ميزانيتي</span>
         <span id="pct2">0%</span>
       </div>
       <div class="pb-track"><div class="pb-fill pb-2" id="bar2" style="width:0%"></div></div>
     </div>
     <div class="prog-bar-card">
       <div class="pb-row">
-        <span>🛒 الوحدة الثالثة — أنا مستهلك واعٍ</span>
+        <span>🛒 الوحدة الثالثة — أنا مستهلك ذكي</span>
         <span id="pct3">0%</span>
       </div>
       <div class="pb-track"><div class="pb-fill pb-3" id="bar3" style="width:0%"></div></div>
+    </div>
+    <div class="prog-bar-card">
+      <div class="pb-row">
+        <span>🚀 الوحدة الرابعة — أنا منتج</span>
+        <span id="pct4">0%</span>
+      </div>
+      <div class="pb-track"><div class="pb-fill pb-4" id="bar4" style="width:0%"></div></div>
+    </div>
+    <div class="prog-bar-card">
+      <div class="pb-row">
+        <span>🤝 الوحدة الخامسة — المال والمجتمع</span>
+        <span id="pct5">0%</span>
+      </div>
+      <div class="pb-track"><div class="pb-fill pb-5" id="bar5" style="width:0%"></div></div>
     </div>
 
     <div class="card-glass" style="margin-top:18px;border-radius:var(--r-lg);padding:20px">
@@ -2046,35 +2060,35 @@ function obStart() {
           <h3>📊 التقدم في الوحدات</h3>
           <div class="unit-bar-row">
             <div class="unit-bar-label">
-              <span>💰 المال من حولي</span>
-              <span id="p-pct1">0 / 7 دروس</span>
+              <span>💰 قيمة المال</span>
+              <span id="p-pct1">0 / 4 دروس</span>
             </div>
             <div class="unit-track"><div class="unit-fill" id="p-bar1" style="width:0%;background:linear-gradient(90deg,#1565C0,#42A5F5)"></div></div>
           </div>
           <div class="unit-bar-row">
             <div class="unit-bar-label">
-              <span>🎯 قراراتي المالية</span>
-              <span id="p-pct2">0 / 9 دروس</span>
+              <span>📊 ميزانيتي</span>
+              <span id="p-pct2">0 / 4 دروس</span>
             </div>
             <div class="unit-track"><div class="unit-fill" id="p-bar2" style="width:0%;background:linear-gradient(90deg,#2E7D32,#66BB6A)"></div></div>
           </div>
           <div class="unit-bar-row" style="margin-bottom:0">
             <div class="unit-bar-label">
-              <span>🧠 مستهلك واعٍ</span>
-              <span id="p-pct3">0 / 8 دروس</span>
+              <span>🛒 أنا مستهلك ذكي</span>
+              <span id="p-pct3">0 / 4 دروس</span>
             </div>
             <div class="unit-track"><div class="unit-fill" id="p-bar3" style="width:0%;background:linear-gradient(90deg,#C62828,#FF7043)"></div></div>
           </div>
           <div class="unit-bar-row">
             <div class="unit-bar-label">
-              <span>🚀 أنا رائد صغير</span>
+              <span>🚀 أنا منتج</span>
               <span id="p-pct4">0 / 4 دروس</span>
             </div>
             <div class="unit-track"><div class="unit-fill" id="p-bar4" style="width:0%;background:linear-gradient(90deg,#4A148C,#7B1FA2)"></div></div>
           </div>
           <div class="unit-bar-row">
             <div class="unit-bar-label">
-              <span>🏦 المال أداة في يدي</span>
+              <span>🤝 المال والمجتمع</span>
               <span id="p-pct5">0 / 4 دروس</span>
             </div>
             <div class="unit-track"><div class="unit-fill" id="p-bar5" style="width:0%;background:linear-gradient(90deg,#B71C1C,#E53935)"></div></div>
@@ -2617,13 +2631,17 @@ const UNITS = {
 
 const BADGES = [
   { id:'b1', icon:'🏆', name:'أول درس!', req: 1 },
-  { id:'b2', icon:'📚', name:'قارئ نشيط', req: 3 },
+  { id:'b2', icon:'📚', name:'متعلم نشيط', req: 3 },
   { id:'b3', icon:'🌟', name:'طالب متميز', req: 6 },
-  { id:'b4', icon:'🧠', name:'مفكر ذكي', req: 9 },
-  { id:'b5', icon:'💰', name:'مدّخر صغير', req: 'savings' },
-  { id:'b6', icon:'🛒', name:'مستهلك واعٍ', req: 'unit3' },
+  { id:'b4', icon:'🧠', name:'مفكر ذكي', req: 10 },
+  { id:'b5', icon:'💰', name:'مدّخر ذكي', req: 'savings' },
+  { id:'b6', icon:'🛒', name:'مستهلك ذكي', req: 'unit3' },
   { id:'b7', icon:'🎯', name:'صاحب هدف', req: 'goal' },
   { id:'b8', icon:'🔥', name:'لا يُوقف!', req: 'streak' },
+  { id:'b9', icon:'📊', name:'خبير الميزانية', req: 'unit2' },
+  { id:'b10', icon:'🚀', name:'رائد صغير', req: 'unit4' },
+  { id:'b11', icon:'🤝', name:'مواطن واعٍ', req: 'unit5' },
+  { id:'b12', icon:'🎓', name:'أكمل الصف الخامس!', req: 20 },
 ];
 
 // 
@@ -4636,7 +4654,7 @@ function renderStudentList() {
 }
 
 function printCertificate(studentName, dateStr) {
-  const units = ['المال من حولي','قراراتي المالية','أنا مستهلك واعٍ','أنا رائد صغير','المال أداة في يدي'];
+  const units = ['قيمة المال','ميزانيتي','أنا مستهلك ذكي','أنا منتج','المال والمجتمع'];
   
   // Remove any existing cert overlay
   const old = document.getElementById('cert-overlay');
