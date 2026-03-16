@@ -1194,6 +1194,158 @@ body {
 }
 .bucket-sublabel { font-size:12px; color:rgba(255,255,255,0.5); }
 .bucket-progress-text { font-size:11px; color:rgba(255,255,255,0.45); margin-top:4px; }
+
+/* ══════════════════════════════════════════════
+   سوق ريم — نشاط تفاعلي
+══════════════════════════════════════════════ */
+.souq-wrap {
+  background: linear-gradient(140deg, rgba(230,74,19,0.15), rgba(255,87,34,0.08));
+  border: 2px solid rgba(255,87,34,0.3);
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 18px;
+  font-family: Noto Naskh Arabic, serif;
+}
+.souq-title {
+  font-size: 17px;
+  font-weight: 900;
+  color: #FF7043;
+  margin-bottom: 6px;
+}
+.souq-intro {
+  font-size: 13px;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+.souq-budget-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255,255,255,0.07);
+  border-radius: 12px;
+  padding: 10px 16px;
+  margin-bottom: 16px;
+  font-size: 15px;
+  font-weight: 800;
+}
+.souq-budget-val { color: #66BB6A; font-size: 18px; }
+.souq-budget-val.red { color: #EF5350; }
+.souq-section-title {
+  font-size: 14px;
+  font-weight: 800;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 10px;
+  margin-top: 14px;
+}
+.souq-materials {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 8px;
+  margin-bottom: 4px;
+}
+.souq-mat {
+  background: rgba(255,255,255,0.06);
+  border: 1.5px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+}
+.souq-mat:hover { background: rgba(255,255,255,0.1); transform: scale(1.03); }
+.souq-mat.selected {
+  border-color: #FF7043;
+  background: rgba(255,112,67,0.18);
+}
+.souq-mat-icon { font-size: 24px; margin-bottom: 4px; }
+.souq-mat-name { font-size: 12px; font-weight: 700; color: white; }
+.souq-mat-cost { font-size: 11px; color: rgba(255,255,255,0.5); margin-top: 2px; }
+.souq-mat-qty {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  background: #FF7043;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 11px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.souq-products { display: flex; flex-direction: column; gap: 8px; }
+.souq-product {
+  background: rgba(255,255,255,0.06);
+  border: 1.5px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  padding: 12px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.2s;
+}
+.souq-product:hover { background: rgba(255,255,255,0.1); }
+.souq-product.selected { border-color: #66BB6A; background: rgba(102,187,106,0.12); }
+.souq-product.disabled { opacity: 0.35; cursor: not-allowed; }
+.souq-product-icon { font-size: 28px; }
+.souq-product-info { flex: 1; }
+.souq-product-name { font-size: 14px; font-weight: 800; color: white; }
+.souq-product-needs { font-size: 11px; color: rgba(255,255,255,0.5); margin-top: 3px; }
+.souq-price-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 12px;
+  padding: 12px 16px;
+}
+.souq-price-label { font-size: 14px; font-weight: 700; color: rgba(255,255,255,0.8); flex: 1; }
+.souq-price-input {
+  width: 70px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1.5px solid rgba(255,112,67,0.5);
+  background: rgba(0,0,0,0.3);
+  color: white;
+  font-size: 16px;
+  font-weight: 800;
+  text-align: center;
+  font-family: Noto Naskh Arabic, serif;
+}
+.souq-result {
+  margin-top: 14px;
+  border-radius: 14px;
+  padding: 16px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.8;
+  display: none;
+}
+.souq-result.profit { background: rgba(102,187,106,0.2); border: 1.5px solid #66BB6A; color: #66BB6A; }
+.souq-result.loss   { background: rgba(239,83,80,0.2);  border: 1.5px solid #EF5350; color: #EF5350; }
+.souq-calc-btn {
+  width: 100%;
+  margin-top: 12px;
+  padding: 13px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg,#E64A19,#FF7043);
+  color: white;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  font-family: Noto Naskh Arabic, serif;
+  transition: opacity 0.2s;
+}
+.souq-calc-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
 </style>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
@@ -2490,6 +2642,25 @@ const UNITS = {
         concept: {
           text: '💡 معادلة التسعير:\n🔸 التكلفة = مواد + وقت + مصاريف أخرى\n🔸 السعر = التكلفة + الربح المطلوب\n🔸 الربح = السعر - التكلفة\n🔸 هامش الربح = (الربح ÷ التكلفة) × 100%\n🔸 مثال: تكلفة 10 ₪، سعر 15 ₪ → ربح 5 ₪ → هامش 50%'
         },
+        activity: {
+          type: 'souq',
+          title: '🛍️ سوق ريم الصغير — جرّب بنفسك!',
+          intro: 'أنت ريم! عندك 20 ₪ رأس مال. اختر مواد، اصنع منتجاً، وحدّد سعر البيع.',
+          budget: 20,
+          materials: [
+            { id: 'beads',  name: 'خرز ملون',   cost: 3,   icon: '📿', unit: 'عبوة' },
+            { id: 'thread', name: 'خيط ذهبي',   cost: 1,   icon: '🧵', unit: 'بكرة' },
+            { id: 'paper',  name: 'ورق مقوى',   cost: 2,   icon: '📄', unit: 'ورقة' },
+            { id: 'ribbon', name: 'شريط ملون',  cost: 1.5, icon: '🎀', unit: 'متر'  },
+            { id: 'glue',   name: 'غراء',       cost: 2.5, icon: '🔧', unit: 'أنبوب'},
+          ],
+          products: [
+            { id: 'necklace', name: 'سلسلة خرز',  needs: ['beads','thread'], time: 0.5, icon: '📿' },
+            { id: 'bookmark', name: 'سيمانة',     needs: ['paper','ribbon'], time: 0.25,icon: '🔖' },
+            { id: 'bracelet', name: 'سوار',       needs: ['beads','thread','ribbon'], time: 0.75, icon: '💚' },
+          ],
+          wagePerHour: 8,
+        },
         quiz: {
           q: '💹 تكلفة صنع سندويتش 8 ₪. يريد عمر ربح 50%. ما هو السعر المناسب؟',
           choices: [
@@ -2925,6 +3096,8 @@ function personalizeText(text) {
 function openLesson(unitNum, lessonIdx) {
   console.log('openLesson called', unitNum, lessonIdx);
   currentLesson = { unitNum, lessonIdx };
+  // אפס סוק
+  _souq = { budget: 0, spent: 0, selectedMats: {}, selectedProduct: null, sellPrice: 0 };
   const l = UNITS[unitNum].lessons[lessonIdx];
   const detail = document.getElementById('lesson-detail');
 
@@ -2950,8 +3123,10 @@ function openLesson(unitNum, lessonIdx) {
           : `<p>${personalizeText(l.concept.text).replace(/\n/g,'<br>').replace(/(÷|×|\+|−|=|≈)/g,'<span class="math-op">$1</span>')}</p>`}
     </div>
 
+    ${l.activity ? renderActivity(l) : ''}
+
     <div class="activity-card">
-      <h4>🎯 نشاط تفاعلي</h4>
+      <h4>🎯 سؤال التقييم</h4>
       <p style="font-size:18px;font-weight:700;margin-bottom:16px;color:rgba(255,255,255,0.92);line-height:1.7">
         ${personalizeText(l.quiz.q)}
       </p>
@@ -3002,6 +3177,176 @@ function openLesson(unitNum, lessonIdx) {
       }
     }
   }, 50);
+}
+
+
+// ══════════════════════════════════════════════
+// السوق الصغير — نشاط تفاعلي
+// ══════════════════════════════════════════════
+
+var _souq = {
+  budget: 0, spent: 0,
+  selectedMats: {},
+  selectedProduct: null,
+  sellPrice: 0,
+};
+
+function renderActivity(l) {
+  if (!l.activity || l.activity.type !== 'souq') return '';
+  var a = l.activity;
+  return `
+  <div class="souq-wrap" id="souq-panel">
+    <div class="souq-title">${a.title}</div>
+    <div class="souq-intro">${a.intro}</div>
+
+    <div class="souq-budget-bar">
+      <span>💰 رأس المال</span>
+      <span class="souq-budget-val" id="souq-budget-display">${a.budget} ₪</span>
+    </div>
+
+    <div class="souq-section-title">🛒 الخطوة 1 — اختر المواد</div>
+    <div class="souq-materials">
+      ${a.materials.map(m => `
+        <div class="souq-mat" id="souq-mat-${m.id}" onclick="souqToggleMat('${m.id}', ${m.cost}, ${a.budget})">
+          <div class="souq-mat-qty" id="souq-qty-${m.id}" style="display:none">1</div>
+          <div class="souq-mat-icon">${m.icon}</div>
+          <div class="souq-mat-name">${m.name}</div>
+          <div class="souq-mat-cost">${m.cost} ₪ / ${m.unit}</div>
+        </div>`).join('')}
+    </div>
+
+    <div class="souq-section-title">🏭 الخطوة 2 — اختر ماذا تصنع</div>
+    <div class="souq-products">
+      ${a.products.map(p => `
+        <div class="souq-product disabled" id="souq-prod-${p.id}" data-needs='${JSON.stringify(p.needs)}' onclick="souqSelectProduct('${p.id}', ${JSON.stringify(p.needs)}, ${p.time}, ${a.wagePerHour})">
+          <div class="souq-product-icon">${p.icon}</div>
+          <div class="souq-product-info">
+            <div class="souq-product-name">${p.name}</div>
+            <div class="souq-product-needs">يحتاج: ${p.needs.map(n => a.materials.find(m=>m.id===n)?.icon + a.materials.find(m=>m.id===n)?.name).join(' + ')}</div>
+          </div>
+        </div>`).join('')}
+    </div>
+
+    <div class="souq-section-title">🏷️ الخطوة 3 — حدد سعر البيع</div>
+    <div class="souq-price-row">
+      <span class="souq-price-label">سعر البيع للقطعة:</span>
+      <input class="souq-price-input" type="number" id="souq-sell-price" min="1" max="100" placeholder="0" oninput="souqUpdatePrice(this.value)">
+      <span style="color:rgba(255,255,255,0.6);font-size:14px">₪</span>
+    </div>
+
+    <button class="souq-calc-btn" id="souq-calc-btn" disabled onclick="souqCalculate(${a.wagePerHour})">
+      احسب ربحي! 🧮
+    </button>
+
+    <div class="souq-result" id="souq-result"></div>
+  </div>`;
+}
+
+function souqToggleMat(id, cost, budget) {
+  var el = document.getElementById('souq-mat-' + id);
+  var qty = document.getElementById('souq-qty-' + id);
+  if (_souq.selectedMats[id]) {
+    // إلغاء التحديد
+    delete _souq.selectedMats[id];
+    _souq.spent -= cost;
+    el.classList.remove('selected');
+    qty.style.display = 'none';
+  } else {
+    if (_souq.spent + cost > budget) {
+      // رج البودجت
+      el.style.animation = 'none';
+      el.style.border = '2px solid #EF5350';
+      setTimeout(() => { el.style.border = ''; }, 600);
+      return;
+    }
+    _souq.selectedMats[id] = cost;
+    _souq.spent += cost;
+    el.classList.add('selected');
+    qty.style.display = 'flex';
+  }
+  souqUpdateBudgetDisplay(budget);
+  souqCheckProducts();
+}
+
+function souqUpdateBudgetDisplay(budget) {
+  var rem = budget - _souq.spent;
+  var el = document.getElementById('souq-budget-display');
+  el.textContent = rem.toFixed(1) + ' ₪ متبقي';
+  el.className = 'souq-budget-val' + (rem < 0 ? ' red' : '');
+}
+
+function souqCheckProducts(wph) {
+  // تفعيل المنتجات التي توفرت موادها
+  var activeMats = Object.keys(_souq.selectedMats);
+  document.querySelectorAll('.souq-product').forEach(function(el) {
+    var pid = el.id.replace('souq-prod-', '');
+    // نحتاج نجد needs من المعطيات — نحفظها في data attribute
+    var needsAttr = el.getAttribute('data-needs');
+    if (!needsAttr) return;
+    var needs = JSON.parse(needsAttr);
+    var canMake = needs.every(n => activeMats.includes(n));
+    el.classList.toggle('disabled', !canMake);
+  });
+}
+
+function souqSelectProduct(pid, needs, time, wph) {
+  var el = document.getElementById('souq-prod-' + pid);
+  if (el.classList.contains('disabled')) return;
+  document.querySelectorAll('.souq-product').forEach(e => e.classList.remove('selected'));
+  el.classList.add('selected');
+  _souq.selectedProduct = { pid, needs, time, wph };
+  souqTryEnableCalc();
+}
+
+function souqUpdatePrice(val) {
+  _souq.sellPrice = parseFloat(val) || 0;
+  souqTryEnableCalc();
+}
+
+function souqTryEnableCalc() {
+  var btn = document.getElementById('souq-calc-btn');
+  btn.disabled = !(_souq.selectedProduct && _souq.sellPrice > 0);
+}
+
+function souqCalculate(wph) {
+  if (!_souq.selectedProduct) return;
+  var matsCost = _souq.selectedProduct.needs.reduce((sum, n) => sum + (_souq.selectedMats[n] || 0), 0);
+  var timeCost = _souq.selectedProduct.time * wph;
+  var totalCost = matsCost + timeCost;
+  var profit = _souq.sellPrice - totalCost;
+  var result = document.getElementById('souq-result');
+  result.style.display = 'block';
+  if (profit > 0) {
+    result.className = 'souq-result profit';
+    result.innerHTML = `
+      🎉 <strong>رائع! أنت تاجر/ة ذكي/ة!</strong><br>
+      تكلفة المواد: ${matsCost.toFixed(1)} ₪ &nbsp;|&nbsp; قيمة وقتك: ${timeCost.toFixed(1)} ₪<br>
+      <strong>التكلفة الكاملة: ${totalCost.toFixed(1)} ₪</strong><br>
+      سعر البيع: ${_souq.sellPrice} ₪<br>
+      <strong style="font-size:18px">✅ ربحك: ${profit.toFixed(1)} ₪</strong>
+    `;
+  } else if (profit === 0) {
+    result.className = 'souq-result';
+    result.style.background = 'rgba(255,193,7,0.15)';
+    result.style.border = '1.5px solid #FFC107';
+    result.style.color = '#FFC107';
+    result.innerHTML = `
+      ⚖️ <strong>وصلت لنقطة التعادل!</strong><br>
+      لم تخسر ولم تربح — السعر يساوي التكلفة تماماً.<br>
+      ارفع السعر قليلاً لتحقق ربحاً.
+    `;
+  } else {
+    result.className = 'souq-result loss';
+    result.innerHTML = `
+      ⚠️ <strong>أنت في خسارة!</strong><br>
+      تكلفة المواد: ${matsCost.toFixed(1)} ₪ &nbsp;|&nbsp; قيمة وقتك: ${timeCost.toFixed(1)} ₪<br>
+      <strong>التكلفة الكاملة: ${totalCost.toFixed(1)} ₪</strong><br>
+      سعر البيع: ${_souq.sellPrice} ₪ — هذا أقل من التكلفة!<br>
+      <strong style="font-size:18px">❌ خسارة: ${Math.abs(profit).toFixed(1)} ₪</strong><br>
+      ارفع السعر لـ${(totalCost + 1).toFixed(0)} ₪ على الأقل لتتعادل.
+    `;
+  }
+  result.scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
 
 function closeLesson() {
