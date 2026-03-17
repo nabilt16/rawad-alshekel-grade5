@@ -1346,6 +1346,211 @@ body {
 }
 .souq-calc-btn:disabled { opacity: 0.4; cursor: not-allowed; }
 
+
+/* ============================================
+   نشاط تفاعلي — سوق ريم
+   ============================================ */
+.act-wrap {
+  background: linear-gradient(160deg, rgba(30,40,55,0.95), rgba(20,30,45,0.98));
+  border: 1.5px solid rgba(255,112,67,0.35);
+  border-radius: 20px;
+  padding: 22px 20px;
+  margin-bottom: 18px;
+  font-family: Noto Naskh Arabic, serif;
+}
+.act-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+.act-tag {
+  background: rgba(255,112,67,0.2);
+  color: #FF7043;
+  border: 1px solid rgba(255,112,67,0.4);
+  border-radius: 8px;
+  padding: 3px 10px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+.act-title {
+  font-size: 17px;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 14px;
+}
+.act-task-box {
+  background: rgba(255,112,67,0.1);
+  border-right: 3px solid #FF7043;
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 18px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.88);
+  line-height: 1.7;
+}
+.act-cost-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+.act-cost-table th {
+  background: rgba(255,255,255,0.07);
+  color: rgba(255,255,255,0.55);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 8px 12px;
+  text-align: right;
+}
+.act-cost-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.88);
+  vertical-align: middle;
+}
+.act-cost-table tr:last-child td { border-bottom: none; }
+.act-cost-icon { font-size: 20px; margin-left: 8px; }
+.act-cost-total {
+  background: rgba(255,193,7,0.1);
+  border-radius: 10px;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 15px;
+  font-weight: 800;
+  color: #FFC107;
+  border: 1px solid rgba(255,193,7,0.25);
+}
+.act-price-section {
+  margin-bottom: 16px;
+}
+.act-price-label {
+  font-size: 14px;
+  font-weight: 800;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 10px;
+}
+.act-price-options {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+.act-price-btn {
+  background: rgba(255,255,255,0.07);
+  border: 1.5px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  padding: 12px 6px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.18s;
+  color: white;
+  font-size: 15px;
+  font-weight: 800;
+  font-family: Noto Naskh Arabic, serif;
+}
+.act-price-btn:hover {
+  background: rgba(255,255,255,0.13);
+  transform: translateY(-2px);
+}
+.act-price-btn.sel {
+  border-color: #FF7043;
+  background: rgba(255,112,67,0.2);
+  color: #FF7043;
+}
+.act-price-custom {
+  grid-column: span 4;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255,255,255,0.06);
+  border: 1.5px dashed rgba(255,255,255,0.2);
+  border-radius: 12px;
+  padding: 10px 14px;
+}
+.act-price-custom input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 800;
+  font-family: Noto Naskh Arabic, serif;
+  text-align: center;
+  width: 60px;
+}
+.act-price-custom label {
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+}
+.act-calc-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 13px;
+  border: none;
+  background: linear-gradient(135deg, #E64A19, #FF7043);
+  color: white;
+  font-size: 16px;
+  font-weight: 900;
+  cursor: pointer;
+  font-family: Noto Naskh Arabic, serif;
+  transition: all 0.2s;
+  box-shadow: 0 4px 15px rgba(255,112,67,0.3);
+}
+.act-calc-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(255,112,67,0.4); }
+.act-calc-btn:active { transform: translateY(0); }
+.act-calc-btn:disabled { opacity: 0.35; cursor: not-allowed; box-shadow: none; transform: none; }
+.act-result {
+  margin-top: 16px;
+  border-radius: 16px;
+  padding: 18px;
+  display: none;
+  font-size: 14px;
+  line-height: 1.9;
+}
+.act-result.profit {
+  background: rgba(76,175,80,0.12);
+  border: 1.5px solid rgba(76,175,80,0.4);
+}
+.act-result.loss {
+  background: rgba(239,83,80,0.12);
+  border: 1.5px solid rgba(239,83,80,0.4);
+}
+.act-result.break {
+  background: rgba(255,193,7,0.1);
+  border: 1.5px solid rgba(255,193,7,0.35);
+}
+.act-result-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  color: rgba(255,255,255,0.8);
+}
+.act-result-row:last-child { border-bottom: none; }
+.act-result-total {
+  font-size: 17px;
+  font-weight: 900;
+  padding-top: 10px;
+  margin-top: 6px;
+  border-top: 2px solid rgba(255,255,255,0.15) !important;
+}
+.act-result-msg {
+  margin-top: 12px;
+  font-size: 15px;
+  font-weight: 800;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+}
+.profit .act-result-msg { background: rgba(76,175,80,0.15); color: #66BB6A; }
+.loss   .act-result-msg { background: rgba(239,83,80,0.15); color: #EF5350; }
+.break  .act-result-msg { background: rgba(255,193,7,0.12); color: #FFC107; }
+
 </style>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
@@ -2634,43 +2839,28 @@ const UNITS = {
       {
         id: 'g5_l14', title: 'التكلفة والسعر والربح',
         sub: 'كيف يُحدد سعر أي شيء؟',
-        bg: '💹', bgColor: 'linear-gradient(140deg,#E64A19,#F4511E)',
-        goal: 'تتعلم كيف تحسب تكلفة المنتج وتحدد سعره لتحقيق ربح.',
+        bg: '🥤', bgColor: 'linear-gradient(140deg,#E64A19,#F4511E)',
+        goal: 'تتعلم كيف تحسب التكلفة الحقيقية لأي منتج — بما فيها قيمة وقتك — وتحدد سعراً يحقق ربحاً.',
         story: {
-          text: 'أرادت ريم بيع سلسلات من الخرز في مهرجان المدرسة. حسبت تكلفة كل سلسلة:\n• خرز: 3 ₪\n• خيط: 0.5 ₪\n• وقت العمل (30 دقيقة): ؟\n\nقالت لها أمها: «وقتك له قيمة أيضاً! إذا كان لديك 8 ₪ في الساعة فوقتك يساوي 4 ₪ لكل سلسلة.» إذن التكلفة الحقيقية: 3 + 0.5 + 4 = 7.5 ₪.\n\nباعت بـ12 ₪. الربح 4.5 ₪ لكل سلسلة — وبيعت 20 سلسلة!'
+          text: 'أراد أمير شراء دراجة بـ300 ₪. قرر أن يعمل ويجمع المال بنفسه — أقام دكاناً لبيع عصير الليمون في الحي يوم الجمعة.\n\nاشترى: ليمون وسكر ونعنع بـ20 ₪ (يكفي 20 كوب)، وكؤوساً بـ7 ₪. قرر البيع بـ2 ₪ للكوب.\n\nعمل 3 ساعات — ساعة للتحضير وساعتان للبيع. باع 20 كوباً وجمع 40 ₪. فرح وقال: «ربحت 20 ₪!»\n\nلكن أمه سألته: «وقتك الثلاث ساعات — بكم حسبتهم؟» صمت أمير... لم يفكر في ذلك أبداً.'
         },
         concept: {
-          text: '💡 معادلة التسعير:\n🔸 التكلفة = مواد + وقت + مصاريف أخرى\n🔸 السعر = التكلفة + الربح المطلوب\n🔸 الربح = السعر - التكلفة\n🔸 هامش الربح = (الربح ÷ التكلفة) × 100%\n🔸 مثال: تكلفة 10 ₪، سعر 15 ₪ → ربح 5 ₪ → هامش 50%'
+          text: '💡 التكلفة الحقيقية = مواد + وقت العمل:\n🔸 كل ساعة عمل لها قيمة — حتى لو لم تدفع لأحد\n🔸 أمير عمل 3 ساعات × 10 ₪/ساعة = 30 ₪ قيمة وقته\n🔸 التكلفة الحقيقية: 27 ₪ مواد + 30 ₪ وقت = 57 ₪\n🔸 هو جمع 40 ₪ فقط — خسر 17 ₪ دون أن يعلم!\n🔸 القاعدة: السعر الصحيح = التكلفة الكاملة ÷ عدد الكؤوس + هامش ربح'
         },
         activity: {
-          type: 'souq',
-          title: '🛍️ سوق ريم الصغير — جرّب بنفسك!',
-          intro: 'أنت ريم! عندك 20 ₪ رأس مال. اختر مواد، اصنع منتجاً، وحدّد سعر البيع.',
-          budget: 20,
-          materials: [
-            { id: 'beads',  name: 'خرز ملون',   cost: 3,   icon: '📿', unit: 'عبوة' },
-            { id: 'thread', name: 'خيط ذهبي',   cost: 1,   icon: '🧵', unit: 'بكرة' },
-            { id: 'paper',  name: 'ورق مقوى',   cost: 2,   icon: '📄', unit: 'ورقة' },
-            { id: 'ribbon', name: 'شريط ملون',  cost: 1.5, icon: '🎀', unit: 'متر'  },
-            { id: 'glue',   name: 'غراء',       cost: 2.5, icon: '🔧', unit: 'أنبوب'},
+          type: 'amir',
+          title: '🥤 دكان أمير — ساعده يختار السعر الصحيح!',
+          task: 'أمير عمل 3 ساعات وباع 20 كوب. إليك كل التكاليف الحقيقية. أنت تقرر: بكم يجب أن يبيع الكوب حتى لا يخسر — وحتى يربح فعلاً؟',
+          cups: 20,
+          costs: [
+            { icon: '🍋', label: 'ليمون + سكر + نعنع', desc: 'تكفي 20 كوب', amount: 20.0 },
+            { icon: '🥤', label: 'كؤوس بلاستيكية',     desc: '20 كوب',       amount: 7.0  },
+            { icon: '⏱️', label: 'وقت العمل',           desc: '3 ساعات × 10 ₪/ساعة', amount: 30.0 },
           ],
-          products: [
-            { id: 'necklace', name: 'سلسلة خرز',  needs: ['beads','thread'], time: 0.5, icon: '📿' },
-            { id: 'bookmark', name: 'سيمانة',     needs: ['paper','ribbon'], time: 0.25,icon: '🔖' },
-            { id: 'bracelet', name: 'سوار',       needs: ['beads','thread','ribbon'], time: 0.75, icon: '💚' },
-          ],
-          wagePerHour: 8,
+          priceOptions: [1, 2, 3, 3.5, 4, 5, 6],
+          amirPrice: 2,
         },
-        quiz: {
-          q: '💹 تكلفة صنع سندويتش 8 ₪. يريد عمر ربح 50%. ما هو السعر المناسب؟',
-          choices: [
-            { text: '10 ₪', ok: false, fb: '10 ₪ ربحه 2 ₪ فقط، أي 25% — ليس 50%. 50% من 8 = 4 ₪ ربح. السعر = 8 + 4 = 12 ₪.' },
-            { text: '12 ₪ (8 تكلفة + 50% ربح)', ok: true, fb: '🎉 صح! 50% من 8 = 4 ₪ ربح. السعر = 8 + 4 = 12 ₪. هامش الربح = 4÷8×100 = 50%. تاجر ذكي!' },
-            { text: '16 ₪', ok: false, fb: '16 ₪ ربحه 8 ₪ أي 100% — ضعف التكلفة! هذا كثير. 50% من 8 = 4 ₪ ربح. السعر الصحيح 12 ₪.' }
-          ]
-        }
-      },
-      {
+
         id: 'g5_l15', title: 'فكرة المشروع الصغير',
         sub: 'من الفكرة إلى المشروع الحقيقي',
         bg: '💡', bgColor: 'linear-gradient(140deg,#F4511E,#FF5722)',
@@ -3096,8 +3286,6 @@ function personalizeText(text) {
 function openLesson(unitNum, lessonIdx) {
   console.log('openLesson called', unitNum, lessonIdx);
   currentLesson = { unitNum, lessonIdx };
-  // אפס סוק
-  _souq = { budget: 0, spent: 0, selectedMats: {}, selectedProduct: null, sellPrice: 0 };
   const l = UNITS[unitNum].lessons[lessonIdx];
   const detail = document.getElementById('lesson-detail');
 
@@ -3123,7 +3311,7 @@ function openLesson(unitNum, lessonIdx) {
           : `<p>${personalizeText(l.concept.text).replace(/\n/g,'<br>').replace(/(÷|×|\+|−|=|≈)/g,'<span class="math-op">$1</span>')}</p>`}
     </div>
 
-    ${l.activity ? renderActivity(l) : ''}
+    ${l.activity ? buildActivity(l.activity, l.id) : ''}
 
     <div class="activity-card">
       <h4>🎯 سؤال التقييم</h4>
@@ -3143,7 +3331,7 @@ function openLesson(unitNum, lessonIdx) {
   detail.classList.add('open');
   // Animate lesson cards entrance
   setTimeout(() => {
-    detail.querySelectorAll('.story-card,.concept-card,.activity-card').forEach((el,i) => {
+    detail.querySelectorAll('.story-card,.concept-card,.act-wrap,.activity-card').forEach((el,i) => {
       el.style.opacity = '0';
       el.style.transform = 'translateY(20px)';
       el.style.transition = 'none';
@@ -3347,6 +3535,160 @@ function souqCalculate(wph) {
     `;
   }
   result.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+
+
+
+// ============================================
+// نشاط تفاعلي — دكان أمير
+// ============================================
+
+var _actPrice = 0;
+
+function buildActivity(act, lessonId) {
+  if (!act) return '';
+  if (act.type === 'amir') return buildAmirActivity(act, lessonId);
+  if (act.type === 'pricing') return buildPricingActivity(act, lessonId);
+  return '';
+}
+
+function buildAmirActivity(act, lessonId) {
+  var totalCost = act.costs.reduce(function(s,c){ return s+c.amount; }, 0);
+  var costPerCup = totalCost / act.cups;
+
+  var costRows = act.costs.map(function(c) {
+    return '<tr>' +
+      '<td><span style="font-size:20px;margin-left:8px">' + c.icon + '</span>' + c.label + '</td>' +
+      '<td style="color:rgba(255,255,255,0.5);font-size:13px">' + c.desc + '</td>' +
+      '<td style="font-weight:800;color:#FFB300;text-align:left">' + c.amount.toFixed(0) + ' \u20AA</td>' +
+    '</tr>';
+  }).join('');
+
+  var priceButtons = act.priceOptions.map(function(p) {
+    var label = p + ' \u20AA';
+    var hint = '';
+    if (p === act.amirPrice) hint = '<div style="font-size:10px;color:#EF5350;margin-top:2px">اختيار أمير</div>';
+    return '<button class="act-price-btn" onclick="actAmirSelect(' + p + ', ' + totalCost + ', ' + act.cups + ', \'' + lessonId + '\', this)">' +
+      label + hint +
+    '</button>';
+  }).join('');
+
+  return '<div class="act-wrap" id="act-' + lessonId + '">' +
+
+    '<div class="act-header"><span class="act-tag">\uD83C\uDFAE نشاط تفاعلي</span></div>' +
+    '<div class="act-title">' + act.title + '</div>' +
+    '<div class="act-task-box">' + act.task + '</div>' +
+
+    '<div style="font-size:13px;font-weight:800;color:rgba(255,255,255,0.5);margin-bottom:8px">\uD83D\uDCCB التكاليف الحقيقية لـ' + act.cups + ' كوب</div>' +
+    '<table class="act-cost-table">' +
+      '<thead><tr>' +
+        '<th>عنصر التكلفة</th><th>التفاصيل</th><th style="text-align:left">المبلغ</th>' +
+      '</tr></thead>' +
+      '<tbody>' + costRows + '</tbody>' +
+    '</table>' +
+
+    '<div class="act-cost-total">' +
+      '<span>\uD83D\uDCB0 إجمالي التكلفة الحقيقية</span>' +
+      '<span>' + totalCost.toFixed(0) + ' \u20AA</span>' +
+    '</div>' +
+    '<div style="background:rgba(255,255,255,0.05);border-radius:10px;padding:10px 14px;margin-bottom:18px;font-size:13px;color:rgba(255,255,255,0.65)">' +
+      'التكلفة لكل كوب: ' + totalCost.toFixed(0) + ' \u00F7 ' + act.cups + ' = <strong style="color:#FFB300">' + costPerCup.toFixed(2) + ' \u20AA للكوب</strong>' +
+    '</div>' +
+
+    '<div class="act-price-section">' +
+      '<div class="act-price-label">\uD83C\uDFF7\uFE0F اختر سعر البيع للكوب الواحد:</div>' +
+      '<div class="act-price-options">' + priceButtons + '</div>' +
+    '</div>' +
+
+    '<div class="act-result" id="act-result-' + lessonId + '"></div>' +
+  '</div>';
+}
+
+function actAmirSelect(price, totalCost, cups, lessonId, btn) {
+  document.querySelectorAll('#act-' + lessonId + ' .act-price-btn').forEach(function(b){ b.classList.remove('sel'); });
+  btn.classList.add('sel');
+  _actPrice = price;
+
+  var totalRevenue = price * cups;
+  var profit = totalRevenue - totalCost;
+  var costPerCup = totalCost / cups;
+  var resultEl = document.getElementById('act-result-' + lessonId);
+  if (!resultEl) return;
+
+  var cls, icon, msg, msgColor;
+  if (profit > 0) {
+    cls = 'profit'; icon = '\uD83C\uDF89';
+    msgColor = '#66BB6A';
+    var margin = ((profit / totalCost) * 100).toFixed(0);
+    if (price < costPerCup * 1.3) msg = 'ربحت! لكن الهامش ضعيف — ' + margin + '% فقط. ارفع السعر أكثر.';
+    else msg = 'ممتاز! هامش ربح ' + margin + '% — هذا تسعير محترف!';
+  } else if (profit === 0) {
+    cls = 'break'; icon = '\u2696\uFE0F'; msgColor = '#FFC107';
+    msg = 'نقطة التعادل — عملت ساعات ولم تربح ولا شيء. ارفع السعر!';
+  } else {
+    cls = 'loss'; icon = '\u26A0\uFE0F'; msgColor = '#EF5350';
+    msg = 'هذا اختيار أمير الأول! عمل 3 ساعات وخسر ' + Math.abs(profit).toFixed(0) + ' \u20AA. السعر الأدنى للتعادل: ' + costPerCup.toFixed(1) + ' \u20AA/كوب.';
+  }
+
+  resultEl.className = 'act-result ' + cls;
+  resultEl.style.display = 'block';
+  resultEl.innerHTML =
+    '<div class="act-result-row"><span>الإيرادات (' + cups + ' كوب × ' + price + ' \u20AA)</span><span>' + totalRevenue.toFixed(0) + ' \u20AA</span></div>' +
+    '<div class="act-result-row"><span>إجمالي التكاليف (مواد + وقت)</span><span style="color:#EF5350">- ' + totalCost.toFixed(0) + ' \u20AA</span></div>' +
+    '<div class="act-result-row act-result-total">' +
+      '<span>' + (profit >= 0 ? '\u2705 الربح الصافي' : '\u274C الخسارة') + '</span>' +
+      '<span style="color:' + msgColor + ';font-size:18px">' +
+        (profit >= 0 ? '+' : '') + profit.toFixed(0) + ' \u20AA' +
+      '</span>' +
+    '</div>' +
+    '<div class="act-result-msg" style="background:rgba(255,255,255,0.07);color:' + msgColor + '">' + icon + ' ' + msg + '</div>';
+
+  resultEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+function buildPricingActivity(act, lessonId) {
+  var total = act.costs.reduce(function(s,c){ return s+c.amount; }, 0);
+  var rows = act.costs.map(function(c){
+    return '<tr><td><span style="font-size:18px;margin-left:6px">' + c.icon + '</span>' + c.label + '</td>' +
+      '<td style="color:rgba(255,255,255,0.5);font-size:13px">' + c.desc + '</td>' +
+      '<td style="font-weight:800;color:#FFB300;text-align:left">' + c.amount.toFixed(1) + ' \u20AA</td></tr>';
+  }).join('');
+  var opts = act.priceOptions.map(function(p){
+    return '<button class="act-price-btn" onclick="actSelectPrice(' + p + ', ' + total + ', \'' + lessonId + '\', this)">' + p + ' \u20AA</button>';
+  }).join('');
+  return '<div class="act-wrap" id="act-' + lessonId + '">' +
+    '<div class="act-header"><span class="act-tag">\uD83C\uDFAE نشاط تفاعلي</span></div>' +
+    '<div class="act-title">' + act.title + '</div>' +
+    '<div class="act-task-box">' + act.task + '</div>' +
+    '<table class="act-cost-table"><thead><tr><th>عنصر</th><th>التفاصيل</th><th style="text-align:left">المبلغ</th></tr></thead><tbody>' + rows + '</tbody></table>' +
+    '<div class="act-cost-total"><span>إجمالي التكلفة</span><span>' + total.toFixed(1) + ' \u20AA</span></div>' +
+    '<div class="act-price-section"><div class="act-price-label">اختر سعر البيع:</div>' +
+    '<div class="act-price-options">' + opts + '</div></div>' +
+    '<div class="act-result" id="act-result-' + lessonId + '"></div></div>';
+}
+
+function actSelectPrice(price, totalCost, lessonId, btn) {
+  document.querySelectorAll('#act-' + lessonId + ' .act-price-btn').forEach(function(b){ b.classList.remove('sel'); });
+  btn.classList.add('sel');
+  var profit = price - totalCost;
+  var margin = totalCost > 0 ? ((profit/totalCost)*100).toFixed(0) : 0;
+  var resultEl = document.getElementById('act-result-' + lessonId);
+  if (!resultEl) return;
+  var cls = profit > 0 ? 'profit' : profit < 0 ? 'loss' : 'break';
+  var msgColor = profit > 0 ? '#66BB6A' : profit < 0 ? '#EF5350' : '#FFC107';
+  var msg = profit > 0 ? '\uD83C\uDF89 ربحت ' + profit.toFixed(1) + ' \u20AA (هامش ' + margin + '%)' :
+            profit < 0 ? '\u26A0\uFE0F خسارة! ارفع السعر لـ' + (totalCost+1).toFixed(0) + ' \u20AA على الأقل' :
+            '\u2696\uFE0F نقطة التعادل — لم تربح شيئاً';
+  resultEl.className = 'act-result ' + cls;
+  resultEl.style.display = 'block';
+  resultEl.innerHTML =
+    '<div class="act-result-row"><span>سعر البيع</span><span>' + price.toFixed(1) + ' \u20AA</span></div>' +
+    '<div class="act-result-row"><span>التكلفة الكاملة</span><span style="color:#EF5350">- ' + totalCost.toFixed(1) + ' \u20AA</span></div>' +
+    '<div class="act-result-row act-result-total"><span>' + (profit>=0?'\u2705 الربح':'\u274C الخسارة') + '</span>' +
+    '<span style="color:' + msgColor + ';font-size:18px">' + (profit>=0?'+':'') + profit.toFixed(1) + ' \u20AA</span></div>' +
+    '<div class="act-result-msg" style="background:rgba(255,255,255,0.07);color:' + msgColor + '">' + msg + '</div>';
+  resultEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
 
 function closeLesson() {
