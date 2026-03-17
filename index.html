@@ -1347,209 +1347,200 @@ body {
 .souq-calc-btn:disabled { opacity: 0.4; cursor: not-allowed; }
 
 
+
 /* ============================================
-   نشاط تفاعلي — سوق ريم
+   نشاط أمير — دف عبودة تفاعلي
    ============================================ */
-.act-wrap {
-  background: linear-gradient(160deg, rgba(30,40,55,0.95), rgba(20,30,45,0.98));
-  border: 1.5px solid rgba(255,112,67,0.35);
-  border-radius: 20px;
-  padding: 22px 20px;
-  margin-bottom: 18px;
+.amir-wrap {
   font-family: Noto Naskh Arabic, serif;
+  margin-bottom: 18px;
 }
-.act-header {
+.amir-header {
+  background: linear-gradient(135deg,#E64A19,#FF7043);
+  border-radius: 16px 16px 0 0;
+  padding: 16px 20px;
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 6px;
+  gap: 12px;
 }
-.act-tag {
-  background: rgba(255,112,67,0.2);
-  color: #FF7043;
-  border: 1px solid rgba(255,112,67,0.4);
-  border-radius: 8px;
-  padding: 3px 10px;
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 0.5px;
-}
-.act-title {
+.amir-header-icon { font-size: 32px; }
+.amir-header-text h3 {
+  color: white;
   font-size: 17px;
   font-weight: 900;
+  margin: 0 0 2px;
+}
+.amir-header-text p {
+  color: rgba(255,255,255,0.8);
+  font-size: 13px;
+  margin: 0;
+}
+.amir-body {
+  background: rgba(20,28,40,0.97);
+  border: 1.5px solid rgba(255,112,67,0.25);
+  border-top: none;
+  border-radius: 0 0 16px 16px;
+  padding: 20px;
+}
+.amir-step {
+  background: rgba(255,255,255,0.04);
+  border: 1.5px solid rgba(255,255,255,0.09);
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 12px;
+  transition: border-color 0.3s;
+}
+.amir-step.done { border-color: rgba(76,175,80,0.45); }
+.amir-step.active { border-color: rgba(255,112,67,0.55); }
+.amir-step.locked { opacity: 0.4; pointer-events: none; }
+.amir-step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  background: rgba(255,112,67,0.2);
+  color: #FF7043;
+  border-radius: 50%;
+  font-size: 13px;
+  font-weight: 900;
+  margin-left: 8px;
+  margin-bottom: 8px;
+}
+.amir-step.done .amir-step-num { background: rgba(76,175,80,0.2); color: #66BB6A; }
+.amir-step-title {
+  font-size: 15px;
+  font-weight: 800;
   color: white;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
 }
-.act-task-box {
-  background: rgba(255,112,67,0.1);
-  border-right: 3px solid #FF7043;
-  border-radius: 10px;
-  padding: 12px 14px;
-  margin-bottom: 18px;
-  font-size: 14px;
-  color: rgba(255,255,255,0.88);
-  line-height: 1.7;
-}
-.act-cost-table {
+.amir-data-table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   font-size: 14px;
 }
-.act-cost-table th {
-  background: rgba(255,255,255,0.07);
-  color: rgba(255,255,255,0.55);
-  font-size: 12px;
-  font-weight: 700;
-  padding: 8px 12px;
-  text-align: right;
-}
-.act-cost-table td {
-  padding: 10px 12px;
+.amir-data-table td {
+  padding: 7px 10px;
   border-bottom: 1px solid rgba(255,255,255,0.06);
-  color: rgba(255,255,255,0.88);
-  vertical-align: middle;
+  color: rgba(255,255,255,0.82);
 }
-.act-cost-table tr:last-child td { border-bottom: none; }
-.act-cost-icon { font-size: 20px; margin-left: 8px; }
-.act-cost-total {
-  background: rgba(255,193,7,0.1);
-  border-radius: 10px;
-  padding: 12px 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  font-size: 15px;
+.amir-data-table td:last-child {
   font-weight: 800;
-  color: #FFC107;
-  border: 1px solid rgba(255,193,7,0.25);
+  color: #FFB300;
+  text-align: left;
 }
-.act-price-section {
-  margin-bottom: 16px;
-}
-.act-price-label {
+.amir-question {
   font-size: 14px;
-  font-weight: 800;
-  color: rgba(255,255,255,0.75);
+  font-weight: 700;
+  color: rgba(255,255,255,0.9);
   margin-bottom: 10px;
+  line-height: 1.6;
+  background: rgba(255,112,67,0.08);
+  border-right: 3px solid #FF7043;
+  padding: 10px 12px;
+  border-radius: 0 8px 8px 0;
 }
-.act-price-options {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 8px;
-}
-.act-price-btn {
-  background: rgba(255,255,255,0.07);
-  border: 1.5px solid rgba(255,255,255,0.12);
-  border-radius: 12px;
-  padding: 12px 6px;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.18s;
-  color: white;
-  font-size: 15px;
-  font-weight: 800;
-  font-family: Noto Naskh Arabic, serif;
-}
-.act-price-btn:hover {
-  background: rgba(255,255,255,0.13);
-  transform: translateY(-2px);
-}
-.act-price-btn.sel {
-  border-color: #FF7043;
-  background: rgba(255,112,67,0.2);
-  color: #FF7043;
-}
-.act-price-custom {
-  grid-column: span 4;
+.amir-input-row {
   display: flex;
   align-items: center;
   gap: 10px;
-  background: rgba(255,255,255,0.06);
-  border: 1.5px dashed rgba(255,255,255,0.2);
-  border-radius: 12px;
-  padding: 10px 14px;
+  margin-bottom: 10px;
 }
-.act-price-custom input {
-  flex: 1;
-  background: transparent;
-  border: none;
-  outline: none;
-  color: white;
-  font-size: 16px;
-  font-weight: 800;
-  font-family: Noto Naskh Arabic, serif;
-  text-align: center;
-  width: 60px;
-}
-.act-price-custom label {
-  font-size: 13px;
-  color: rgba(255,255,255,0.5);
-}
-.act-calc-btn {
-  width: 100%;
-  padding: 14px;
-  border-radius: 13px;
-  border: none;
-  background: linear-gradient(135deg, #E64A19, #FF7043);
-  color: white;
-  font-size: 16px;
-  font-weight: 900;
-  cursor: pointer;
-  font-family: Noto Naskh Arabic, serif;
-  transition: all 0.2s;
-  box-shadow: 0 4px 15px rgba(255,112,67,0.3);
-}
-.act-calc-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(255,112,67,0.4); }
-.act-calc-btn:active { transform: translateY(0); }
-.act-calc-btn:disabled { opacity: 0.35; cursor: not-allowed; box-shadow: none; transform: none; }
-.act-result {
-  margin-top: 16px;
-  border-radius: 16px;
-  padding: 18px;
-  display: none;
-  font-size: 14px;
-  line-height: 1.9;
-}
-.act-result.profit {
-  background: rgba(76,175,80,0.12);
-  border: 1.5px solid rgba(76,175,80,0.4);
-}
-.act-result.loss {
-  background: rgba(239,83,80,0.12);
-  border: 1.5px solid rgba(239,83,80,0.4);
-}
-.act-result.break {
-  background: rgba(255,193,7,0.1);
-  border: 1.5px solid rgba(255,193,7,0.35);
-}
-.act-result-row {
-  display: flex;
-  justify-content: space-between;
-  padding: 5px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.07);
-  color: rgba(255,255,255,0.8);
-}
-.act-result-row:last-child { border-bottom: none; }
-.act-result-total {
-  font-size: 17px;
-  font-weight: 900;
-  padding-top: 10px;
-  margin-top: 6px;
-  border-top: 2px solid rgba(255,255,255,0.15) !important;
-}
-.act-result-msg {
-  margin-top: 12px;
-  font-size: 15px;
-  font-weight: 800;
-  text-align: center;
-  padding: 10px;
+.amir-input {
+  width: 80px;
+  padding: 9px 12px;
   border-radius: 10px;
+  border: 1.5px solid rgba(255,255,255,0.18);
+  background: rgba(0,0,0,0.35);
+  color: white;
+  font-size: 17px;
+  font-weight: 800;
+  text-align: center;
+  font-family: inherit;
+  transition: border-color 0.2s;
 }
-.profit .act-result-msg { background: rgba(76,175,80,0.15); color: #66BB6A; }
-.loss   .act-result-msg { background: rgba(239,83,80,0.15); color: #EF5350; }
-.break  .act-result-msg { background: rgba(255,193,7,0.12); color: #FFC107; }
+.amir-input:focus { outline: none; border-color: #FF7043; }
+.amir-input.correct { border-color: #66BB6A; background: rgba(76,175,80,0.12); }
+.amir-input.wrong   { border-color: #EF5350; background: rgba(239,83,80,0.1); animation: shake 0.35s; }
+.amir-unit { color: rgba(255,255,255,0.5); font-size: 14px; }
+.amir-check-btn {
+  padding: 9px 18px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg,#E64A19,#FF7043);
+  color: white;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  font-family: inherit;
+  transition: opacity 0.2s;
+}
+.amir-check-btn:hover { opacity: 0.88; }
+.amir-feedback {
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 12px;
+  border-radius: 9px;
+  margin-top: 4px;
+  display: none;
+  line-height: 1.5;
+}
+.amir-feedback.ok   { background: rgba(76,175,80,0.15);  color: #66BB6A; display: block; }
+.amir-feedback.err  { background: rgba(239,83,80,0.12);  color: #EF5350; display: block; }
+.amir-formula {
+  font-size: 13px;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 8px;
+}
+.amir-summary-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+.amir-summary-table td {
+  padding: 9px 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  color: rgba(255,255,255,0.82);
+}
+.amir-summary-table td:last-child { text-align: left; font-weight: 800; }
+.amir-summary-total td {
+  font-size: 16px;
+  font-weight: 900;
+  color: white;
+  border-top: 2px solid rgba(255,255,255,0.15);
+  padding-top: 12px;
+}
+.amir-improve-wrap textarea {
+  width: 100%;
+  background: rgba(0,0,0,0.3);
+  border: 1.5px solid rgba(255,255,255,0.15);
+  border-radius: 10px;
+  color: white;
+  font-family: inherit;
+  font-size: 14px;
+  padding: 12px;
+  resize: vertical;
+  min-height: 70px;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+}
+.amir-improve-wrap textarea:focus { outline: none; border-color: #FF7043; }
+.amir-final-result {
+  border-radius: 14px;
+  padding: 18px;
+  text-align: center;
+  display: none;
+  margin-top: 10px;
+}
+.amir-final-result.profit { background: rgba(76,175,80,0.12); border: 1.5px solid rgba(76,175,80,0.35); }
+.amir-final-result.loss   { background: rgba(239,83,80,0.12); border: 1.5px solid rgba(239,83,80,0.35); }
+@keyframes shake {
+  0%,100%{transform:translateX(0)} 25%{transform:translateX(-6px)} 75%{transform:translateX(6px)}
+}
 
 </style>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
@@ -2847,30 +2838,8 @@ const UNITS = {
         concept: {
           text: '💡 التكلفة الحقيقية = مواد + وقت العمل:\n🔸 كل ساعة عمل لها قيمة — حتى لو لم تدفع لأحد\n🔸 أمير عمل 3 ساعات × 10 ₪/ساعة = 30 ₪ قيمة وقته\n🔸 التكلفة الحقيقية: 27 ₪ مواد + 30 ₪ وقت = 57 ₪\n🔸 هو جمع 40 ₪ فقط — خسر 17 ₪ دون أن يعلم!\n🔸 القاعدة: السعر الصحيح = التكلفة الكاملة ÷ عدد الكؤوس + هامش ربح'
         },
-        activity: {
-          type: 'amir',
-          title: '🥤 دكان أمير — ساعده يختار السعر الصحيح!',
-          task: 'أمير عمل 3 ساعات وباع 20 كوب. إليك كل التكاليف الحقيقية. أنت تقرر: بكم يجب أن يبيع الكوب حتى لا يخسر — وحتى يربح فعلاً؟',
-          cups: 20,
-          costs: [
-            { icon: '🍋', label: 'ليمون + سكر + نعنع', desc: 'تكفي 20 كوب', amount: 20.0 },
-            { icon: '🥤', label: 'كؤوس بلاستيكية',     desc: '20 كوب',       amount: 7.0  },
-            { icon: '⏱️', label: 'وقت العمل',           desc: '3 ساعات × 10 ₪/ساعة', amount: 30.0 },
-          ],
-          priceOptions: [1, 2, 3, 3.5, 4, 5, 6],
-          amirPrice: 2,
-        },
+        activity: { type: 'amir_steps' },
 
-        id: 'g5_l15', title: 'فكرة المشروع الصغير',
-        sub: 'من الفكرة إلى المشروع الحقيقي',
-        bg: '💡', bgColor: 'linear-gradient(140deg,#F4511E,#FF5722)',
-        goal: 'تتعلم كيف تحول فكرة إلى مشروع صغير قابل للتنفيذ.',
-        story: {
-          text: 'قرر أسامة وثلاثة أصدقاء فتح «محل طباعة» صغير في المدرسة. يطبعون للطلاب ورقة المشاريع بـ1 ₪.\n\nبدأوا بالأسئلة الصح: من سيشتري؟ (طلاب المدرسة). ماذا يحتاجون؟ (طباعة وورق). كم نفقات بداية؟ (حبر 15 ₪، ورق 10 ₪). كم نربح لكل ورقة؟ (1 - 0.3 = 0.7 ₪).\n\nبعد شهر طبعوا 200 ورقة. الربح 140 ₪ — قسموها بالتساوي. قال أسامة: «العمل الجماعي يضاعف النتائج!»'
-        },
-        concept: {
-          text: '💡 عناصر المشروع الناجح:\n1️⃣ الفكرة: ما المشكلة التي تحلها؟\n2️⃣ الزبائن: من سيشتري؟\n3️⃣ التكلفة: كم تحتاج للبدء؟\n4️⃣ السعر: كم ستبيع؟\n5️⃣ الربح: هل يستحق؟\n🔸 ابدأ صغيراً ثم كبّر إذا نجح!'
-        },
         quiz: {
           q: '💡 تكلفة بدء مشروع لبيع عصير 30 ₪. ربح كل كوب 2 ₪. كم كوباً تحتاج لاسترداد تكلفة البداية؟',
           choices: [
@@ -3540,156 +3509,287 @@ function souqCalculate(wph) {
 
 
 
+
 // ============================================
-// نشاط تفاعلي — دكان أمير
+// نشاط أمير — 5 خطوات تفاعلية
 // ============================================
 
-var _actPrice = 0;
+// حالة النشاط
+var _amir = {
+  s1done: false, s2done: false, s3done: false, s4done: false,
+  expenses: 60,   // مجموع المصاريف
+  cups: 20,
+  hoursWorked: 3.5,
+  wagePerHour: 20,
+  laborCost: 70,    // 3.5 × 20
+  totalCost: 130,   // 60 + 70
+  sellPrice: 6,
+  revenue: 120,     // 20 × 6
+  profit: -10       // 120 - 130
+};
 
 function buildActivity(act, lessonId) {
   if (!act) return '';
-  if (act.type === 'amir') return buildAmirActivity(act, lessonId);
-  if (act.type === 'pricing') return buildPricingActivity(act, lessonId);
+  if (act.type === 'amir_steps') return buildAmirSteps(lessonId);
   return '';
 }
 
-function buildAmirActivity(act, lessonId) {
-  var totalCost = act.costs.reduce(function(s,c){ return s+c.amount; }, 0);
-  var costPerCup = totalCost / act.cups;
+function buildAmirSteps(lid) {
+  return '<div class="amir-wrap" id="amir-' + lid + '">' +
 
-  var costRows = act.costs.map(function(c) {
-    return '<tr>' +
-      '<td><span style="font-size:20px;margin-left:8px">' + c.icon + '</span>' + c.label + '</td>' +
-      '<td style="color:rgba(255,255,255,0.5);font-size:13px">' + c.desc + '</td>' +
-      '<td style="font-weight:800;color:#FFB300;text-align:left">' + c.amount.toFixed(0) + ' \u20AA</td>' +
-    '</tr>';
-  }).join('');
+  // Header
+  '<div class="amir-header">' +
+    '<div class="amir-header-icon">🥤</div>' +
+    '<div class="amir-header-text">' +
+      '<h3>مهمة يزم: "هل عسل أمير مربح؟"</h3>' +
+      '<p>أنت المستشار المالي لأمير — ساعده يكتشف الحقيقة خطوة بخطوة</p>' +
+    '</div>' +
+  '</div>' +
 
-  var priceButtons = act.priceOptions.map(function(p) {
-    var label = p + ' \u20AA';
-    var hint = '';
-    if (p === act.amirPrice) hint = '<div style="font-size:10px;color:#EF5350;margin-top:2px">اختيار أمير</div>';
-    return '<button class="act-price-btn" onclick="actAmirSelect(' + p + ', ' + totalCost + ', ' + act.cups + ', \'' + lessonId + '\', this)">' +
-      label + hint +
-    '</button>';
-  }).join('');
+  '<div class="amir-body">' +
 
-  return '<div class="act-wrap" id="act-' + lessonId + '">' +
-
-    '<div class="act-header"><span class="act-tag">\uD83C\uDFAE نشاط تفاعلي</span></div>' +
-    '<div class="act-title">' + act.title + '</div>' +
-    '<div class="act-task-box">' + act.task + '</div>' +
-
-    '<div style="font-size:13px;font-weight:800;color:rgba(255,255,255,0.5);margin-bottom:8px">\uD83D\uDCCB التكاليف الحقيقية لـ' + act.cups + ' كوب</div>' +
-    '<table class="act-cost-table">' +
-      '<thead><tr>' +
-        '<th>عنصر التكلفة</th><th>التفاصيل</th><th style="text-align:left">المبلغ</th>' +
-      '</tr></thead>' +
-      '<tbody>' + costRows + '</tbody>' +
+  // الخطوة 1
+  '<div class="amir-step active" id="amir-step1">' +
+    '<div class="amir-step-title"><span class="amir-step-num">1</span>احسب تكاليف المصاريف</div>' +
+    '<table class="amir-data-table">' +
+      '<tr><td>🍋 ليمون وسكر ونعنع</td><td>40 ₪</td></tr>' +
+      '<tr><td>🥤 كوسة (20 كوب)</td><td>10 ₪</td></tr>' +
+      '<tr><td>🧊 ثلج وأدوات</td><td>10 ₪</td></tr>' +
     '</table>' +
-
-    '<div class="act-cost-total">' +
-      '<span>\uD83D\uDCB0 إجمالي التكلفة الحقيقية</span>' +
-      '<span>' + totalCost.toFixed(0) + ' \u20AA</span>' +
+    '<div class="amir-question">السؤال 1: كم تكلفت كل المصاريف معاً؟</div>' +
+    '<div class="amir-input-row">' +
+      '<input class="amir-input" id="a1q1" type="number" placeholder="؟" min="0" max="999">' +
+      '<span class="amir-unit">₪</span>' +
+      '<button class="amir-check-btn" onclick="amirCheck1()">تحقق ✓</button>' +
     '</div>' +
-    '<div style="background:rgba(255,255,255,0.05);border-radius:10px;padding:10px 14px;margin-bottom:18px;font-size:13px;color:rgba(255,255,255,0.65)">' +
-      'التكلفة لكل كوب: ' + totalCost.toFixed(0) + ' \u00F7 ' + act.cups + ' = <strong style="color:#FFB300">' + costPerCup.toFixed(2) + ' \u20AA للكوب</strong>' +
+    '<div class="amir-feedback" id="a1q1-fb"></div>' +
+    '<div id="a1-q2-wrap" style="display:none;margin-top:14px">' +
+      '<div class="amir-question">السؤال 2: إذا المصاريف تكفي لـ20 كوب، كم تكلف كوب واحد؟<br><span style="color:rgba(255,255,255,0.4);font-size:12px">المصاريف ÷ 20 = ؟</span></div>' +
+      '<div class="amir-input-row">' +
+        '<input class="amir-input" id="a1q2" type="number" placeholder="؟" step="0.1" min="0" max="99">' +
+        '<span class="amir-unit">₪ / كوب</span>' +
+        '<button class="amir-check-btn" onclick="amirCheck1b()">تحقق ✓</button>' +
+      '</div>' +
+      '<div class="amir-feedback" id="a1q2-fb"></div>' +
     '</div>' +
+  '</div>' +
 
-    '<div class="act-price-section">' +
-      '<div class="act-price-label">\uD83C\uDFF7\uFE0F اختر سعر البيع للكوب الواحد:</div>' +
-      '<div class="act-price-options">' + priceButtons + '</div>' +
+  // الخطوة 2
+  '<div class="amir-step locked" id="amir-step2">' +
+    '<div class="amir-step-title"><span class="amir-step-num">2</span>الوقت له قيمة!</div>' +
+    '<table class="amir-data-table">' +
+      '<tr><td>⏱️ تحضير المصاريف</td><td>ساعة واحدة</td></tr>' +
+      '<tr><td>🏪 الوقوف عند الدكان</td><td>ساعتان</td></tr>' +
+      '<tr><td>🧹 تنظيف وترتيب</td><td>نصف ساعة</td></tr>' +
+    '</table>' +
+    '<div class="amir-question">السؤال 3: لو عمل أمير في البستان عند الجار، كان يكسب 20 ₪/ساعة. كم خسر بعمله في الدكان 3.5 ساعات؟<br><span style="color:rgba(255,255,255,0.4);font-size:12px">3.5 × 20 = ؟</span></div>' +
+    '<div class="amir-input-row">' +
+      '<input class="amir-input" id="a2q1" type="number" placeholder="؟" min="0" max="999">' +
+      '<span class="amir-unit">₪</span>' +
+      '<button class="amir-check-btn" onclick="amirCheck2()">تحقق ✓</button>' +
     '</div>' +
+    '<div class="amir-feedback" id="a2q1-fb"></div>' +
+  '</div>' +
 
-    '<div class="act-result" id="act-result-' + lessonId + '"></div>' +
-  '</div>';
+  // الخطوة 3
+  '<div class="amir-step locked" id="amir-step3">' +
+    '<div class="amir-step-title"><span class="amir-step-num">3</span>التسعير والمبيعات</div>' +
+    '<div style="background:rgba(255,112,67,0.1);border-radius:10px;padding:12px 14px;margin-bottom:14px;font-size:14px;color:rgba(255,255,255,0.85);line-height:1.7">' +
+      '🎯 أمير قرر أن يبيع كل كوب بـ<strong style="color:#FF7043">6 ₪</strong> وباع جميع الـ20 كوباً.' +
+    '</div>' +
+    '<div class="amir-question">السؤال 4: كم جمع أمير في نهاية اليوم؟<br><span style="color:rgba(255,255,255,0.4);font-size:12px">20 كوب × 6 ₪ = ؟</span></div>' +
+    '<div class="amir-input-row">' +
+      '<input class="amir-input" id="a3q1" type="number" placeholder="؟" min="0" max="9999">' +
+      '<span class="amir-unit">₪</span>' +
+      '<button class="amir-check-btn" onclick="amirCheck3()">تحقق ✓</button>' +
+    '</div>' +
+    '<div class="amir-feedback" id="a3q1-fb"></div>' +
+  '</div>' +
+
+  // الخطوة 4
+  '<div class="amir-step locked" id="amir-step4">' +
+    '<div class="amir-step-title"><span class="amir-step-num">4</span>الحقيقة الكاملة — هل ربح أمير؟</div>' +
+    '<div class="amir-formula">الربح الحقيقي = الإيرادات − المصاريف − شكر العمل</div>' +
+    '<table class="amir-summary-table">' +
+      '<tr><td>💰 الإيرادات (كل ما جمعه)</td><td id="s4-rev" style="color:#66BB6A">— ₪</td></tr>' +
+      '<tr><td>🍋 ناقص: تكلفة المصاريف</td><td style="color:#EF5350">- 60 ₪</td></tr>' +
+      '<tr><td>⏱️ ناقص: شكر العمل</td><td id="s4-labor" style="color:#EF5350">— ₪</td></tr>' +
+      '<tr class="amir-summary-total"><td>الربح (أو الخسارة) الحقيقية</td><td id="s4-result">= ؟ ₪</td></tr>' +
+    '</table>' +
+    '<div class="amir-question">السؤال 5: احسب الربح أو الخسارة الحقيقية لأمير:</div>' +
+    '<div class="amir-input-row">' +
+      '<input class="amir-input" id="a4q1" type="number" placeholder="؟" min="-999" max="999">' +
+      '<span class="amir-unit">₪</span>' +
+      '<button class="amir-check-btn" onclick="amirCheck4()">تحقق ✓</button>' +
+    '</div>' +
+    '<div class="amir-feedback" id="a4q1-fb"></div>' +
+    '<div class="amir-final-result" id="amir-final"></div>' +
+  '</div>' +
+
+  // الخطوة 5
+  '<div class="amir-step locked" id="amir-step5">' +
+    '<div class="amir-step-title"><span class="amir-step-num">5</span>🧠 أنت المستشار — كيف تحسّن العسل؟</div>' +
+    '<div style="font-size:14px;color:rgba(255,255,255,0.75);margin-bottom:14px;line-height:1.7">' +
+      'أمير عمل بجد وخسر بدون ما يدري! اقترح له <strong>طريقتين</strong> لتحسين العسل في الجمعة القادمة:' +
+    '</div>' +
+    '<div class="amir-improve-wrap">' +
+      '<textarea id="a5-idea1" placeholder="الفكرة الأولى: مثلاً — أرفع السعر..."></textarea>' +
+      '<textarea id="a5-idea2" placeholder="الفكرة الثانية: مثلاً — أصنع أكثر كوسات..."></textarea>' +
+      '<button class="amir-check-btn" style="width:100%;padding:13px" onclick="amirFinish()">أرسل أفكاري! 💡</button>' +
+    '</div>' +
+    '<div class="amir-feedback" id="a5-fb"></div>' +
+  '</div>' +
+
+  '</div></div>'; // end amir-body + amir-wrap
 }
 
-function actAmirSelect(price, totalCost, cups, lessonId, btn) {
-  document.querySelectorAll('#act-' + lessonId + ' .act-price-btn').forEach(function(b){ b.classList.remove('sel'); });
-  btn.classList.add('sel');
-  _actPrice = price;
+// === دوال التحقق ===
 
-  var totalRevenue = price * cups;
-  var profit = totalRevenue - totalCost;
-  var costPerCup = totalCost / cups;
-  var resultEl = document.getElementById('act-result-' + lessonId);
-  if (!resultEl) return;
-
-  var cls, icon, msg, msgColor;
-  if (profit > 0) {
-    cls = 'profit'; icon = '\uD83C\uDF89';
-    msgColor = '#66BB6A';
-    var margin = ((profit / totalCost) * 100).toFixed(0);
-    if (price < costPerCup * 1.3) msg = 'ربحت! لكن الهامش ضعيف — ' + margin + '% فقط. ارفع السعر أكثر.';
-    else msg = 'ممتاز! هامش ربح ' + margin + '% — هذا تسعير محترف!';
-  } else if (profit === 0) {
-    cls = 'break'; icon = '\u2696\uFE0F'; msgColor = '#FFC107';
-    msg = 'نقطة التعادل — عملت ساعات ولم تربح ولا شيء. ارفع السعر!';
+function amirCheck1() {
+  var val = parseFloat(document.getElementById('a1q1').value);
+  var input = document.getElementById('a1q1');
+  var fb = document.getElementById('a1q1-fb');
+  if (val === 60) {
+    input.classList.add('correct');
+    fb.className = 'amir-feedback ok';
+    fb.textContent = '✅ صح! 40 + 10 + 10 = 60 ₪ مجموع المصاريف.';
+    document.getElementById('a1-q2-wrap').style.display = 'block';
+    document.getElementById('a1-q2-wrap').scrollIntoView({ behavior:'smooth', block:'nearest' });
   } else {
-    cls = 'loss'; icon = '\u26A0\uFE0F'; msgColor = '#EF5350';
-    msg = 'هذا اختيار أمير الأول! عمل 3 ساعات وخسر ' + Math.abs(profit).toFixed(0) + ' \u20AA. السعر الأدنى للتعادل: ' + costPerCup.toFixed(1) + ' \u20AA/كوب.';
+    input.classList.add('wrong');
+    fb.className = 'amir-feedback err';
+    fb.textContent = '❌ حاول مرة ثانية — اجمع كل المبالغ الثلاثة معاً.';
+    setTimeout(function(){ input.classList.remove('wrong'); }, 600);
   }
-
-  resultEl.className = 'act-result ' + cls;
-  resultEl.style.display = 'block';
-  resultEl.innerHTML =
-    '<div class="act-result-row"><span>الإيرادات (' + cups + ' كوب × ' + price + ' \u20AA)</span><span>' + totalRevenue.toFixed(0) + ' \u20AA</span></div>' +
-    '<div class="act-result-row"><span>إجمالي التكاليف (مواد + وقت)</span><span style="color:#EF5350">- ' + totalCost.toFixed(0) + ' \u20AA</span></div>' +
-    '<div class="act-result-row act-result-total">' +
-      '<span>' + (profit >= 0 ? '\u2705 الربح الصافي' : '\u274C الخسارة') + '</span>' +
-      '<span style="color:' + msgColor + ';font-size:18px">' +
-        (profit >= 0 ? '+' : '') + profit.toFixed(0) + ' \u20AA' +
-      '</span>' +
-    '</div>' +
-    '<div class="act-result-msg" style="background:rgba(255,255,255,0.07);color:' + msgColor + '">' + icon + ' ' + msg + '</div>';
-
-  resultEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
 
-function buildPricingActivity(act, lessonId) {
-  var total = act.costs.reduce(function(s,c){ return s+c.amount; }, 0);
-  var rows = act.costs.map(function(c){
-    return '<tr><td><span style="font-size:18px;margin-left:6px">' + c.icon + '</span>' + c.label + '</td>' +
-      '<td style="color:rgba(255,255,255,0.5);font-size:13px">' + c.desc + '</td>' +
-      '<td style="font-weight:800;color:#FFB300;text-align:left">' + c.amount.toFixed(1) + ' \u20AA</td></tr>';
-  }).join('');
-  var opts = act.priceOptions.map(function(p){
-    return '<button class="act-price-btn" onclick="actSelectPrice(' + p + ', ' + total + ', \'' + lessonId + '\', this)">' + p + ' \u20AA</button>';
-  }).join('');
-  return '<div class="act-wrap" id="act-' + lessonId + '">' +
-    '<div class="act-header"><span class="act-tag">\uD83C\uDFAE نشاط تفاعلي</span></div>' +
-    '<div class="act-title">' + act.title + '</div>' +
-    '<div class="act-task-box">' + act.task + '</div>' +
-    '<table class="act-cost-table"><thead><tr><th>عنصر</th><th>التفاصيل</th><th style="text-align:left">المبلغ</th></tr></thead><tbody>' + rows + '</tbody></table>' +
-    '<div class="act-cost-total"><span>إجمالي التكلفة</span><span>' + total.toFixed(1) + ' \u20AA</span></div>' +
-    '<div class="act-price-section"><div class="act-price-label">اختر سعر البيع:</div>' +
-    '<div class="act-price-options">' + opts + '</div></div>' +
-    '<div class="act-result" id="act-result-' + lessonId + '"></div></div>';
+function amirCheck1b() {
+  var val = parseFloat(document.getElementById('a1q2').value);
+  var input = document.getElementById('a1q2');
+  var fb = document.getElementById('a1q2-fb');
+  if (val === 3) {
+    input.classList.add('correct');
+    fb.className = 'amir-feedback ok';
+    fb.textContent = '✅ ممتاز! 60 ÷ 20 = 3 ₪ تكلفة المصاريف لكل كوب.';
+    _amir.s1done = true;
+    document.getElementById('amir-step1').classList.add('done');
+    document.getElementById('amir-step1').classList.remove('active');
+    amirUnlock('amir-step2');
+  } else {
+    input.classList.add('wrong');
+    fb.className = 'amir-feedback err';
+    fb.textContent = '❌ اقسم مجموع المصاريف (60) على عدد الكوسات (20).';
+    setTimeout(function(){ input.classList.remove('wrong'); }, 600);
+  }
 }
 
-function actSelectPrice(price, totalCost, lessonId, btn) {
-  document.querySelectorAll('#act-' + lessonId + ' .act-price-btn').forEach(function(b){ b.classList.remove('sel'); });
-  btn.classList.add('sel');
-  var profit = price - totalCost;
-  var margin = totalCost > 0 ? ((profit/totalCost)*100).toFixed(0) : 0;
-  var resultEl = document.getElementById('act-result-' + lessonId);
-  if (!resultEl) return;
-  var cls = profit > 0 ? 'profit' : profit < 0 ? 'loss' : 'break';
-  var msgColor = profit > 0 ? '#66BB6A' : profit < 0 ? '#EF5350' : '#FFC107';
-  var msg = profit > 0 ? '\uD83C\uDF89 ربحت ' + profit.toFixed(1) + ' \u20AA (هامش ' + margin + '%)' :
-            profit < 0 ? '\u26A0\uFE0F خسارة! ارفع السعر لـ' + (totalCost+1).toFixed(0) + ' \u20AA على الأقل' :
-            '\u2696\uFE0F نقطة التعادل — لم تربح شيئاً';
-  resultEl.className = 'act-result ' + cls;
-  resultEl.style.display = 'block';
-  resultEl.innerHTML =
-    '<div class="act-result-row"><span>سعر البيع</span><span>' + price.toFixed(1) + ' \u20AA</span></div>' +
-    '<div class="act-result-row"><span>التكلفة الكاملة</span><span style="color:#EF5350">- ' + totalCost.toFixed(1) + ' \u20AA</span></div>' +
-    '<div class="act-result-row act-result-total"><span>' + (profit>=0?'\u2705 الربح':'\u274C الخسارة') + '</span>' +
-    '<span style="color:' + msgColor + ';font-size:18px">' + (profit>=0?'+':'') + profit.toFixed(1) + ' \u20AA</span></div>' +
-    '<div class="act-result-msg" style="background:rgba(255,255,255,0.07);color:' + msgColor + '">' + msg + '</div>';
-  resultEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+function amirCheck2() {
+  var val = parseFloat(document.getElementById('a2q1').value);
+  var input = document.getElementById('a2q1');
+  var fb = document.getElementById('a2q1-fb');
+  if (val === 70) {
+    input.classList.add('correct');
+    fb.className = 'amir-feedback ok';
+    fb.textContent = '✅ صح! 3.5 × 20 = 70 ₪ قيمة وقت أمير. هذا المبلغ "الخفي" الذي لم يحسبه!';
+    _amir.s2done = true;
+    document.getElementById('amir-step2').classList.add('done');
+    document.getElementById('amir-step2').classList.remove('active');
+    amirUnlock('amir-step3');
+  } else {
+    input.classList.add('wrong');
+    fb.className = 'amir-feedback err';
+    fb.textContent = '❌ اضرب 3.5 ساعات × 20 ₪ في الساعة.';
+    setTimeout(function(){ input.classList.remove('wrong'); }, 600);
+  }
 }
+
+function amirCheck3() {
+  var val = parseFloat(document.getElementById('a3q1').value);
+  var input = document.getElementById('a3q1');
+  var fb = document.getElementById('a3q1-fb');
+  if (val === 120) {
+    input.classList.add('correct');
+    fb.className = 'amir-feedback ok';
+    fb.textContent = '✅ صح! 20 × 6 = 120 ₪ جمعها أمير. ظن أنه ربح 60 ₪ (120 - 60)... لكن هل نسي شيئاً؟ 🤔';
+    _amir.s3done = true;
+    document.getElementById('amir-step3').classList.add('done');
+    document.getElementById('amir-step3').classList.remove('active');
+    // تحديث جدول ملخص
+    document.getElementById('s4-rev').textContent = '120 ₪';
+    document.getElementById('s4-labor').textContent = '- 70 ₪';
+    document.getElementById('s4-result').textContent = '= ؟ ₪';
+    amirUnlock('amir-step4');
+  } else {
+    input.classList.add('wrong');
+    fb.className = 'amir-feedback err';
+    fb.textContent = '❌ اضرب عدد الكوسات المبيعة (20) × السعر (6 ₪).';
+    setTimeout(function(){ input.classList.remove('wrong'); }, 600);
+  }
+}
+
+function amirCheck4() {
+  var val = parseFloat(document.getElementById('a4q1').value);
+  var input = document.getElementById('a4q1');
+  var fb = document.getElementById('a4q1-fb');
+  // 120 - 60 - 70 = -10
+  if (val === -10) {
+    input.classList.add('correct');
+    fb.className = 'amir-feedback ok';
+    fb.textContent = '✅ 120 - 60 - 70 = -10 ₪. أمير خسر 10 ₪ دون أن يعرف!';
+    document.getElementById('s4-result').textContent = '= -10 ₪';
+    document.getElementById('s4-result').style.color = '#EF5350';
+    var finalEl = document.getElementById('amir-final');
+    finalEl.className = 'amir-final-result loss';
+    finalEl.style.display = 'block';
+    finalEl.innerHTML = '<div style="font-size:28px;margin-bottom:8px">😲</div>' +
+      '<div style="font-size:17px;font-weight:900;color:#EF5350;margin-bottom:8px">أمير خسر 10 ₪ !</div>' +
+      '<div style="font-size:14px;color:rgba(255,255,255,0.75);line-height:1.8">' +
+        'فكّر ظن أنه ربح 60 ₪ (120 - 60) — لكن نسي قيمة وقته 70 ₪.<br>' +
+        'لو باع الكوس بـ<strong style="color:#66BB6A">6.5 ₪</strong> فقط كان وصل لنقطة التعادل.<br>' +
+        'لو باع بـ<strong style="color:#66BB6A">8 ₪</strong> كان ربح <strong style="color:#66BB6A">30 ₪</strong> صافي.' +
+      '</div>';
+    _amir.s4done = true;
+    document.getElementById('amir-step4').classList.add('done');
+    document.getElementById('amir-step4').classList.remove('active');
+    amirUnlock('amir-step5');
+    finalEl.scrollIntoView({ behavior:'smooth', block:'center' });
+  } else {
+    input.classList.add('wrong');
+    fb.className = 'amir-feedback err';
+    var hint = val > 0 ? '❌ الجواب سالب! الإيرادات أقل من التكاليف الكاملة.' :
+               '❌ احسب: 120 (إيرادات) - 60 (مصاريف) - 70 (شكر العمل) = ؟';
+    fb.textContent = hint;
+    setTimeout(function(){ input.classList.remove('wrong'); }, 600);
+  }
+}
+
+function amirFinish() {
+  var i1 = document.getElementById('a5-idea1').value.trim();
+  var i2 = document.getElementById('a5-idea2').value.trim();
+  var fb = document.getElementById('a5-fb');
+  if (i1.length < 5 || i2.length < 5) {
+    fb.className = 'amir-feedback err';
+    fb.textContent = '❌ اكتب فكرتين كاملتين على الأقل!';
+    return;
+  }
+  fb.className = 'amir-feedback ok';
+  fb.innerHTML = '🎓 <strong>ممتاز! أنت مستشار مالي حقيقي!</strong><br>' +
+    'تذكر القاعدة الذهبية: <strong>السعر الصحيح = تكلفة المواد + تكلفة العمل + هامش ربح</strong><br>' +
+    'الآن انتقل للسؤال التالي! ✅';
+  document.getElementById('amir-step5').classList.add('done');
+  document.getElementById('amir-step5').classList.remove('active');
+  fb.scrollIntoView({ behavior:'smooth', block:'center' });
+}
+
+function amirUnlock(stepId) {
+  var el = document.getElementById(stepId);
+  if (el) {
+    el.classList.remove('locked');
+    el.classList.add('active');
+    setTimeout(function(){ el.scrollIntoView({ behavior:'smooth', block:'nearest' }); }, 200);
+  }
+}
+
 
 function closeLesson() {
   document.getElementById('lesson-detail').classList.remove('open');
