@@ -2563,8 +2563,8 @@ const UNITS = {
           q: '🤔 ارتفع سعر الفلافل من 10 ₪ إلى 12 ₪ خلال سنتين. ماذا يعني هذا؟',
           choices: [
             { text: 'الفلافل أصبحت أحسن جودة', ok: false, fb: 'ليس بالضرورة! ارتفاع السعر لا يعني دائماً تحسن الجودة. هذا يسمى تضخماً.' },
-            { text: 'قيمة المال الشرائية انخفضت — نفس الـ10 ₪ تشتري أقل', ok: true, fb: '🎉 ممتاز! هذا هو التضخم — نفس المبلغ يشتري أقل مع الوقت. لهذا المال يحتاج أن «يعمل» ويكبر.' },
-            { text: 'يجب التوقف عن أكل الفلافل', ok: false, fb: 'هذا ليس الحل! الأفضل أن نفهم التضخم ونخطط له بدل أن نتجنب الطعام.' }
+            { text: 'يجب التوقف عن أكل الفلافل', ok: false, fb: 'هذا ليس الحل! الأفضل أن نفهم التضخم ونخطط له بدل أن نتجنب الطعام.' },
+            { text: 'قيمة المال الشرائية انخفضت — نفس الـ10 ₪ تشتري أقل', ok: true, fb: '🎉 ممتاز! هذا هو التضخم — نفس المبلغ يشتري أقل مع الوقت. لهذا المال يحتاج أن «يعمل» ويكبر.' }
           ]
         }
       },
@@ -2583,8 +2583,8 @@ const UNITS = {
           q: '📊 راتب أبو أسامة 8000 ₪. ارتفعت الأسعار 10% هذا العام لكن راتبه ارتفع 5% فقط. كيف تأثرت قدرته الشرائية؟',
           choices: [
             { text: 'تحسنت لأن راتبه ارتفع', ok: false, fb: 'الراتب ارتفع لكن الأسعار ارتفعت أكثر! 10% > 5%، فالقدرة الشرائية انخفضت فعلاً.' },
-            { text: 'انخفضت لأن الأسعار ارتفعت أكثر من الراتب', ok: true, fb: '🎉 صح! الأسعار ارتفعت 10% والراتب 5% فقط — يعني كل 100 ₪ تشتري الآن أقل مما كانت تشتريه قبل.' },
-            { text: 'لم تتغير لأن كلاهما ارتفع', ok: false, fb: 'المهم ليس أن يرتفع الراتب، بل أن يرتفع بنفس نسبة الأسعار أو أكثر. هنا الأسعار فازت!' }
+            { text: 'لم تتغير لأن كلاهما ارتفع', ok: false, fb: 'المهم ليس أن يرتفع الراتب، بل أن يرتفع بنفس نسبة الأسعار أو أكثر. هنا الأسعار فازت!' },
+            { text: 'انخفضت لأن الأسعار ارتفعت أكثر من الراتب', ok: true, fb: '🎉 صح! الأسعار ارتفعت 10% والراتب 5% فقط — يعني كل 100 ₪ تشتري الآن أقل مما كانت تشتريه قبل.' }
           ]
         }
       },
@@ -2602,8 +2602,8 @@ const UNITS = {
         quiz: {
           q: '🧮 شامبو A: 250 مل بـ15 ₪. شامبو B: 400 مل بـ20 ₪. أيهما أفضل قيمة؟',
           choices: [
-            { text: 'شامبو A لأنه أرخص سعراً', ok: false, fb: 'السعر وحده لا يكفي! A يكلف 15÷250=0.06 ₪/مل. B يكلف 20÷400=0.05 ₪/مل. B أوفر!' },
             { text: 'شامبو B لأن سعره للمل أقل', ok: true, fb: '🎉 حساب ممتاز! A = 0.06 ₪/مل، B = 0.05 ₪/مل. B أوفر بـ17% رغم أن سعره الإجمالي أعلى.' },
+            { text: 'شامبو A لأنه أرخص سعراً', ok: false, fb: 'السعر وحده لا يكفي! A يكلف 15÷250=0.06 ₪/مل. B يكلف 20÷400=0.05 ₪/مل. B أوفر!' },
             { text: 'كلاهما متساوي', ok: false, fb: 'ليسا متساويين! احسب السعر على المل: A=0.06 ₪/مل، B=0.05 ₪/مل. B أوفر بوضوح.' }
           ]
         }
@@ -2648,8 +2648,8 @@ const UNITS = {
         quiz: {
           q: '📊 مصروف سامي الأسبوعي 40 ₪. ينفق: طعام 15 ₪، مواصلات 10 ₪، ترفيه 20 ₪. ما وضعه المالي؟',
           choices: [
-            { text: 'فائض لأنه يأكل ويتنقل', ok: false, fb: 'الفائض والعجز يُحسبان بالأرقام! المصروفات: 15+10+20=45 ₪، الدخل 40 ₪. عجز 5 ₪.' },
             { text: 'عجز 5 ₪ لأن مصروفاته 45 ₪ ودخله 40 ₪', ok: true, fb: '🎉 حساب دقيق! 15+10+20=45 ₪، ودخله 40 ₪. عجز 5 ₪ أسبوعياً = 20 ₪ شهرياً. يحتاج لخفض الترفيه.' },
+            { text: 'فائض لأنه يأكل ويتنقل', ok: false, fb: 'الفائض والعجز يُحسبان بالأرقام! المصروفات: 15+10+20=45 ₪، الدخل 40 ₪. عجز 5 ₪.' },
             { text: 'متوازن لأنه ينفق بحكمة', ok: false, fb: 'التوازن يعني الدخل = المصروفات، لكن هنا المصروفات 45 ₪ > الدخل 40 ₪. هذا عجز لا توازن.' }
           ]
         }
@@ -2669,8 +2669,8 @@ const UNITS = {
           q: '⚖️ ريم دخلها 60 ₪ أسبوعياً. مصروفاتها: ضرورات 35 ₪، ترفيه 30 ₪. كيف تصل للتوازن؟',
           choices: [
             { text: 'تزيد دخلها بالعمل أكثر', ok: false, fb: 'زيادة الدخل فكرة جيدة على المدى البعيد، لكن الحل الأسرع هو تقليل المصروفات. الترفيه 30 ₪ يمكن تخفيضه.' },
-            { text: 'تخفض الترفيه بمقدار 5 ₪ على الأقل', ok: true, fb: '🎉 صح! المصروفات 65 ₪ والدخل 60 ₪ — عجز 5 ₪. لو خفضت الترفيه من 30 لـ25 ₪ وصلت للتوازن أو أكثر.' },
-            { text: 'تقترض الفرق كل أسبوع', ok: false, fb: 'الاقتراض الأسبوعي يكبّر المشكلة! بعد شهر ستكون مديونة 20 ₪ وهكذا. الحل في تقليل المصروفات.' }
+            { text: 'تقترض الفرق كل أسبوع', ok: false, fb: 'الاقتراض الأسبوعي يكبّر المشكلة! بعد شهر ستكون مديونة 20 ₪ وهكذا. الحل في تقليل المصروفات.' },
+            { text: 'تخفض الترفيه بمقدار 5 ₪ على الأقل', ok: true, fb: '🎉 صح! المصروفات 65 ₪ والدخل 60 ₪ — عجز 5 ₪. لو خفضت الترفيه من 30 لـ25 ₪ وصلت للتوازن أو أكثر.' }
           ]
         }
       },
@@ -2689,8 +2689,8 @@ const UNITS = {
           q: '🤔 مصروف ياسمين 50 ₪ أسبوعياً. الحاجات 38 ₪. رأت حقيبة بـ25 ₪. ماذا تفعل؟',
           choices: [
             { text: 'تشتريها الآن فالفرصة لن تتكرر', ok: false, fb: 'الحاجات 38 ₪ + الحقيبة 25 ₪ = 63 ₪ — أكثر من مصروفها 50 ₪! الإحساس بالعجلة خدعة تسويقية.' },
-            { text: 'تحفظ الفائض (12 ₪) لأسابيع حتى تشتريها', ok: true, fb: '🎉 تفكير رائع! الفائض 50-38=12 ₪ أسبوعياً. بعد أسبوعين وزيادة تجمع 25 ₪ وتشتريها براحة.' },
-            { text: 'تتخلى عن الحقيبة نهائياً', ok: false, fb: 'ليس ضرورياً التخلي النهائي! يمكنها الادخار وشراؤها لاحقاً. التأجيل ليس تخلياً دائماً.' }
+            { text: 'تتخلى عن الحقيبة نهائياً', ok: false, fb: 'ليس ضرورياً التخلي النهائي! يمكنها الادخار وشراؤها لاحقاً. التأجيل ليس تخلياً دائماً.' },
+            { text: 'تحفظ الفائض (12 ₪) لأسابيع حتى تشتريها', ok: true, fb: '🎉 تفكير رائع! الفائض 50-38=12 ₪ أسبوعياً. بعد أسبوعين وزيادة تجمع 25 ₪ وتشتريها براحة.' }
           ]
         }
       },
@@ -2708,8 +2708,8 @@ const UNITS = {
         quiz: {
           q: '✏️ نور مصروفها 60 ₪ أسبوعياً. تريد تطبيق قاعدة 50-30-20. كم ستدخر؟',
           choices: [
-            { text: '10 ₪ (تقريباً)', ok: false, fb: '10 ₪ هي 17% تقريباً. القاعدة تقول 20% للادخار. 20% من 60 = 12 ₪.' },
             { text: '12 ₪ (20% من 60)', ok: true, fb: '🎉 حساب ممتاز! 20% × 60 = 12 ₪ ادخار. الضرورات 30 ₪ (50%)، الرغبات 18 ₪ (30%). ميزانية مثالية!' },
+            { text: '10 ₪ (تقريباً)', ok: false, fb: '10 ₪ هي 17% تقريباً. القاعدة تقول 20% للادخار. 20% من 60 = 12 ₪.' },
             { text: '30 ₪ (نصف المصروف)', ok: false, fb: '30 ₪ هي 50% — كثير جداً للادخار! القاعدة 50-30-20 تقول 20% ادخار = 12 ₪. الباقي للحاجات والرغبات.' }
           ]
         }
@@ -2755,8 +2755,8 @@ const UNITS = {
           q: '📱 لعبة مجانية على هاتفك تقول: «اشترِ 100 جوهرة بـ4 ₪ لتفتح المستوى التالي!» ماذا تفعل؟',
           choices: [
             { text: 'أشتري — 4 ₪ فقط ليست كثيرة', ok: false, fb: 'هذا بالضبط ما تريده اللعبة! «4 ₪ فقط» تتكرر 10 مرات = 40 ₪. ألعاب مجانية كثيرة تجني أكثر من الألعاب المدفوعة بهذه الطريقة.' },
-            { text: 'أتوقف وأقرر: هل هذه اللعبة تستحق فعلاً؟', ok: true, fb: '🎉 تصرف ذكي! اسأل نفسك: كم أنفقت على هذه اللعبة حتى الآن؟ كم ستنفق؟ هل هي تستحق؟ أحياناً الحل هو حذف اللعبة.' },
-            { text: 'أطلب من أهلي يدفعون', ok: false, fb: 'هذا يحل مشكلة لحظة واحدة لكن لا يحل المشكلة الأصلية. الأفضل أن تفهم الفخ وتقرر بوعي.' }
+            { text: 'أطلب من أهلي يدفعون', ok: false, fb: 'هذا يحل مشكلة لحظة واحدة لكن لا يحل المشكلة الأصلية. الأفضل أن تفهم الفخ وتقرر بوعي.' },
+            { text: 'أتوقف وأقرر: هل هذه اللعبة تستحق فعلاً؟', ok: true, fb: '🎉 تصرف ذكي! اسأل نفسك: كم أنفقت على هذه اللعبة حتى الآن؟ كم ستنفق؟ هل هي تستحق؟ أحياناً الحل هو حذف اللعبة.' }
           ]
         }
       },
@@ -2794,8 +2794,8 @@ const UNITS = {
         quiz: {
           q: '⚖️ اشترت ريم هاتفاً بـ800 ₪. بعد شهرين توقفت الشاشة عن العمل فجأة. قال المتجر: «الضمان انتهى». ماذا تفعل؟',
           choices: [
-            { text: 'تقبل الأمر وتشتري هاتفاً جديداً', ok: false, fb: 'لا! القانون الإسرائيلي يعطيها ضماناً لسنة كاملة للعيوب في التصنيع. شهران فقط مضيا — حقها محفوظ بالقانون.' },
             { text: 'تطالب بحقها القانوني — الضمان يمتد لسنة كاملة', ok: true, fb: '🎉 بالضبط! قانون حماية المستهلك الإسرائيلي يضمن سنة كاملة. إذا رفض المتجر تستطيع التقدم بشكوى לRashut Hagant Hatzarchan.' },
+            { text: 'تقبل الأمر وتشتري هاتفاً جديداً', ok: false, fb: 'لا! القانون الإسرائيلي يعطيها ضماناً لسنة كاملة للعيوب في التصنيع. شهران فقط مضيا — حقها محفوظ بالقانون.' },
             { text: 'تشتكي للمتجر بدون فاتورة', ok: false, fb: 'الفاتورة ضرورية جداً! بدونها يصعب إثبات الشراء. لهذا دائماً احتفظ بالفاتورة — هي دليلك القانوني الأساسي.' }
           ]
         }
@@ -2864,8 +2864,8 @@ const UNITS = {
           q: '👷 مبرمج يكسب 200 ₪ في الساعة. نجار ماهر يكسب 80 ₪. لماذا الفرق؟',
           choices: [
             { text: 'البرمجة أشرف من النجارة', ok: false, fb: 'كلا المهنتين لها كرامة وقيمة! الفرق في ندرة المهارة والطلب عليها — البرمجة أندر ومطلوبة جداً الآن.' },
-            { text: 'مهارة البرمجة أندر والطلب عليها أعلى حالياً', ok: true, fb: '🎉 تفكير اقتصادي ممتاز! الندرة + الطلب = السعر. مهارات البرمجة نادرة والطلب عليها كبير. النجار الماهر أيضاً يكسب جيداً لأن مهارته مطلوبة.' },
-            { text: 'المبرمج عمل أكثر سنوات', ok: false, fb: 'سنوات الخبرة عامل واحد، لكن الأهم هو الندرة والطلب. نجار بـ30 سنة خبرة قد يكسب أكثر من مبرمج مبتدئ!' }
+            { text: 'المبرمج عمل أكثر سنوات', ok: false, fb: 'سنوات الخبرة عامل واحد، لكن الأهم هو الندرة والطلب. نجار بـ30 سنة خبرة قد يكسب أكثر من مبرمج مبتدئ!' },
+            { text: 'مهارة البرمجة أندر والطلب عليها أعلى حالياً', ok: true, fb: '🎉 تفكير اقتصادي ممتاز! الندرة + الطلب = السعر. مهارات البرمجة نادرة والطلب عليها كبير. النجار الماهر أيضاً يكسب جيداً لأن مهارته مطلوبة.' }
           ]
         }
       }
@@ -2929,8 +2929,8 @@ const UNITS = {
         quiz: {
           q: '🌍 قنينة ماء بلاستيكية 2 ₪/يوم. علبة معدنية 30 ₪ مرة واحدة. بعد كم يوم تكون العلبة المعدنية أوفر؟',
           choices: [
-            { text: '10 أيام', ok: false, fb: '10 أيام × 2 ₪ = 20 ₪ — أقل من سعر العلبة المعدنية 30 ₪. نقطة التعادل: 30 ÷ 2 = 15 يوماً.' },
             { text: '15 يوماً', ok: true, fb: '🎉 حساب بيئي ومالي ممتاز! 30 ₪ ÷ 2 ₪/يوم = 15 يوم. من اليوم الـ16 توفّر 2 ₪ يومياً. في السنة توفّر 700 ₪ وتحمي البيئة!' },
+            { text: '10 أيام', ok: false, fb: '10 أيام × 2 ₪ = 20 ₪ — أقل من سعر العلبة المعدنية 30 ₪. نقطة التعادل: 30 ÷ 2 = 15 يوماً.' },
             { text: '30 يوماً', ok: false, fb: 'نقطة التعادل = سعر العلبة المعدنية ÷ تكلفة القنينة اليومية = 30 ÷ 2 = 15 يوماً، لا 30.' }
           ]
         }
@@ -2949,8 +2949,8 @@ const UNITS = {
         quiz: {
           q: '🌟 هدف [اسم_الطالب]: توفير 150 ₪ خلال شهر. يوفر 8 ₪ أسبوعياً. هل يحقق هدفه؟',
           choices: [
-            { text: 'نعم، بسهولة', ok: false, fb: '4 أسابيع × 8 ₪ = 32 ₪ فقط! هذا أقل بكثير من 150 ₪. الخطة تحتاج تعديلاً — إما زيادة التوفير أو تمديد الوقت.' },
             { text: 'لا، يحتاج لتوفير 37.5 ₪ أسبوعياً لتحقيق الهدف', ok: true, fb: '🎉 تفكير دقيق! 150 ÷ 4 أسابيع = 37.5 ₪/أسبوع. 8 ₪ لا تكفي. يحتاج إما زيادة التوفير أو تمديد الوقت لـ19 أسبوعاً.' },
+            { text: 'نعم، بسهولة', ok: false, fb: '4 أسابيع × 8 ₪ = 32 ₪ فقط! هذا أقل بكثير من 150 ₪. الخطة تحتاج تعديلاً — إما زيادة التوفير أو تمديد الوقت.' },
             { text: 'نعم، إذا عمل في الإجازة', ok: false, fb: 'العمل فكرة جيدة! لكن السؤال عن 8 ₪ أسبوعياً فقط — 4×8=32 ₪ في شهر. يحتاج 150 ₪ يعني يحتاج 37.5 ₪/أسبوع.' }
           ]
         }
@@ -3517,15 +3517,15 @@ function souqCalculate(wph) {
 // حالة النشاط
 var _amir = {
   s1done: false, s2done: false, s3done: false, s4done: false,
-  expenses: 60,   // مجموع المصاريف
+  expenses: 60,    // 40+10+10
   cups: 20,
   hoursWorked: 3.5,
   wagePerHour: 20,
-  laborCost: 70,    // 3.5 × 20
-  totalCost: 130,   // 60 + 70
+  laborCost: 70,   // 3.5 × 20
+  totalCost: 130,  // 60 + 70
   sellPrice: 6,
-  revenue: 120,     // 20 × 6
-  profit: -10       // 120 - 130
+  revenue: 120,    // 20 × 6
+  profit: -10      // 120 - 130
 };
 
 function buildActivity(act, lessonId) {
@@ -3537,26 +3537,26 @@ function buildActivity(act, lessonId) {
 function buildAmirSteps(lid) {
   return '<div class="amir-wrap" id="amir-' + lid + '">' +
 
-  // Header
   '<div class="amir-header">' +
     '<div class="amir-header-icon">🥤</div>' +
     '<div class="amir-header-text">' +
-      '<h3>مهمة اليوم: "هل عمل أمير مربح؟"</h3>' +
-      '<p>أنت المستشار المالي لأمير — ساعده يكتشف الحقيقة خطوة بخطوة</p>' +
+      '<h3>مهمة ريادة الأعمال: "مشروع أمير — هل هو مربح؟"</h3>' +
+      '<p>أنت الخبير المالي لأمير — ساعده يكتشف الحقيقة خطوة بخطوة</p>' +
     '</div>' +
   '</div>' +
 
   '<div class="amir-body">' +
 
-  // الخطوة 1
+  // ── المرحلة 1 ──
   '<div class="amir-step active" id="amir-step1">' +
-    '<div class="amir-step-title"><span class="amir-step-num">1</span>احسب تكاليف المصاريف</div>' +
+    '<div class="amir-step-title"><span class="amir-step-num">1</span>📋 المرحلة 1: حساب المصاريف</div>' +
+    '<div style="font-size:13px;color:rgba(255,255,255,0.55);margin-bottom:12px">اشترى أمير مواد تكفي لـ 20 كوباً:</div>' +
     '<table class="amir-data-table">' +
-      '<tr><td>🍋 ليمون وسكر ونعنع</td><td>40 ₪</td></tr>' +
-      '<tr><td>🥤 كأس للعصير (20 حبة)</td><td>10 ₪</td></tr>' +
-      '<tr><td>🧊 ثلج وأدوات</td><td>10 ₪</td></tr>' +
+      '<tr><td>🍋 كيس ليمون</td><td>40 ₪</td></tr>' +
+      '<tr><td>🍬 سكر ونعناع وثلج</td><td>10 ₪</td></tr>' +
+      '<tr><td>🥤 رزمة أكواب (20 كوب)</td><td>10 ₪</td></tr>' +
     '</table>' +
-    '<div class="amir-question">السؤال 1: كم تكلفت كل المصاريف معاً؟</div>' +
+    '<div class="amir-question">السؤال 1: كم كلفته كل المواد معاً؟</div>' +
     '<div class="amir-input-row">' +
       '<input class="amir-input" id="a1q1" type="number" placeholder="؟" min="0" max="999">' +
       '<span class="amir-unit">₪</span>' +
@@ -3564,7 +3564,7 @@ function buildAmirSteps(lid) {
     '</div>' +
     '<div class="amir-feedback" id="a1q1-fb"></div>' +
     '<div id="a1-q2-wrap" style="display:none;margin-top:14px">' +
-      '<div class="amir-question">السؤال 2: إذا المصاريف تكفي لـ20 كوب، كم تكلف كوب واحد؟<br><span style="color:rgba(255,255,255,0.4);font-size:12px">المصاريف ÷ 20 = ؟</span></div>' +
+      '<div class="amir-question">السؤال 2: المواد تكفي لـ20 كوباً — كم تكلف الكوب الواحد؟<br><span style="color:rgba(255,255,255,0.4);font-size:12px">المصاريف ÷ 20 = ؟</span></div>' +
       '<div class="amir-input-row">' +
         '<input class="amir-input" id="a1q2" type="number" placeholder="؟" step="0.1" min="0" max="99">' +
         '<span class="amir-unit">₪ / كوب</span>' +
@@ -3574,15 +3574,20 @@ function buildAmirSteps(lid) {
     '</div>' +
   '</div>' +
 
-  // الخطوة 2
+  // ── المرحلة 2 ──
   '<div class="amir-step locked" id="amir-step2">' +
-    '<div class="amir-step-title"><span class="amir-step-num">2</span>الوقت له قيمة!</div>' +
+    '<div class="amir-step-title"><span class="amir-step-num">2</span>🕒 المرحلة 2: الوقت يساوي ذهب!</div>' +
+    '<div style="font-size:13px;color:rgba(255,255,255,0.55);margin-bottom:12px">عمل أمير بجد كبير — دعونا نحسب كم وقتاً استثمر:</div>' +
     '<table class="amir-data-table">' +
-      '<tr><td>⏱️ تحضير المصاريف</td><td>ساعة واحدة</td></tr>' +
-      '<tr><td>🏪 الوقوف عند الدكان</td><td>ساعتان</td></tr>' +
-      '<tr><td>🧹 تنظيف وترتيب</td><td>نصف ساعة</td></tr>' +
+      '<tr><td>🍋 تحضير العصير وترتيب البسطة</td><td>ساعة واحدة</td></tr>' +
+      '<tr><td>🏪 الوقوف في البسطة والبيع</td><td>ساعتان</td></tr>' +
+      '<tr><td>🧹 التنظيف والترتيب في النهاية</td><td>نصف ساعة</td></tr>' +
+      '<tr style="background:rgba(255,193,7,0.08)"><td><strong>مجموع وقت العمل</strong></td><td><strong style="color:#FFB300">3.5 ساعات</strong></td></tr>' +
     '</table>' +
-    '<div class="amir-question">السؤال 3: لو عمل أمير في البستان عند الجار، كان يكسب 20 ₪/ساعة. كم خسر بعمله في الدكان 3.5 ساعات؟<br><span style="color:rgba(255,255,255,0.4);font-size:12px">3.5 × 20 = ؟</span></div>' +
+    '<div style="background:rgba(255,112,67,0.1);border-right:3px solid #FF7043;padding:10px 12px;border-radius:0 8px 8px 0;font-size:13px;color:rgba(255,255,255,0.8);margin-bottom:14px;line-height:1.7">' +
+      '💡 <strong>المعضلة:</strong> لو عمل أمير في مساعدة جاره في الحديقة، كان يكسب <strong>20 ₪ عن كل ساعة</strong>. إذا لم يعوّضه المشروع عن هذا المبلغ — ربما كان من الأفضل له العمل في الحديقة!' +
+    '</div>' +
+    '<div class="amir-question">السؤال 3: كم كان أمير سيربح لو عمل في الحديقة 3.5 ساعات؟<br><span style="color:rgba(255,255,255,0.4);font-size:12px">3.5 × 20 = ؟</span></div>' +
     '<div class="amir-input-row">' +
       '<input class="amir-input" id="a2q1" type="number" placeholder="؟" min="0" max="999">' +
       '<span class="amir-unit">₪</span>' +
@@ -3591,13 +3596,13 @@ function buildAmirSteps(lid) {
     '<div class="amir-feedback" id="a2q1-fb"></div>' +
   '</div>' +
 
-  // الخطوة 3
+  // ── المرحلة 3 ──
   '<div class="amir-step locked" id="amir-step3">' +
-    '<div class="amir-step-title"><span class="amir-step-num">3</span>التسعير والمبيعات</div>' +
+    '<div class="amir-step-title"><span class="amir-step-num">3</span>💰 المرحلة 3: التسعير والمبيعات</div>' +
     '<div style="background:rgba(255,112,67,0.1);border-radius:10px;padding:12px 14px;margin-bottom:14px;font-size:14px;color:rgba(255,255,255,0.85);line-height:1.7">' +
-      '🎯 أمير قرر أن يبيع كل كوب بـ<strong style="color:#FF7043">6 ₪</strong> وباع جميع الـ20 كوباً.' +
+      '🎯 قرر أمير بيع كل كوب بـ <strong style="color:#FF7043;font-size:16px">6 ₪</strong>. نجح في بيع جميع الـ20 كوباً!' +
     '</div>' +
-    '<div class="amir-question">السؤال 4: كم جمع أمير في نهاية اليوم؟<br><span style="color:rgba(255,255,255,0.4);font-size:12px">20 كوب × 6 ₪ = ؟</span></div>' +
+    '<div class="amir-question">السؤال 4: كم مبلغاً دخل إلى الصندوق في نهاية اليوم؟<br><span style="color:rgba(255,255,255,0.4);font-size:12px">20 كوب × 6 ₪ = ؟</span></div>' +
     '<div class="amir-input-row">' +
       '<input class="amir-input" id="a3q1" type="number" placeholder="؟" min="0" max="9999">' +
       '<span class="amir-unit">₪</span>' +
@@ -3606,17 +3611,17 @@ function buildAmirSteps(lid) {
     '<div class="amir-feedback" id="a3q1-fb"></div>' +
   '</div>' +
 
-  // الخطوة 4
+  // ── المرحلة 4 ──
   '<div class="amir-step locked" id="amir-step4">' +
-    '<div class="amir-step-title"><span class="amir-step-num">4</span>الحقيقة الكاملة — هل ربح أمير؟</div>' +
-    '<div class="amir-formula">الربح الحقيقي = الإيرادات − المصاريف − أجر العمل</div>' +
+    '<div class="amir-step-title"><span class="amir-step-num">4</span>📊 المرحلة 4: اختبار النتيجة الحقيقية</div>' +
+    '<div class="amir-formula">الربح الحقيقي = الإيرادات − تكلفة المواد − أجر العمل</div>' +
     '<table class="amir-summary-table">' +
-      '<tr><td>💰 الإيرادات (كل ما جمعه)</td><td id="s4-rev" style="color:#66BB6A">— ₪</td></tr>' +
-      '<tr><td>🍋 ناقص: تكلفة المصاريف</td><td style="color:#EF5350">- 60 ₪</td></tr>' +
-      '<tr><td>⏱️ ناقص: أجر العمل</td><td id="s4-labor" style="color:#EF5350">— ₪</td></tr>' +
-      '<tr class="amir-summary-total"><td>الربح (أو الخسارة) الحقيقية</td><td id="s4-result">= ؟ ₪</td></tr>' +
+      '<tr><td>💰 الإيرادات (ما جمعه من الزبائن)</td><td id="s4-rev" style="color:#66BB6A">— ₪</td></tr>' +
+      '<tr><td>🍋 ناقص: تكلفة المواد</td><td style="color:#EF5350">− 60 ₪</td></tr>' +
+      '<tr><td>⏱️ ناقص: أجر عمل أمير (تعبه)</td><td id="s4-labor" style="color:#EF5350">— ₪</td></tr>' +
+      '<tr class="amir-summary-total"><td>النتيجة النهائية: ربح أم خسارة؟</td><td id="s4-result">= ؟ ₪</td></tr>' +
     '</table>' +
-    '<div class="amir-question">السؤال 5: احسب الربح أو الخسارة الحقيقية لأمير:</div>' +
+    '<div class="amir-question">السؤال 5: احسب النتيجة النهائية — هل ربح أمير أم خسر؟<br><span style="color:rgba(255,255,255,0.4);font-size:12px">تلميح: الجواب قد يكون رقماً سالباً!</span></div>' +
     '<div class="amir-input-row">' +
       '<input class="amir-input" id="a4q1" type="number" placeholder="؟" min="-999" max="999">' +
       '<span class="amir-unit">₪</span>' +
@@ -3626,24 +3631,55 @@ function buildAmirSteps(lid) {
     '<div class="amir-final-result" id="amir-final"></div>' +
   '</div>' +
 
-  // الخطوة 5
+  // ── المرحلة 5 ──
   '<div class="amir-step locked" id="amir-step5">' +
-    '<div class="amir-step-title"><span class="amir-step-num">5</span>🧠 أنت المستشار — كيف تحسّن العمل؟</div>' +
-    '<div style="font-size:14px;color:rgba(255,255,255,0.75);margin-bottom:14px;line-height:1.7">' +
-      'أمير عمل بجد وخسر بدون ما يدري! اقترح له <strong>طريقتين</strong> لتحسين العمل في الجمعة القادمة القادمة:' +
+    '<div class="amir-step-title"><span class="amir-step-num">5</span>🧠 المرحلة 5: تفكير الريادي — كيف نحسّن؟</div>' +
+    '<div style="font-size:14px;color:rgba(255,255,255,0.8);margin-bottom:16px;line-height:1.8">' +
+      'أمير عمل بجد وخسر دون أن يعلم! الآن أنت المستشار — احسب معه <strong>3 طرق للتحسين</strong>:' +
     '</div>' +
-    '<div class="amir-improve-wrap">' +
-      '<textarea id="a5-idea1" placeholder="الفكرة الأولى: مثلاً — أرفع السعر..."></textarea>' +
-      '<textarea id="a5-idea2" placeholder="الفكرة الثانية: مثلاً — أصنع أكثر كؤوساً..."></textarea>' +
-      '<button class="amir-check-btn" style="width:100%;padding:13px" onclick="amirFinish()">أرسل أفكاري! 💡</button>' +
-    '</div>' +
-    '<div class="amir-feedback" id="a5-fb"></div>' +
-  '</div>' +
 
+    // طريقة 1 — رفع السعر
+    '<div style="background:rgba(255,255,255,0.05);border-radius:12px;padding:14px;margin-bottom:12px">' +
+      '<div style="font-size:13px;font-weight:800;color:#FFB300;margin-bottom:8px">💡 الطريقة 1: رفع السعر إلى 8 ₪</div>' +
+      '<div style="font-size:13px;color:rgba(255,255,255,0.7);margin-bottom:10px">إذا رفع أمير السعر لـ8 ₪ وباع نفس الـ20 كوب — ما النتيجة؟<br><span style="color:rgba(255,255,255,0.4);font-size:12px">الإيرادات الجديدة − 60 مواد − 70 عمل = ؟</span></div>' +
+      '<div class="amir-input-row">' +
+        '<input class="amir-input" id="a5q1" type="number" placeholder="؟" min="-999" max="999" style="width:70px">' +
+        '<span class="amir-unit">₪</span>' +
+        '<button class="amir-check-btn" onclick="amirCheck5a()">تحقق ✓</button>' +
+      '</div>' +
+      '<div class="amir-feedback" id="a5q1-fb"></div>' +
+    '</div>' +
+
+    // طريقة 2 — زيادة الكمية
+    '<div style="background:rgba(255,255,255,0.05);border-radius:12px;padding:14px;margin-bottom:12px">' +
+      '<div style="font-size:13px;font-weight:800;color:#64B5F6;margin-bottom:8px">💡 الطريقة 2: تحضير 40 كوباً بنفس الوقت</div>' +
+      '<div style="font-size:13px;color:rgba(255,255,255,0.7);margin-bottom:10px">إذا حضّر 40 كوباً بنفس 3.5 ساعات عمل، والمواد ستكلف 120 ₪ — ما الربح عند بيع بـ6 ₪؟<br><span style="color:rgba(255,255,255,0.4);font-size:12px">الإيرادات − 120 مواد − 70 عمل = ؟</span></div>' +
+      '<div class="amir-input-row">' +
+        '<input class="amir-input" id="a5q2" type="number" placeholder="؟" min="-999" max="999" style="width:70px">' +
+        '<span class="amir-unit">₪</span>' +
+        '<button class="amir-check-btn" onclick="amirCheck5b()">تحقق ✓</button>' +
+      '</div>' +
+      '<div class="amir-feedback" id="a5q2-fb"></div>' +
+    '</div>' +
+
+    // طريقة 3 — فكرة حرة
+    '<div style="background:rgba(255,255,255,0.05);border-radius:12px;padding:14px;margin-bottom:14px">' +
+      '<div style="font-size:13px;font-weight:800;color:#81C784;margin-bottom:8px">💡 الطريقة 3: فكرتك أنت</div>' +
+      '<div style="font-size:13px;color:rgba(255,255,255,0.7);margin-bottom:10px">اقترح فكرة أخرى لتحسين مشروع أمير — مثلاً: التميّز بشيء مختلف، تقليل التكاليف، أو إيجاد زبائن أكثر.</div>' +
+      '<div class="amir-improve-wrap">' +
+        '<textarea id="a5-idea" placeholder="فكرتي: ..."></textarea>' +
+        '<button class="amir-check-btn" style="width:100%;padding:12px" onclick="amirFinish()">أرسل فكرتي! 💡</button>' +
+      '</div>' +
+      '<div class="amir-feedback" id="a5-fb"></div>' +
+    '</div>' +
+
+  '</div>' + // end step5
   '</div></div>'; // end amir-body + amir-wrap
 }
 
-// === دوال التحقق ===
+// ═══════════════════════════════════
+// دوال التحقق
+// ═══════════════════════════════════
 
 function amirCheck1() {
   var val = parseFloat(document.getElementById('a1q1').value);
@@ -3652,13 +3688,13 @@ function amirCheck1() {
   if (val === 60) {
     input.classList.add('correct');
     fb.className = 'amir-feedback ok';
-    fb.textContent = '✅ صح! 40 + 10 + 10 = 60 ₪ مجموع المصاريف.';
+    fb.textContent = '✅ صح! 40 + 10 + 10 = 60 ₪ مجموع المواد.';
     document.getElementById('a1-q2-wrap').style.display = 'block';
     document.getElementById('a1-q2-wrap').scrollIntoView({ behavior:'smooth', block:'nearest' });
   } else {
     input.classList.add('wrong');
     fb.className = 'amir-feedback err';
-    fb.textContent = '❌ حاول مرة ثانية — اجمع كل المبالغ الثلاثة معاً.';
+    fb.textContent = '❌ حاول مرة ثانية — اجمع الأرقام الثلاثة: 40 + 10 + 10.';
     setTimeout(function(){ input.classList.remove('wrong'); }, 600);
   }
 }
@@ -3670,15 +3706,14 @@ function amirCheck1b() {
   if (val === 3) {
     input.classList.add('correct');
     fb.className = 'amir-feedback ok';
-    fb.textContent = '✅ ممتاز! 60 ÷ 20 = 3 ₪ تكلفة المصاريف لكل كوب.';
+    fb.textContent = '✅ ممتاز! 60 ÷ 20 = 3 ₪ تكلفة المواد لكل كوب.';
     _amir.s1done = true;
-    document.getElementById('amir-step1').classList.add('done');
-    document.getElementById('amir-step1').classList.remove('active');
+    document.getElementById('amir-step1').classList.replace('active','done');
     amirUnlock('amir-step2');
   } else {
     input.classList.add('wrong');
     fb.className = 'amir-feedback err';
-    fb.textContent = '❌ اقسم مجموع المصاريف (60) على عدد الكؤوس (20).';
+    fb.textContent = '❌ اقسم مجموع المواد (60) على عدد الأكواب (20).';
     setTimeout(function(){ input.classList.remove('wrong'); }, 600);
   }
 }
@@ -3690,10 +3725,9 @@ function amirCheck2() {
   if (val === 70) {
     input.classList.add('correct');
     fb.className = 'amir-feedback ok';
-    fb.textContent = '✅ صح! 3.5 × 20 = 70 ₪ قيمة وقت أمير. هذا المبلغ "الخفي" الذي لم يحسبه!';
+    fb.textContent = '✅ صح! 3.5 × 20 = 70 ₪ — هذا "الذهب الخفي" الذي لم يحسبه أمير!';
     _amir.s2done = true;
-    document.getElementById('amir-step2').classList.add('done');
-    document.getElementById('amir-step2').classList.remove('active');
+    document.getElementById('amir-step2').classList.replace('active','done');
     amirUnlock('amir-step3');
   } else {
     input.classList.add('wrong');
@@ -3710,19 +3744,16 @@ function amirCheck3() {
   if (val === 120) {
     input.classList.add('correct');
     fb.className = 'amir-feedback ok';
-    fb.textContent = '✅ صح! 20 × 6 = 120 ₪ جمعها أمير. ظن أنه ربح 60 ₪ (120 - 60)... لكن هل نسي شيئاً؟ 🤔';
+    fb.textContent = '✅ صح! 20 × 6 = 120 ₪ جمعها أمير. ظن أنه ربح 60 ₪ (120-60)... لكن هل نسي شيئاً؟ 🤔';
     _amir.s3done = true;
-    document.getElementById('amir-step3').classList.add('done');
-    document.getElementById('amir-step3').classList.remove('active');
-    // تحديث جدول ملخص
+    document.getElementById('amir-step3').classList.replace('active','done');
     document.getElementById('s4-rev').textContent = '120 ₪';
-    document.getElementById('s4-labor').textContent = '- 70 ₪';
-    document.getElementById('s4-result').textContent = '= ؟ ₪';
+    document.getElementById('s4-labor').textContent = '− 70 ₪';
     amirUnlock('amir-step4');
   } else {
     input.classList.add('wrong');
     fb.className = 'amir-feedback err';
-    fb.textContent = '❌ اضرب عدد الالكؤوس المبيعة (20) × السعر (6 ₪).';
+    fb.textContent = '❌ اضرب عدد الأكواب (20) × السعر (6 ₪).';
     setTimeout(function(){ input.classList.remove('wrong'); }, 600);
   }
 }
@@ -3731,53 +3762,86 @@ function amirCheck4() {
   var val = parseFloat(document.getElementById('a4q1').value);
   var input = document.getElementById('a4q1');
   var fb = document.getElementById('a4q1-fb');
-  // 120 - 60 - 70 = -10
   if (val === -10) {
     input.classList.add('correct');
     fb.className = 'amir-feedback ok';
     fb.textContent = '✅ 120 - 60 - 70 = -10 ₪. أمير خسر 10 ₪ دون أن يعرف!';
-    document.getElementById('s4-result').textContent = '= -10 ₪';
+    document.getElementById('s4-result').textContent = '= −10 ₪';
     document.getElementById('s4-result').style.color = '#EF5350';
     var finalEl = document.getElementById('amir-final');
     finalEl.className = 'amir-final-result loss';
     finalEl.style.display = 'block';
-    finalEl.innerHTML = '<div style="font-size:28px;margin-bottom:8px">😲</div>' +
-      '<div style="font-size:17px;font-weight:900;color:#EF5350;margin-bottom:8px">أمير خسر 10 ₪ !</div>' +
-      '<div style="font-size:14px;color:rgba(255,255,255,0.75);line-height:1.8">' +
-        'فكّر ظن أنه ربح 60 ₪ (120 - 60) — لكن نسي قيمة وقته 70 ₪.<br>' +
-        'لو باع الكوس بـ<strong style="color:#66BB6A">6.5 ₪</strong> فقط كان وصل لنقطة التعادل.<br>' +
-        'لو باع بـ<strong style="color:#66BB6A">8 ₪</strong> كان ربح <strong style="color:#66BB6A">30 ₪</strong> صافي.' +
+    finalEl.innerHTML =
+      '<div style="font-size:32px;margin-bottom:8px">😲</div>' +
+      '<div style="font-size:18px;font-weight:900;color:#EF5350;margin-bottom:10px">أمير خسر 10 ₪ وهو لا يعلم!</div>' +
+      '<div style="font-size:13px;color:rgba(255,255,255,0.75);line-height:2">' +
+        'ظن أنه ربح 60 ₪ (120 − 60 مواد) — لكن نسي قيمة وقته 70 ₪!<br>' +
+        'السعر الأدنى للتعادل: 130 ÷ 20 = <strong style="color:#FFC107">6.5 ₪ / كوب</strong><br>' +
+        'لو باع بـ<strong style="color:#66BB6A">8 ₪</strong>: الربح = 160 − 130 = <strong style="color:#66BB6A">+30 ₪</strong> ✅' +
       '</div>';
     _amir.s4done = true;
-    document.getElementById('amir-step4').classList.add('done');
-    document.getElementById('amir-step4').classList.remove('active');
+    document.getElementById('amir-step4').classList.replace('active','done');
     amirUnlock('amir-step5');
     finalEl.scrollIntoView({ behavior:'smooth', block:'center' });
   } else {
     input.classList.add('wrong');
     fb.className = 'amir-feedback err';
-    var hint = val > 0 ? '❌ الجواب سالب! الإيرادات أقل من التكاليف الكاملة.' :
-               '❌ احسب: 120 (إيرادات) - 60 (مصاريف) - 70 (أجر العمل) = ؟';
+    var hint = val > 0
+      ? '❌ الجواب سالب! الإيرادات أقل من التكاليف الكاملة.'
+      : '❌ احسب: 120 (إيرادات) − 60 (مواد) − 70 (أجر العمل) = ؟';
     fb.textContent = hint;
     setTimeout(function(){ input.classList.remove('wrong'); }, 600);
   }
 }
 
-function amirFinish() {
-  var i1 = document.getElementById('a5-idea1').value.trim();
-  var i2 = document.getElementById('a5-idea2').value.trim();
-  var fb = document.getElementById('a5-fb');
-  if (i1.length < 5 || i2.length < 5) {
+function amirCheck5a() {
+  var val = parseFloat(document.getElementById('a5q1').value);
+  var input = document.getElementById('a5q1');
+  var fb = document.getElementById('a5q1-fb');
+  // 20 × 8 = 160 − 60 − 70 = +30
+  if (val === 30) {
+    input.classList.add('correct');
+    fb.className = 'amir-feedback ok';
+    fb.innerHTML = '✅ 20 × 8 = 160. 160 − 60 − 70 = <strong>+30 ₪ ربح!</strong> برفع السعر 2 ₪ فقط تحوّلت الخسارة لربح!';
+  } else {
+    input.classList.add('wrong');
     fb.className = 'amir-feedback err';
-    fb.textContent = '❌ اكتب فكرتين كاملتين على الأقل!';
+    fb.textContent = '❌ أولاً احسب الإيرادات: 20 × 8 = 160 ₪. ثم: 160 − 60 − 70 = ؟';
+    setTimeout(function(){ input.classList.remove('wrong'); }, 600);
+  }
+}
+
+function amirCheck5b() {
+  var val = parseFloat(document.getElementById('a5q2').value);
+  var input = document.getElementById('a5q2');
+  var fb = document.getElementById('a5q2-fb');
+  // 40 × 6 = 240 − 120 − 70 = +50
+  if (val === 50) {
+    input.classList.add('correct');
+    fb.className = 'amir-feedback ok';
+    fb.innerHTML = '✅ 40 × 6 = 240. 240 − 120 − 70 = <strong>+50 ₪ ربح!</strong> نفس الوقت والجهد — لكن ضعف الأكواب يعني ربح أكبر!';
+  } else {
+    input.classList.add('wrong');
+    fb.className = 'amir-feedback err';
+    fb.textContent = '❌ أولاً احسب الإيرادات: 40 × 6 = 240 ₪. ثم: 240 − 120 − 70 = ؟';
+    setTimeout(function(){ input.classList.remove('wrong'); }, 600);
+  }
+}
+
+function amirFinish() {
+  var idea = document.getElementById('a5-idea').value.trim();
+  var fb = document.getElementById('a5-fb');
+  if (idea.length < 5) {
+    fb.className = 'amir-feedback err';
+    fb.textContent = '❌ اكتب فكرتك بشكل كامل!';
     return;
   }
   fb.className = 'amir-feedback ok';
-  fb.innerHTML = '🎓 <strong>ممتاز! أنت مستشار مالي حقيقي!</strong><br>' +
-    'تذكر القاعدة الذهبية: <strong>السعر الصحيح = تكلفة المواد + تكلفة العمل + هامش ربح</strong><br>' +
-    'الآن انتقل للسؤال التالي! ✅';
-  document.getElementById('amir-step5').classList.add('done');
-  document.getElementById('amir-step5').classList.remove('active');
+  fb.innerHTML =
+    '🎓 <strong>أحسنت! أنت ريادي حقيقي!</strong><br>' +
+    'القاعدة الذهبية: <strong>السعر الصحيح = تكلفة المواد + أجر العمل + هامش الربح</strong><br>' +
+    'الآن انتقل لسؤال التقييم! ✅';
+  document.getElementById('amir-step5').classList.replace('active','done');
   fb.scrollIntoView({ behavior:'smooth', block:'center' });
 }
 
@@ -3786,10 +3850,9 @@ function amirUnlock(stepId) {
   if (el) {
     el.classList.remove('locked');
     el.classList.add('active');
-    setTimeout(function(){ el.scrollIntoView({ behavior:'smooth', block:'nearest' }); }, 200);
+    setTimeout(function(){ el.scrollIntoView({ behavior:'smooth', block:'nearest' }); }, 250);
   }
 }
-
 
 function closeLesson() {
   document.getElementById('lesson-detail').classList.remove('open');
