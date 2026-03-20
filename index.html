@@ -2283,30 +2283,30 @@ function obStart() {
   <!-- PANEL: GLOSSARY -->
   <div id="panel-glossary" class="panel" style="padding:16px;overflow-y:auto;font-family:Noto Naskh Arabic,serif">
 
-    <div style="text-align:center;padding:20px 0 16px">
-      <div style="font-size:36px;margin-bottom:8px">📘</div>
-      <h2 style="font-size:20px;font-weight:900;color:white;margin-bottom:4px">قاموس الريادي الصغير</h2>
-      <p style="font-size:13px;color:rgba(255,255,255,0.5)">رواد المال — الصف الخامس</p>
+    <div style="text-align:center;padding:24px 0 18px">
+      <div style="font-size:44px;margin-bottom:10px">📘</div>
+      <h2 style="font-size:26px;font-weight:900;color:white;margin-bottom:6px">قاموس الريادي الصغير</h2>
+      <p style="font-size:15px;color:rgba(255,255,255,0.5)">رواد المال — الصف الخامس</p>
     </div>
 
-    <div style="background:linear-gradient(135deg,rgba(249,168,37,0.15),rgba(249,168,37,0.05));border:1px solid rgba(249,168,37,0.3);border-radius:14px;padding:14px 16px;margin-bottom:18px;text-align:center;font-size:14px;color:rgba(255,255,255,0.85);line-height:1.8">
-      ✨ <strong style="color:#F9A825">الكلمات السحرية</strong> التي ستساعدك في إدارة عالمك المالي بنجاح
+    <div style="background:linear-gradient(135deg,rgba(249,168,37,0.2),rgba(249,168,37,0.08));border:2px solid rgba(249,168,37,0.45);border-radius:16px;padding:16px 20px;margin-bottom:22px;text-align:center;font-size:16px;color:rgba(255,255,255,0.92);line-height:1.9">
+      ✨ <strong style="color:#F9A825;font-size:17px">الكلمات السحرية</strong> التي ستساعدك في إدارة عالمك المالي بنجاح
     </div>
 
     <div id="glossary-list" style="display:flex;flex-direction:column;gap:10px;margin-bottom:20px"></div>
 
-    <div style="background:linear-gradient(135deg,rgba(255,112,67,0.15),rgba(255,193,7,0.1));border:1.5px solid rgba(255,112,67,0.3);border-radius:16px;padding:18px;text-align:center;margin-bottom:16px">
-      <div style="font-size:22px;margin-bottom:8px">🌟</div>
-      <div style="font-size:14px;font-weight:800;color:#FF7043;margin-bottom:8px">النصيحة الذهبية لرواد المال</div>
-      <div style="font-size:15px;font-weight:700;color:white;line-height:1.8;font-style:italic">
+    <div style="background:linear-gradient(135deg,rgba(255,112,67,0.2),rgba(255,193,7,0.15));border:2px solid rgba(255,112,67,0.5);border-radius:18px;padding:22px;text-align:center;margin-bottom:18px">
+      <div style="font-size:30px;margin-bottom:10px">🌟</div>
+      <div style="font-size:17px;font-weight:900;color:#FF7043;margin-bottom:10px">النصيحة الذهبية لرواد المال</div>
+      <div style="font-size:20px;font-weight:800;color:white;line-height:1.9;font-style:italic">
         "المال وسيلة وليس غاية"
       </div>
-      <div style="font-size:12px;color:rgba(255,255,255,0.6);margin-top:8px;line-height:1.7">
+      <div style="font-size:15px;color:rgba(255,255,255,0.75);margin-top:10px;line-height:1.8">
         الكسف أداة لتحقيق أهدافك — استخدمه بحكمة لبناء مستقبلك ومستقبل مجتمعك
       </div>
     </div>
 
-    <button onclick="printGlossary()" style="width:100%;padding:13px;border-radius:12px;border:1.5px solid rgba(255,255,255,0.2);background:transparent;color:rgba(255,255,255,0.7);font-size:14px;font-weight:700;cursor:pointer;font-family:Noto Naskh Arabic,serif">
+    <button onclick="printGlossary()" style="width:100%;padding:15px;border-radius:14px;border:2px solid rgba(255,255,255,0.25);background:rgba(255,255,255,0.07);color:white;font-size:16px;font-weight:800;cursor:pointer;font-family:Noto Naskh Arabic,serif;transition:all 0.2s">
       🖨️ طباعة القاموس
     </button>
 
@@ -5025,30 +5025,48 @@ function renderGlossary() {
 
   var html = '';
   GLOSSARY_TERMS.forEach(function(unit) {
-    html += '<div style="margin-bottom:6px">' +
-      '<div style="background:' + unit.unitColor + '22;border-right:3px solid ' + unit.unitColor + ';' +
-        'border-radius:0 10px 10px 0;padding:8px 12px;margin-bottom:8px;' +
-        'font-size:12px;font-weight:800;color:' + unit.unitColor + ';letter-spacing:0.5px">' +
-        'الوحدة ' + unit.unit + ' — ' + unit.unitName +
+
+    // عنوان الوحدة — رقعة ملونة واضحة
+    html += '<div style="margin-bottom:20px">' +
+      '<div style="background:' + unit.unitColor + ';border-radius:12px;padding:12px 18px;margin-bottom:12px;' +
+        'display:flex;align-items:center;gap:10px">' +
+        '<span style="font-size:20px">' + unit.icon + '</span>' +
+        '<span style="font-size:17px;font-weight:900;color:white;letter-spacing:0.3px">' +
+          'الوحدة ' + unit.unit + ' — ' + unit.unitName +
+        '</span>' +
       '</div>';
 
     unit.terms.forEach(function(t) {
-      html += '<div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09);' +
-        'border-radius:12px;padding:13px 14px;margin-bottom:8px">' +
-        '<div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px">' +
-          '<span style="font-size:16px;font-weight:900;color:white">' + t.ar + '</span>' +
-          '<span style="font-size:12px;color:rgba(255,255,255,0.4);direction:ltr;text-align:left;margin-right:8px">' + t.he + '</span>' +
-        '</div>' +
-        '<div style="font-size:13px;color:rgba(255,255,255,0.7);line-height:1.6;border-top:1px solid rgba(255,255,255,0.07);padding-top:7px;margin-bottom:8px">' +
-          t.def +
-        '</div>' +
-        '<div style="display:flex;align-items:center;gap:8px">' +
-          '<span style="font-size:11px;color:rgba(255,255,255,0.35);flex-shrink:0">مثالي:</span>' +
-          '<input type="text" placeholder="اكتب مثالاً من حياتك..." ' +
-            'style="flex:1;background:rgba(0,0,0,0.25);border:1px dashed rgba(255,255,255,0.15);border-radius:7px;' +
-            'color:rgba(255,255,255,0.85);font-family:Noto Naskh Arabic,serif;font-size:12px;padding:5px 10px;outline:none">' +
-        '</div>' +
-      '</div>';
+      html +=
+        '<div style="background:rgba(255,255,255,0.06);border:1.5px solid ' + unit.unitColor + '55;' +
+          'border-radius:14px;padding:16px 18px;margin-bottom:10px;' +
+          'border-right:4px solid ' + unit.unitColor + '">' +
+
+          // اسم المصطلح + العبري
+          '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">' +
+            '<span style="font-size:20px;font-weight:900;color:white">' + t.ar + '</span>' +
+            '<span style="font-size:13px;font-weight:700;color:rgba(255,255,255,0.5);' +
+              'direction:ltr;background:rgba(255,255,255,0.08);padding:3px 10px;border-radius:8px">' +
+              t.he +
+            '</span>' +
+          '</div>' +
+
+          // التعريف — رقعة ملونة
+          '<div style="background:' + unit.unitColor + '18;border-radius:10px;padding:12px 14px;' +
+            'font-size:15px;color:rgba(255,255,255,0.9);line-height:1.8;margin-bottom:10px">' +
+            t.def +
+          '</div>' +
+
+          // حقل المثال الشخصي
+          '<div style="display:flex;align-items:center;gap:10px">' +
+            '<span style="font-size:13px;font-weight:800;color:' + unit.unitColor + ';flex-shrink:0">✏️ مثالي:</span>' +
+            '<input type="text" placeholder="اكتب مثالاً من حياتك..." ' +
+              'style="flex:1;background:rgba(0,0,0,0.3);border:1.5px dashed ' + unit.unitColor + '66;' +
+              'border-radius:9px;color:white;font-family:Noto Naskh Arabic,serif;' +
+              'font-size:14px;padding:8px 12px;outline:none">' +
+          '</div>' +
+
+        '</div>';
     });
 
     html += '</div>';
