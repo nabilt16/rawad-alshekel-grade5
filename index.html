@@ -1605,30 +1605,30 @@ body {
     <span class="ob-appsub">برنامج الثقافة المالية · الصف الخامس</span>
     <div class="ob-steps"><div class="ob-dot act"></div><div class="ob-dot"></div><div class="ob-dot"></div></div>
     <div class="ob-label">✦ خطوة 1 من 3</div>
-    <div class="ob-title">شو اسمك؟</div>
-    <div class="ob-field"><input type="text" id="ob-name" placeholder="اكتب اسمك هون..." maxlength="30" autocomplete="off"></div>
+    <div class="ob-title">ما اسمك؟</div>
+    <div class="ob-field"><input type="text" id="ob-name" placeholder="اكتب اسمك هنا..." maxlength="30" autocomplete="off"></div>
     <div class="ob-who-btns" id="ob-gender-btns" style="margin-bottom:20px">
       <div class="ob-who-btn" id="ob-gender-m" onclick="obPickGender('m')">👦 صبي</div>
       <div class="ob-who-btn" id="ob-gender-f" onclick="obPickGender('f')">👧 بنت</div>
     </div>
-    <button class="ob-btn" id="ob-btn1" disabled onclick="obStep2()">يلا نكمل ←</button>
+    <button class="ob-btn" id="ob-btn1" disabled onclick="obStep2()">يالله نكمل ←</button>
     <div class="ob-note">معلوماتك محفوظة على جهازك بس <span>🔒</span></div>
   </div>
 
-  <!-- S2: مين بيشتغل بالبيت؟ -->
+  <!-- S2: مين يشتغل بالبيت؟ -->
   <div class="ob-screen" id="ob-s2">
     <span class="ob-coin">🪙</span>
     <span class="ob-appname">رواد المال</span>
     <span class="ob-appsub">برنامج الثقافة المالية · الصف الخامس</span>
     <div class="ob-steps"><div class="ob-dot done"></div><div class="ob-dot act"></div><div class="ob-dot"></div></div>
     <div class="ob-label">✦ خطوة 2 من 3</div>
-    <div class="ob-title" id="ob-s2-title">مين بيشتغل وبيجيب المصاري للبيت؟</div>
+    <div class="ob-title" id="ob-s2-title">مين يشتغل ويجيب المصاري للبيت؟</div>
     <div class="ob-who-btns">
       <div class="ob-who-btn" id="ob-who-dad" onclick="obPickWho('dad')">👨 أبوي بس</div>
       <div class="ob-who-btn" id="ob-who-mom" onclick="obPickWho('mom')">👩 أمي بس</div>
       <div class="ob-who-btn" id="ob-who-both" onclick="obPickWho('both')">👨‍👩‍👦 كلاهم</div>
     </div>
-    <button class="ob-btn" id="ob-btn2" disabled onclick="obStep3()">يلا نكمل ←</button>
+    <button class="ob-btn" id="ob-btn2" disabled onclick="obStep3()">يالله نكمل ←</button>
   </div>
 
   <!-- S3: اسم وشغلة — ديناميكي -->
@@ -1649,7 +1649,7 @@ body {
     <div class="ob-wname">أهلاً <span id="ob-disp-name"></span>!</div>
     <div class="ob-wmsg" id="ob-disp-msg"></div>
     <div id="ob-disp-pills"></div>
-    <button class="ob-btn" style="margin-top:22px" onclick="obStart()">يلا نبلش! 🚀</button>
+    <button class="ob-btn" style="margin-top:22px" onclick="obStart()">يالله نبدأ! 🚀</button>
     <div class="ob-note">معلوماتك محفوظة على جهازك بس <span>🔒</span></div>
   </div>
 
@@ -1666,14 +1666,14 @@ var _ob = {
 };
 
 var _jobList = [
-  {e:'🚌',j:'سواق',m:'بيطلع عالطريق كل يوم عشان يجيب الناس لشغلهم — وهيك بتيجي الرزقة للبيت.'},
-  {e:'👨‍⚕️',j:'دكتور',m:'بيساعد ناس كتير كل يوم — وهيك بتيجي المصاري برزقة وعمل مهم.'},
+  {e:'🚌',j:'سواق',m:'يطلع عالطريق كل يوم عشان يجيب الناس لشغلهم — وهيك بتيجي الرزقة للبيت.'},
+  {e:'👨‍⚕️',j:'دكتور',m:'يساعد ناس كثير كل يوم — وهيك بتيجي المصاري برزقة وعمل مهم.'},
   {e:'👩‍🏫',j:'معلم',m:'التعليم من أهم الشغلات — ومن بيشتغل فيها عارف قيمة المعرفة.'},
   {e:'🔧',j:'مهندس',m:'المهندسين هم اللي بيبنوا المدن — شغلة عظيمة وبتجيب رزق كويس.'},
   {e:'🏪',j:'صاحب محل',m:'صاحب المحل شغله ما بيوقف — وكل بيعة هي رزقة جديدة للعيلة.'},
   {e:'🩺',j:'ممرض',m:'الممرضين هم اللي بيحرسوا المرضى — شغلة بتحتاج قلب كبير.'},
-  {e:'👮',j:'شرطي',m:'الشرطي بيحمي الناس كل يوم — وهيك بيستاهل كل قرش بيكسبه.'},
-  {e:'🧱',j:'عامل بناء',m:'عمال البناء هم اللي بيعملوا البيوت اللي نحنا ساكنين فيها.'},
+  {e:'👮',j:'شرطي',m:'الشرطي يحمي الناس كل يوم — وهيك بيستاهل كل قرش يكسبه.'},
+  {e:'🧱',j:'عامل بناء',m:'عمال البناء هم اللي يعملوا البيوت اللي نحنا ساكنين فيها.'},
   {e:'🌾',j:'فلاح',m:'الفلاح بيزرع الأرض ليجيب الأكل عالموائد — شغلة مهمة ومحترمة.'},
   {e:'💼',j:'موظف',m:'الموظف بيحافظ على شغله كل يوم عشان يجيب رزق ثابت للعيلة.'},
   {e:'🚛',j:'سائق شاحنة',m:'بيوصل البضاعة من مكان لمكان — بدونه ما في سوبرماركت مليان!'},
@@ -1753,7 +1753,7 @@ function obCustomJob(prefix, btnId) {
 
 function obStep2() {
   _ob.name = document.getElementById('ob-name').value.trim();
-  document.getElementById('ob-s2-title').textContent = _ob.name + '، مين بيشتغل وبيجيب المصاري للبيت؟';
+  document.getElementById('ob-s2-title').textContent = _ob.name + '، مين يشتغل ويجيب المصاري للبيت؟';
   obShowScreen('ob-s2');
 }
 
@@ -1771,7 +1771,7 @@ function obStep3() {
     setTimeout(function(){ var el=document.getElementById('ob-mom-name'); if(el) el.focus(); }, 400);
   } else {
     // كلاهم → مقعد واحد يمثل العيلة — الولد يختار أيهم
-    document.getElementById('ob-s3-title').textContent = 'مين منهم تبي تحكي عنه في البرنامج؟';
+    document.getElementById('ob-s3-title').textContent = 'مين منهم تريد تحكي عنه في البرنامج؟';
     s3body.innerHTML =
       '<div class="ob-who-btns" style="margin-bottom:16px">'
       + '<div class="ob-who-btn" id="ob-pick-dad" onclick="obPickRepresentative(\'dad\')">👨 أبوي</div>'
@@ -2554,7 +2554,7 @@ function obStart() {
     <div class="pe-gbtn" id="pe-gf" onclick="pEditGender('f')">👧 بنت</div>
   </div>
 
-  <div class="pe-label">مين بيشتغل بالبيت؟</div>
+  <div class="pe-label">مين يشتغل بالبيت؟</div>
   <div class="pe-gender">
     <div class="pe-gbtn" id="pe-wd" onclick="pEditWho('dad')">👨 أبوي</div>
     <div class="pe-gbtn" id="pe-wm" onclick="pEditWho('mom')">👩 أمي</div>
