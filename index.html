@@ -4807,26 +4807,26 @@ function buildTimeMachine(lid) {
   '<div class="amir-step locked" id="tm-step3-' + lid + '">' +
     '<div class="amir-step-title"><span class="amir-step-num" style="background:rgba(21,101,192,0.25);color:#42A5F5">3</span>⚖️ المرحلة 3: كيف نحمي قيمة مالنا؟</div>' +
 
-    '<div style="background:rgba(255,193,7,0.1);border:1px solid rgba(255,193,7,0.25);border-radius:12px;padding:14px;margin-bottom:16px;font-size:14px;line-height:1.8">' +
+    '<div style="background:rgba(255,193,7,0.1);border:1px solid rgba(255,193,7,0.25);border-radius:12px;padding:16px;margin-bottom:16px;font-size:15px;line-height:2">' +
       '💡 ريان عنده 20 ₪ ويريد شراء عصير. وجد عرضين:<br>' +
-      '<strong style="color:#64B5F6">العرض أ:</strong> قنينة 1 لتر بـ 10 ₪<br>' +
-      '<strong style="color:#FFB300">العرض ب:</strong> قنينة نصف لتر بـ 7 ₪' +
+      '<strong style="color:#64B5F6;font-size:16px">العرض أ:</strong> <span style="color:white;font-weight:700"> قنينة 1 لتر (1000 مل) بـ 10 ₪</span><br>' +
+      '<strong style="color:#FFB300;font-size:16px">العرض ب:</strong> <span style="color:white;font-weight:700"> قنينة نصف لتر (500 مل) بـ 7 ₪</span>' +
     '</div>' +
 
     '<div class="amir-question">السؤال 4: احسب سعر كل مل في كل عرض — أيهما أوفر؟<br>' +
       '<span style="color:rgba(255,255,255,0.4);font-size:14px">العرض أ: 10 ₪ ÷ 1000 مل = ؟ أغورة/مل | العرض ب: 7 ₪ ÷ 500 مل = ؟ أغورة/مل</span>' +
     '</div>' +
 
-    '<div style="display:flex;flex-direction:column;gap:8px;margin-bottom:12px">' +
-      '<button class="act-price-btn" id="tm-opt-a-' + lid + '" style="text-align:right;padding:12px 16px" ' +
+    '<div style="display:flex;flex-direction:column;gap:10px;margin-bottom:12px">' +
+      '<button class="act-price-btn" id="tm-opt-a-' + lid + '" style="text-align:right;padding:14px 18px;font-size:15px;font-weight:800;color:white" ' +
         'onclick="tmCheck4(\'' + lid + '\',\'a\')">' +
         'العرض أ أوفر — 1 أغورة للمل (10 ÷ 1000)' +
       '</button>' +
-      '<button class="act-price-btn" id="tm-opt-b-' + lid + '" style="text-align:right;padding:12px 16px" ' +
+      '<button class="act-price-btn" id="tm-opt-b-' + lid + '" style="text-align:right;padding:14px 18px;font-size:15px;font-weight:800;color:white" ' +
         'onclick="tmCheck4(\'' + lid + '\',\'b\')">' +
         'العرض ب أوفر — 1.4 أغورة للمل (7 ÷ 500)' +
       '</button>' +
-      '<button class="act-price-btn" id="tm-opt-c-' + lid + '" style="text-align:right;padding:12px 16px" ' +
+      '<button class="act-price-btn" id="tm-opt-c-' + lid + '" style="text-align:right;padding:14px 18px;font-size:15px;font-weight:800;color:white" ' +
         'onclick="tmCheck4(\'' + lid + '\',\'c\')">' +
         'كلاهما متساوي في القيمة' +
       '</button>' +
