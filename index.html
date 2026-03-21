@@ -409,25 +409,6 @@ body {
 .choice.ok  { border-color: var(--green); background: rgba(46,125,50,0.2); color: #81C784; pointer-events:none; }
 .choice.bad { border-color: #EF5350; background: rgba(239,83,80,0.15); color: #EF9A9A; pointer-events:none; }
 .choice.dim { opacity: 0.4; pointer-events: none; }
-.act-price-btn {
-  background: rgba(255,255,255,0.08);
-  border: 1.5px solid rgba(255,255,255,0.18);
-  border-radius: 12px;
-  color: white;
-  font-family: Noto Naskh Arabic, serif;
-  font-size: 15px;
-  font-weight: 800;
-  cursor: pointer;
-  transition: all 0.2s;
-  text-align: right;
-  width: 100%;
-}
-.act-price-btn:hover { background: rgba(255,255,255,0.14); transform: translateX(-3px); }
-.act-price-btn.sel {
-  border-color: #FF7043;
-  background: rgba(255,112,67,0.18);
-  color: #FF7043;
-}
 .choice-icon { 
   font-size: 15px; font-weight: 800; flex-shrink: 0;
   width: 28px; height: 28px; border-radius: 8px;
@@ -2609,7 +2590,7 @@ const UNITS = {
           text: 'وجد أسامة صورة قديمة لجدّه وهو في سنه، وكتب تحتها: «اشتريت بيتزا كاملة بـ5 ₪!». ضحك أسامة وقال: «5 ₪ الآن لا تشتري حتى خبزاً!».\n\nسأل أباه، فشرح له: «في السابق كانت الأسعار أقل، لكن مع الوقت ترتفع. هذا يسمى التضخم — يعني المال يشتري أقل مما كان يشتريه قبل سنوات».\n\nفكّر أسامة: «إذن 100 ₪ اليوم ستكون تشتري أقل بعد 10 سنوات؟» قال أبوه: «بالضبط! لهذا من المهم أن نستثمر مالنا وليس فقط نحفظه في درج.»'
         },
         concept: {
-          text: '💡 القيمة الشرائية للمال:\n🔸 نفس المبلغ يشتري أشياء مختلفة في أوقات مختلفة\n🔸 التضخم = ارتفاع الأسعار مع الزمن\n🔸 في إسرائيل يُقاس التضخم بـ «مؤشر أسعار المستهلك» — وهو عبارة عن "سلة تسوق خيالية" تفحصها الدولة كل شهر: كم يكلف الحليب؟ الخبز؟ الوقود؟ إذا غلت السلة — المؤشر ارتفع\n🔸 مثال بسيط: لو عندك 100 ₪ اليوم وحفظتها في درج 10 سنوات — بسبب التضخم (3% كل سنة) ستحتاج 134 ₪ لتشتري نفس الأشياء. يعني الـ100 ₪ أصبحت «تساوي أقل» بدون ما صرفت منها شيئاً!\n🔸 لهذا الادخار وحده لا يكفي — يجب أن يعمل المال. أناس يضعون مدخراتهم في بنك يعطي فائدة، أو يشترون أصولاً، حتى يحافظوا على قيمة مالهم (ستتعلم هذا أكثر في الدروس القادمة)\n🔸 المال «الشفاف»: عندما تدفع بالبطاقة أو الهاتف يسهل نسيان قيمة المال — كن أكثر انتباهاً!'
+          text: '💡 القيمة الشرائية للمال:\n🔸 نفس المبلغ يشتري أشياء مختلفة في أوقات مختلفة\n🔸 التضخم = ارتفاع الأسعار مع الزمن\n🔸 في إسرائيل يُقاس التضخم بـ «مؤشر أسعار المستهلك»\n🔸 لهذا الادخار وحده لا يكفي — يجب أن يعمل المال\n🔸 مثال: لو التضخم 3% سنوياً، بعد 10 سنوات تحتاج 134 ₪ لتشتري ما يشتريه 100 ₪ اليوم'
         },
         quiz: {
           q: '🤔 ارتفع سعر الفلافل من 10 ₪ إلى 12 ₪ خلال سنتين. ماذا يعني هذا؟',
@@ -2629,7 +2610,7 @@ const UNITS = {
           text: 'كانت عائلة أسامة تذهب كل جمعة لمطعم الشاورما. لكن هذا العام لاحظ أن أبوه يطلب أطباقاً أقل. سأله: «لماذا؟»\n\nقال أبوه: «الشاورما كانت 35 ₪ للطبق، الآن صارت 45 ₪. لم يرتفع راتبي بنفس النسبة، فصرت أشتري أقل.»\n\nفهم أسامة: عندما ترتفع الأسعار أسرع من الرواتب، العائلة تعيش بشكل أصعب. قررت العائلة معاً أن تطبخ الشاورما في البيت مرة شهرياً بدل كل جمعة — وهكذا وفّروا المال ومازالوا يستمتعون بوجبتهم المفضلة.'
         },
         concept: {
-          text: '💡 التضخم والميزانية العائلية:\n🔸 لو ارتفعت الأسعار 5% والراتب 2% فقط — القدرة الشرائية انخفضت\n🔸 الحلول العملية: المقارنة بين المتاجر، الطبخ في البيت، الشراء بكميات\n🔸 الحكومة تحاول السيطرة على التضخم عبر بنك إسرائيل — البنك يرفع أو يخفض «سعر الفائدة» فتتغير الأسعار تبعاً لذلك. مثال: إذا ارتفعت الأسعار كثيراً، رفع البنك سعر الفائدة يجعل القروض أغلى، فيصرف الناس أقل، وتهدأ الأسعار تدريجياً\n🔸 المستهلك الذكي يتكيف مع الأسعار ويجد بدائل\n🔸 السلع البديلة: عندما يرتفع سعر شيء نحبه، نبحث عن بديل أرخص بنفس الجودة — هذا ما فعلته عائلة أسامة بالضبط!'
+          text: '💡 التضخم والميزانية العائلية:\n🔸 لو ارتفعت الأسعار 5% والراتب 2% فقط — القدرة الشرائية انخفضت\n🔸 الحلول العملية: المقارنة بين المتاجر، الطبخ في البيت، الشراء بكميات\n🔸 الحكومة تحاول السيطرة على التضخم عبر بنك إسرائيل\n🔸 المستهلك الذكي يتكيف مع الأسعار ويجد بدائل'
         },
         activity: { type: 'time_machine' },
         quiz: {
@@ -2639,12 +2620,6 @@ const UNITS = {
             { text: 'لم تتغير لأن كلاهما ارتفع', ok: false, fb: 'المهم ليس أن يرتفع الراتب، بل أن يرتفع بنفس نسبة الأسعار أو أكثر. هنا الأسعار فازت!' },
             { text: 'انخفضت لأن الأسعار ارتفعت أكثر من الراتب', ok: true, fb: '🎉 صح! الأسعار ارتفعت 10% والراتب 5% فقط — يعني كل 100 ₪ تشتري الآن أقل مما كانت تشتريه قبل.' }
           ]
-        },
-        homework: {
-          title: '🏠 تحدي المنزل — المحقق الصغير',
-          task: 'اطلب من أهلك فاتورة سوبرماركت قديمة (من قبل سنة أو أكثر) وفاتورة حديثة. قارن بين أسعار 3 منتجات تجدها في الفاتورتين معاً. هل ارتفعت الأسعار؟ بكم؟ احسب نسبة الارتفاع لكل منتج.',
-          example: 'مثال: لبن 4 ₪ قبل سنتين → 5.5 ₪ اليوم. نسبة الارتفاع = ((5.5-4)÷4)×100 = 37.5%',
-          tip: '💡 ستفاجئ أهلك بما تعرفه — هذا ما يميز الريادي الذكي!'
         }
       },
       {
@@ -3235,81 +3210,43 @@ function selectUnit(num) {
 // 
 // PERSONALIZATION — بدّل أسماء الشخصيات باسم الطالب وأهله
 // 
+function replaceStudentName(text) {
+  var n = (state && state.studentName) ? state.studentName.trim() : '';
+  if (!n) return text.replace(/\[اسم_الطالب\]/g, '').replace('يا !', '!');
+  return text.replace(/\[اسم_الطالب\]/g, n);
+}
+
 function personalizeText(text) {
   if (!text) return text;
   var st = state;
-  var sName    = (st.studentName   || '').trim();
-  var gender   = (st.studentGender || 'm');
-  var dName    = (st.dadName       || '').trim();
-  var mName    = (st.momName       || '').trim();
-  var whoWorks = (st.whoWorks      || '');
+  var sName = (st.studentName || '').trim();
+  var dName = (st.dadName || '').trim();
+  var mName = (st.momName || '').trim();
+  var gender = (st.studentGender || 'm');
 
   if (!sName) return text;
 
-  // استبدال [اسم_الطالب] المباشر
+  // القاعدة: اسم الطالب يظهر فقط في المخاطبة المباشرة
   text = text.split('[اسم_الطالب]').join(sName);
+  text = text.split('[يا_طالب]').join('يا ' + sName);
 
-  var storyMaleKids   = ['أسامة','يوسف','أحمد','عمر','سامي'];
-  var storyFemaleKids = ['ياسمين','ريم','ليلى','نادين','سارة','نور','رنا','مريم'];
-
-  // --- استبدال اسم الطالب ---
-  if (gender === 'f') {
-    storyMaleKids.forEach(function(n){   text = text.split(n).join('___S___'); });
-    storyFemaleKids.forEach(function(n){ text = text.split(n).join('___S___'); });
-    text = text.split('___S___').join(sName);
-    // تأنيث أفعال
-    var fem = [
-      ['قال لنفسه','قالت لنفسها'],
-      ['قرر ','قررت '],['فكّر:','فكّرت:'],['فكّر ','فكّرت '],
-      ['ابتسم','ابتسمت'],['فهم ','فهمت '],['استمع','استمعت'],
-      ['غيّر','غيّرت'],['باع','باعت'],['اشترى','اشترت'],
-      ['وفّر','وفّرت'],['ذهب','ذهبت'],['جلس','جلست'],
-      ['سأل ','سألت '],['فتح ','فتحت '],['أرسل','أرسلت'],
-      ['أخرج','أخرجت'],['أضاف','أضافت'],['بدأ ','بدأت '],
-      ['وضع','وضعت'],['وجد','وجدت'],['ربح','ربحت'],
-      ['باع','باعت'],['كسب','كسبت'],['حسب ','حسبت '],
-      // لا نستبدل عنده/معه بشكل عام — يسبب أخطاء (البنك عنده، الجد عنده...)
-      [' له ',' لها '],[' هو ',' هي '],
-    ];
-    fem.forEach(function(p){ text = text.split(p[0]).join(p[1]); });
-  } else {
-    // الطالب الذكر — نستبدل أسماء الذكور فقط، الإناث نتركهن كما هن
-    storyMaleKids.forEach(function(n){ text = text.split(n).join(sName); });
-    // لا نستبدل أسماء الإناث لأن أفعالهن مؤنثة ولا تناسب اسم الطالب
-  }
-
-  // --- استبدال اسم الأب ---
-  // الصيغ الموجودة في القصص: أبوها، أبوه، أبيها، أبيه، أبوك، سأله أبوه، قال الأب
+  // استبدال اسم الأب إذا أدخله
   if (dName) {
-    text = text.split('أبوها').join(dName);
     text = text.split('أبوه').join(dName);
-    text = text.split('أبيها').join(dName);
+    text = text.split('أبوها').join(dName);
     text = text.split('أبيه').join(dName);
-    text = text.split('لأبيه').join('لـ' + dName);
-    text = text.split('لأبوه').join('لـ' + dName);
-    text = text.split('سألها أبوها').join('سأل' + (gender==='f'?'ها':'ه') + ' ' + dName);
-    text = text.split('سأله أبوه').join('سأله ' + dName);
-    text = text.split('قال الأب').join('قال ' + dName);
+    text = text.split('أبيها').join(dName);
     text = text.split('قال أبوه').join('قال ' + dName);
-    text = text.split('قال أبوها').join('قال ' + dName);
+    text = text.split('قال الأب').join('قال ' + dName);
   }
 
-  // --- استبدال اسم الأم ---
-  // الصيغ الموجودة: أمها، أمه، لأمه، قالت أمها، أجابت أمها، ابتسمت أمها
+  // استبدال اسم الأم إذا أدخله
   if (mName) {
-    text = text.split('أمها').join(mName);
     text = text.split('أمه').join(mName);
-    text = text.split('لأمه').join('لـ' + mName);
-    text = text.split('لأمها').join('لـ' + mName);
-    text = text.split('قالت أمها').join('قال' + (gender==='f'?'ت':'') + ' ' + mName);
+    text = text.split('أمها').join(mName);
     text = text.split('قالت أمه').join('قال' + (gender==='f'?'ت':'') + ' ' + mName);
-    text = text.split('أجابت أمها').join('أجاب' + (gender==='f'?'ت':'') + ' ' + mName);
-    text = text.split('ابتسمت أمها').join('ابتسم ' + mName);
-    text = text.split('سألت الأم').join('سأل' + (gender==='f'?'ت':'') + ' ' + mName);
-    text = text.split('قالت الأم').join('قال' + (gender==='f'?'ت':'') + ' ' + mName);
+    text = text.split('قالت أمها').join('قال' + (gender==='f'?'ت':'') + ' ' + mName);
     text = text.split('الأم').join(mName);
-  } else if (dName) {
-    // لو عندنا أب بس — نستبدل "الأم" بشيء محايد
   }
 
   return text;
@@ -3344,14 +3281,6 @@ function openLesson(unitNum, lessonIdx) {
     </div>
 
     ${l.activity ? buildActivity(l.activity, l.id) : ''}
-
-    ${l.homework ? `
-    <div class="activity-card" style="background:linear-gradient(135deg,rgba(21,101,192,0.12),rgba(30,136,229,0.08));border:1.5px solid rgba(21,101,192,0.3)">
-      <h4 style="color:#42A5F5">🏠 تحدي المنزل</h4>
-      <p style="font-size:16px;font-weight:700;color:rgba(255,255,255,0.9);line-height:1.7;margin-bottom:12px">${l.homework.task}</p>
-      <div style="background:rgba(255,193,7,0.1);border-right:3px solid #FFB300;padding:10px 12px;border-radius:0 8px 8px 0;font-size:14px;color:rgba(255,255,255,0.75);margin-bottom:10px">${l.homework.example}</div>
-      <div style="font-size:14px;color:#42A5F5;font-weight:700">${l.homework.tip}</div>
-    </div>` : ''}
 
     <div class="activity-card">
       <h4>🎯 سؤال التقييم</h4>
@@ -3913,7 +3842,7 @@ function amirFinish() {
   }
   fb.className = 'amir-feedback ok';
   fb.innerHTML =
-    '🎓 <strong>أحسنت! أنت ريادي حقيقي!</strong><br>' +
+    replaceStudentName('🎓 <strong>أحسنت يا [اسم_الطالب]! أنت ريادي/ة حقيقي/ة!</strong><br>') +
     'القاعدة الذهبية: <strong>السعر الصحيح = تكلفة المواد + أجر العمل + هامش الربح</strong><br>' +
     'الآن انتقل لسؤال التقييم! ✅';
   document.getElementById('amir-step5').classList.replace('active','done');
@@ -4192,7 +4121,7 @@ function wassamFinish() {
 
   fb.className = 'amir-feedback ok';
   fb.innerHTML =
-    '🎓 <strong>تفكير رائد!</strong><br>' +
+    replaceStudentName('🎓 <strong>تفكير رائد يا [اسم_الطالب]!</strong><br>') +
     'هذا هو جوهر التخطيط المالي: كل قرار شراء يعني <strong>تكلفة بديلة</strong> — ' +
     'إذا اشتريت المهرج الغالي، لن يبقى مال للطعام!<br>' +
     'الحفلة الممتعة لا تحتاج مالاً كثيراً — تحتاج تخطيطاً ذكياً ✅';
@@ -4406,7 +4335,7 @@ function maryamFinish(lid) {
   }
   fb.className = 'amir-feedback ok';
   fb.innerHTML =
-    '🛡️ <strong>ميثاق المستهلك الذكي مكتمل!</strong><br>' +
+    replaceStudentName('🛡️ <strong>ميثاق المستهلك الذكي مكتمل يا [اسم_الطالب]!</strong><br>') +
     'تذكر دائماً: <strong>المنتج الغالي ليس دائماً الأفضل</strong> — أحياناً تدفع للإعلان لا للمنتج.<br>' +
     'الآن انتقل لسؤال التقييم! ✅';
   document.getElementById('mstep3-' + lid).classList.replace('active','done');
@@ -4711,7 +4640,7 @@ function citySign(lid) {
   }
   fb.className = 'amir-feedback ok';
   fb.innerHTML =
-    '🌟 <strong>مبروك ' + name + '!</strong><br>' +
+    replaceStudentName('🌟 <strong>مبروك يا [اسم_الطالب]!</strong><br>') +
     'أتممت رحلة الصف الخامس في رواد المال!<br>' +
     'اليوم تعلمت: كيف تدير مالك + تحمي نفسك كمستهلك + تساهم في مجتمعك.<br>' +
     '<strong style="color:#00897B">هذه أدوات لا يعرفها أغلب الكبار — أنت الآن رائد! 🚀</strong>';
@@ -4804,9 +4733,7 @@ function buildTimeMachine(lid) {
 
     '<div style="background:rgba(255,255,255,0.05);border-radius:12px;padding:14px;margin-bottom:14px">' +
       '<div style="font-size:15px;color:rgba(255,255,255,0.7);margin-bottom:8px;line-height:1.7">' +
-        '💬 <strong>بكلمات بسيطة:</strong> نرى كم شيكلاً زاد السعر، ثم نحسب كم هذه الزيادة من السعر الأصلي.<br><br>' +
-        '📌 <strong>مثال سريع:</strong> الهمبرغر زاد <strong style="color:#EF5350">40 ₪</strong> (من 10 إلى 50). الـ40 هي <strong>4 أضعاف</strong> الـ10 الأصلية — يعني زيادة <strong style="color:#FFB300">400%</strong>!<br><br>' +
-        'المعادلة الرسمية:<br>' +
+        'لحساب نسبة الارتفاع نستخدم المعادلة:<br>' +
         '<span style="background:rgba(21,101,192,0.2);padding:4px 10px;border-radius:8px;color:#64B5F6;font-weight:800">' +
           'نسبة الارتفاع = ((السعر الجديد − السعر القديم) ÷ السعر القديم) × 100' +
         '</span>' +
@@ -4826,26 +4753,26 @@ function buildTimeMachine(lid) {
   '<div class="amir-step locked" id="tm-step3-' + lid + '">' +
     '<div class="amir-step-title"><span class="amir-step-num" style="background:rgba(21,101,192,0.25);color:#42A5F5">3</span>⚖️ المرحلة 3: كيف نحمي قيمة مالنا؟</div>' +
 
-    '<div style="background:rgba(255,193,7,0.1);border:1px solid rgba(255,193,7,0.25);border-radius:12px;padding:16px;margin-bottom:16px;font-size:15px;line-height:2">' +
+    '<div style="background:rgba(255,193,7,0.1);border:1px solid rgba(255,193,7,0.25);border-radius:12px;padding:14px;margin-bottom:16px;font-size:14px;line-height:1.8">' +
       '💡 ريان عنده 20 ₪ ويريد شراء عصير. وجد عرضين:<br>' +
-      '<strong style="color:#64B5F6;font-size:16px">العرض أ:</strong> <span style="color:white;font-weight:700"> قنينة 1 لتر (1000 مل) بـ 10 ₪</span><br>' +
-      '<strong style="color:#FFB300;font-size:16px">العرض ب:</strong> <span style="color:white;font-weight:700"> قنينة نصف لتر (500 مل) بـ 7 ₪</span>' +
+      '<strong style="color:#64B5F6">العرض أ:</strong> قنينة 1 لتر بـ 10 ₪<br>' +
+      '<strong style="color:#FFB300">العرض ب:</strong> قنينة نصف لتر بـ 7 ₪' +
     '</div>' +
 
     '<div class="amir-question">السؤال 4: احسب سعر كل مل في كل عرض — أيهما أوفر؟<br>' +
       '<span style="color:rgba(255,255,255,0.4);font-size:14px">العرض أ: 10 ₪ ÷ 1000 مل = ؟ أغورة/مل | العرض ب: 7 ₪ ÷ 500 مل = ؟ أغورة/مل</span>' +
     '</div>' +
 
-    '<div style="display:flex;flex-direction:column;gap:10px;margin-bottom:12px">' +
-      '<button class="act-price-btn" id="tm-opt-a-' + lid + '" style="text-align:right;padding:14px 18px;font-size:15px;font-weight:800;color:white" ' +
+    '<div style="display:flex;flex-direction:column;gap:8px;margin-bottom:12px">' +
+      '<button class="act-price-btn" id="tm-opt-a-' + lid + '" style="text-align:right;padding:12px 16px" ' +
         'onclick="tmCheck4(\'' + lid + '\',\'a\')">' +
         'العرض أ أوفر — 1 أغورة للمل (10 ÷ 1000)' +
       '</button>' +
-      '<button class="act-price-btn" id="tm-opt-b-' + lid + '" style="text-align:right;padding:14px 18px;font-size:15px;font-weight:800;color:white" ' +
+      '<button class="act-price-btn" id="tm-opt-b-' + lid + '" style="text-align:right;padding:12px 16px" ' +
         'onclick="tmCheck4(\'' + lid + '\',\'b\')">' +
         'العرض ب أوفر — 1.4 أغورة للمل (7 ÷ 500)' +
       '</button>' +
-      '<button class="act-price-btn" id="tm-opt-c-' + lid + '" style="text-align:right;padding:14px 18px;font-size:15px;font-weight:800;color:white" ' +
+      '<button class="act-price-btn" id="tm-opt-c-' + lid + '" style="text-align:right;padding:12px 16px" ' +
         'onclick="tmCheck4(\'' + lid + '\',\'c\')">' +
         'كلاهما متساوي في القيمة' +
       '</button>' +
@@ -5566,15 +5493,6 @@ async function sendMsg() {
   inp.disabled = false;
   document.querySelector('.send-btn').disabled = false;
   inp.focus();
-
-  // أعد فتح القائمة الفرعية إذا كان السؤال جاء منها
-  if (_lastSubMenu) {
-    const subEl = document.getElementById(_lastSubMenu);
-    if (subEl) {
-      subEl.classList.add('open');
-      activeSubMenu = _lastSubMenu;
-    }
-  }
 }
 
 function quickMsg(text) {
@@ -6029,13 +5947,10 @@ function closeSub(id) {
   activeSubMenu = null;
 }
 
-var _lastSubMenu = null;
-
 function subAsk(subId, msg) {
-  _lastSubMenu = subId;   // احفظ معرّف القائمة الفرعية
+  closeSub(subId);
   document.getElementById('chat-input').value = msg;
   sendMsg();
-  // لا نغلق القائمة الفرعية — ستبقى مفتوحة بعد الجواب
 }
 
 </script>
