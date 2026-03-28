@@ -1192,7 +1192,7 @@ body {
 .bucket-bar-fill {
   height:100%; border-radius:4px; transition:width 0.6s cubic-bezier(0.34,1.2,0.64,1);
 }
-.bucket-sublabel { font-size:12px; color:rgba(255,255,255,0.5); }
+.bucket-sublabel { font-size:15px; color:rgba(255,255,255,0.5); }
 .bucket-progress-text { font-size:11px; color:rgba(255,255,255,0.45); margin-top:4px; }
 
 /* ══════════════════════════════════════════════
@@ -1560,7 +1560,7 @@ body {
 #onboarding-overlay .ob-coin{font-size:52px;display:block;text-align:center;margin-bottom:6px;filter:drop-shadow(0 0 18px rgba(249,168,37,.5));animation:obPulse 3s ease-in-out infinite}
 @keyframes obPulse{0%,100%{filter:drop-shadow(0 0 14px rgba(249,168,37,.4))}50%{filter:drop-shadow(0 0 28px rgba(249,168,37,.8))}}
 #onboarding-overlay .ob-appname{display:block;text-align:center;font-size:28px;font-weight:900;color:#F9A825;margin-bottom:2px}
-#onboarding-overlay .ob-appsub{display:block;text-align:center;font-size:12px;color:rgba(255,255,255,.4);margin-bottom:24px}
+#onboarding-overlay .ob-appsub{display:block;text-align:center;font-size:15px;color:rgba(255,255,255,.4);margin-bottom:24px}
 #onboarding-overlay .ob-steps{display:flex;justify-content:center;gap:8px;margin-bottom:24px}
 #onboarding-overlay .ob-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.15);transition:all .3s}
 #onboarding-overlay .ob-dot.act{background:#F9A825;width:24px;border-radius:4px}
@@ -1932,7 +1932,7 @@ function obStart() {
     <!-- زر تعديل الملف الشخصي -->
     <div id="lessons-profile-bar" style="display:flex;align-items:center;justify-content:space-between;padding:10px 16px 4px;margin-bottom:4px">
       <span id="lessons-greeting" style="font-size:14px;color:rgba(255,255,255,.55);font-weight:600"></span>
-      <button onclick="openProfileEdit()" style="background:rgba(249,168,37,.12);border:1px solid rgba(249,168,37,.25);color:#F9A825;border-radius:10px;padding:5px 12px;font-size:12px;font-weight:700;cursor:pointer;font-family:Noto Naskh Arabic,serif">✏️ تعديل ملفي</button>
+      <button onclick="openProfileEdit()" style="background:rgba(249,168,37,.12);border:1px solid rgba(249,168,37,.25);color:#F9A825;border-radius:10px;padding:5px 12px;font-size:15px;font-weight:700;cursor:pointer;font-family:Noto Naskh Arabic,serif">✏️ تعديل ملفي</button>
     </div>
 
     <div class="units-row">
@@ -2140,7 +2140,7 @@ function obStart() {
     <!-- STEP 1: Parent sets the rules -->
     <div class="buckets-setup card-glass" id="buckets-setup" style="border-radius:var(--r-lg);padding:24px;margin-bottom:18px;border:1px solid rgba(255,255,255,0.11)">
       <h3 style="font-family:Noto Naskh Arabic,serif;font-size:16px;font-weight:900;color:white;margin-bottom:6px">⚙️ إعداد الأهل</h3>
-      <p style="font-size:12px;color:rgba(255,255,255,0.5);margin-bottom:18px">حدّدوا معاً كم يذهب لكل صندوق — الطفل يضبط بالنسب</p>
+      <p style="font-size:15px;color:rgba(255,255,255,0.5);margin-bottom:18px">حدّدوا معاً كم يذهب لكل صندوق — الطفل يضبط بالنسب</p>
 
       <div class="field" style="margin-bottom:14px">
         <label>المصروف الأسبوعي (₪)</label>
@@ -2222,8 +2222,8 @@ function obStart() {
           </div>
           <div class="bucket-sublabel" id="lbl-spend">للإنفاق اليومي</div>
           <div style="margin-top:8px;display:flex;gap:6px">
-            <input type="number" id="use-spend" placeholder="أنفقت... (₪)" style="flex:1;padding:7px 10px;border-radius:8px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);color:white;font-size:12px">
-            <button onclick="useBucket('spend')" style="padding:7px 12px;border-radius:8px;background:rgba(255,152,0,0.25);border:1px solid rgba(255,152,0,0.4);color:#FFB300;font-size:12px;font-weight:700;cursor:pointer">- استخدم</button>
+            <input type="number" id="use-spend" placeholder="أنفقت... (₪)" style="flex:1;padding:7px 10px;border-radius:8px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);color:white;font-size:15px">
+            <button onclick="useBucket('spend')" style="padding:7px 12px;border-radius:8px;background:rgba(255,152,0,0.25);border:1px solid rgba(255,152,0,0.4);color:#FFB300;font-size:15px;font-weight:700;cursor:pointer">- استخدم</button>
           </div>
         </div>
 
@@ -2257,8 +2257,8 @@ function obStart() {
           </div>
           <div class="bucket-sublabel" id="lbl-give">لـ: <span id="give-goal-display">—</span></div>
           <div style="margin-top:8px;display:flex;gap:6px">
-            <input type="number" id="use-give" placeholder="تبرعت بـ... (₪)" style="flex:1;padding:7px 10px;border-radius:8px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);color:white;font-size:12px">
-            <button onclick="useBucket('give')" style="padding:7px 12px;border-radius:8px;background:rgba(102,187,106,0.2);border:1px solid rgba(102,187,106,0.4);color:#81C784;font-size:12px;font-weight:700;cursor:pointer">✓ تبرّعت</button>
+            <input type="number" id="use-give" placeholder="تبرعت بـ... (₪)" style="flex:1;padding:7px 10px;border-radius:8px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);color:white;font-size:15px">
+            <button onclick="useBucket('give')" style="padding:7px 12px;border-radius:8px;background:rgba(102,187,106,0.2);border:1px solid rgba(102,187,106,0.4);color:#81C784;font-size:15px;font-weight:700;cursor:pointer">✓ تبرّعت</button>
           </div>
         </div>
 
@@ -3645,7 +3645,7 @@ function buildAmirSteps(lid) {
     // طريقة 1 — رفع السعر
     '<div style="background:rgba(255,255,255,0.05);border-radius:12px;padding:14px;margin-bottom:12px">' +
       '<div style="font-size:15px;font-weight:800;color:#FFB300;margin-bottom:8px">💡 الطريقة 1: رفع السعر إلى 8 ₪</div>' +
-      '<div style="font-size:15px;color:rgba(255,255,255,0.7);margin-bottom:10px">إذا رفع أمير السعر لـ8 ₪ وباع نفس الـ20 كوب — ما النتيجة؟<br><span style="color:rgba(255,255,255,0.4);font-size:12px">الإيرادات الجديدة − 60 مواد − 70 عمل = ؟</span></div>' +
+      '<div style="font-size:15px;color:rgba(255,255,255,0.7);margin-bottom:10px">إذا رفع أمير السعر لـ8 ₪ وباع نفس الـ20 كوب — ما النتيجة؟<br><span style="color:rgba(255,255,255,0.4);font-size:15px">الإيرادات الجديدة − 60 مواد − 70 عمل = ؟</span></div>' +
       '<div class="amir-input-row">' +
         '<input class="amir-input" id="a5q1" type="number" placeholder="؟" min="-999" max="999" style="width:70px">' +
         '<span class="amir-unit">₪</span>' +
@@ -3657,7 +3657,7 @@ function buildAmirSteps(lid) {
     // طريقة 2 — زيادة الكمية
     '<div style="background:rgba(255,255,255,0.05);border-radius:12px;padding:14px;margin-bottom:12px">' +
       '<div style="font-size:15px;font-weight:800;color:#64B5F6;margin-bottom:8px">💡 الطريقة 2: تحضير 40 كوباً بنفس الوقت</div>' +
-      '<div style="font-size:15px;color:rgba(255,255,255,0.7);margin-bottom:10px">إذا حضّر 40 كوباً بنفس 3.5 ساعات عمل، والمواد ستكلف 120 ₪ — ما الربح عند بيع بـ6 ₪؟<br><span style="color:rgba(255,255,255,0.4);font-size:12px">الإيرادات − 120 مواد − 70 عمل = ؟</span></div>' +
+      '<div style="font-size:15px;color:rgba(255,255,255,0.7);margin-bottom:10px">إذا حضّر 40 كوباً بنفس 3.5 ساعات عمل، والمواد ستكلف 120 ₪ — ما الربح عند بيع بـ6 ₪؟<br><span style="color:rgba(255,255,255,0.4);font-size:15px">الإيرادات − 120 مواد − 70 عمل = ؟</span></div>' +
       '<div class="amir-input-row">' +
         '<input class="amir-input" id="a5q2" type="number" placeholder="؟" min="-999" max="999" style="width:70px">' +
         '<span class="amir-unit">₪</span>' +
@@ -3885,7 +3885,7 @@ function buildWassamParty(lid) {
       '<td style="text-align:center;font-size:20px;padding:10px 8px">' + item.icon + '</td>' +
       '<td style="padding:10px 8px;color:rgba(255,255,255,0.9);font-size:14px">' + item.name + '</td>' +
       '<td style="text-align:center;padding:10px 8px">' +
-        '<span style="background:' + typeColor + '22;color:' + typeColor + ';border:1px solid ' + typeColor + '44;border-radius:6px;padding:2px 8px;font-size:12px;font-weight:800">' + item.type + '</span>' +
+        '<span style="background:' + typeColor + '22;color:' + typeColor + ';border:1px solid ' + typeColor + '44;border-radius:6px;padding:2px 8px;font-size:15px;font-weight:800">' + item.type + '</span>' +
       '</td>' +
       '<td style="text-align:left;padding:10px 8px;font-weight:800;color:#FFB300;font-size:15px">' + item.price + ' ₪</td>' +
       '<td style="text-align:center;padding:10px 8px" id="wcheck-' + item.id + '"><span style="font-size:20px;color:rgba(255,255,255,0.15)">○</span></td>' +
@@ -3920,16 +3920,16 @@ function buildWassamParty(lid) {
       '<div style="background:rgba(255,255,255,0.1);border-radius:8px;height:10px;overflow:hidden">' +
         '<div id="w-budget-bar" style="height:100%;width:0%;background:linear-gradient(90deg,#43A047,#66BB6A);border-radius:8px;transition:all 0.3s"></div>' +
       '</div>' +
-      '<div id="w-budget-warn" style="display:none;margin-top:8px;font-size:12px;font-weight:700;color:#EF5350">⚠️ تجاوزت الميزانية! احذف بعض الاختيارات.</div>' +
+      '<div id="w-budget-warn" style="display:none;margin-top:8px;font-size:15px;font-weight:700;color:#EF5350">⚠️ تجاوزت الميزانية! احذف بعض الاختيارات.</div>' +
     '</div>' +
 
     '<div style="overflow-x:auto">' +
     '<table style="width:100%;border-collapse:collapse">' +
       '<thead><tr style="background:rgba(255,255,255,0.07)">' +
         '<th style="padding:8px;font-size:15px;color:rgba(255,255,255,0.88);text-align:center"></th>' +
-        '<th style="padding:8px;font-size:12px;color:rgba(255,255,255,0.5);text-align:right">الغرض</th>' +
+        '<th style="padding:8px;font-size:15px;color:rgba(255,255,255,0.5);text-align:right">الغرض</th>' +
         '<th style="padding:8px;font-size:15px;color:rgba(255,255,255,0.88);text-align:center">النوع</th>' +
-        '<th style="padding:8px;font-size:12px;color:rgba(255,255,255,0.5);text-align:left">السعر</th>' +
+        '<th style="padding:8px;font-size:15px;color:rgba(255,255,255,0.5);text-align:left">السعر</th>' +
         '<th style="padding:8px;font-size:15px;color:rgba(255,255,255,0.88);text-align:center">اخترت؟</th>' +
       '</tr></thead>' +
       '<tbody>' + itemRows + '</tbody>' +
@@ -4158,9 +4158,9 @@ function buildMaryamDetective(lid) {
     '<div style="overflow-x:auto;margin-bottom:16px">' +
     '<table style="width:100%;border-collapse:collapse;font-size:15px">' +
       '<thead><tr style="background:rgba(0,137,123,0.2)">' +
-        '<th style="padding:10px 8px;text-align:right;color:rgba(255,255,255,0.6);font-size:12px">وجه المقارنة</th>' +
-        '<th style="padding:10px 8px;text-align:center;color:#FFB300;font-size:12px">🦸 المنتج (أ)<br>"بطل الأبطال"</th>' +
-        '<th style="padding:10px 8px;text-align:center;color:#66BB6A;font-size:12px">🥣 المنتج (ب)<br>"الخيار البسيط"</th>' +
+        '<th style="padding:10px 8px;text-align:right;color:rgba(255,255,255,0.6);font-size:15px">وجه المقارنة</th>' +
+        '<th style="padding:10px 8px;text-align:center;color:#FFB300;font-size:15px">🦸 المنتج (أ)<br>"بطل الأبطال"</th>' +
+        '<th style="padding:10px 8px;text-align:center;color:#66BB6A;font-size:15px">🥣 المنتج (ب)<br>"الخيار البسيط"</th>' +
       '</tr></thead>' +
       '<tbody>' +
         '<tr style="border-bottom:1px solid rgba(255,255,255,0.07)">' +
@@ -4189,7 +4189,7 @@ function buildMaryamDetective(lid) {
 
     // سؤال 1
     '<div class="amir-question">السؤال 1: لماذا المنتج (أ) أغلى بـ13 ₪ رغم أن المكونات متطابقة؟<br>' +
-    '<span style="color:rgba(255,255,255,0.4);font-size:12px">اختر السبب الحقيقي:</span></div>' +
+    '<span style="color:rgba(255,255,255,0.4);font-size:15px">اختر السبب الحقيقي:</span></div>' +
     '<div style="display:flex;flex-direction:column;gap:8px;margin-bottom:14px">' +
       '<button class="act-price-btn" id="m1a-' + lid + '" style="text-align:right;padding:12px 16px" onclick="maryamQ1(\'' + lid + '\',\'a\')">أ) المنتج (أ) ألذ وأفضل بكثير في الجودة</button>' +
       '<button class="act-price-btn" id="m1b-' + lid + '" style="text-align:right;padding:12px 16px" onclick="maryamQ1(\'' + lid + '\',\'b\')">ب) ندفع ثمن الإعلانات وصورة المشهور والهدية البلاستيكية</button>' +
@@ -4200,7 +4200,7 @@ function buildMaryamDetective(lid) {
     // سؤال 2 — محجوب حتى يجاوب الأول
     '<div id="m1-q2-' + lid + '" style="display:none;margin-top:14px">' +
       '<div class="amir-question">السؤال 2: إذا اختارت مريم المنتج (ب)، كم ₪ ستوفر؟<br>' +
-      '<span style="color:rgba(255,255,255,0.4);font-size:12px">25 − 12 = ؟</span></div>' +
+      '<span style="color:rgba(255,255,255,0.4);font-size:15px">25 − 12 = ؟</span></div>' +
       '<div class="amir-input-row">' +
         '<input class="amir-input" id="m1q2-' + lid + '" type="number" placeholder="؟" min="0" max="99">' +
         '<span class="amir-unit">₪</span>' +
@@ -4217,11 +4217,11 @@ function buildMaryamDetective(lid) {
     '<div style="background:rgba(255,193,7,0.1);border:1px solid rgba(255,193,7,0.3);border-radius:12px;padding:14px;margin-bottom:16px;font-size:16px;line-height:1.8">' +
       '🏷️ تجد مريم عرضاً: <strong style="color:#FFB300">"3 عبوات شوكولاتة بـ30 ₪"</strong><br>' +
       'أو: <strong style="color:#66BB6A">عبوة واحدة بـ12 ₪</strong><br>' +
-      '<span style="font-size:12px;color:rgba(255,255,255,0.5)">مريم تحتاج عبوة واحدة فقط.</span>' +
+      '<span style="font-size:15px;color:rgba(255,255,255,0.5)">مريم تحتاج عبوة واحدة فقط.</span>' +
     '</div>' +
 
     '<div class="amir-question">السؤال 3: إذا اشترت العرض (3 عبوات) لأنه "توفير" — هل وفّرت فعلاً؟<br>' +
-    '<span style="color:rgba(255,255,255,0.4);font-size:12px">كم ₪ دفعت إضافية لم تكن تنوي دفعها؟</span></div>' +
+    '<span style="color:rgba(255,255,255,0.4);font-size:15px">كم ₪ دفعت إضافية لم تكن تنوي دفعها؟</span></div>' +
     '<div class="amir-input-row">' +
       '<input class="amir-input" id="m2q1-' + lid + '" type="number" placeholder="؟" min="0" max="99">' +
       '<span class="amir-unit">₪ إضافية</span>' +
@@ -4369,7 +4369,7 @@ function buildCityCouncil(lid) {
         '<span style="font-size:26px">' + p.icon + '</span>' +
         '<div style="flex:1">' +
           '<div style="font-size:14px;font-weight:800;color:white;margin-bottom:2px">' + p.name + '</div>' +
-          '<div style="font-size:12px;color:rgba(255,255,255,0.5)">' + p.goal + '</div>' +
+          '<div style="font-size:15px;color:rgba(255,255,255,0.5)">' + p.goal + '</div>' +
         '</div>' +
         '<div style="text-align:left">' +
           '<div style="font-size:16px;font-weight:900;color:#FFB300">' + p.cost + ' ₪</div>' +
@@ -4407,7 +4407,7 @@ function buildCityCouncil(lid) {
       '<div style="background:rgba(255,255,255,0.1);border-radius:8px;height:10px;overflow:hidden">' +
         '<div id="city-bar-' + lid + '" style="height:100%;width:0%;background:linear-gradient(90deg,#00897B,#26A69A);border-radius:8px;transition:all 0.3s"></div>' +
       '</div>' +
-      '<div id="city-warn-' + lid + '" style="display:none;margin-top:8px;font-size:12px;font-weight:700;color:#EF5350">⚠️ تجاوزت الميزانية! احذف مشروعاً.</div>' +
+      '<div id="city-warn-' + lid + '" style="display:none;margin-top:8px;font-size:15px;font-weight:700;color:#EF5350">⚠️ تجاوزت الميزانية! احذف مشروعاً.</div>' +
     '</div>' +
 
     projectRows +
@@ -4788,12 +4788,12 @@ function buildTimeMachine(lid) {
       '<div style="background:rgba(239,83,80,0.1);border:1px solid rgba(239,83,80,0.25);border-radius:12px;padding:14px;text-align:center">' +
         '<div style="font-size:24px;margin-bottom:6px">📉</div>' +
         '<div style="font-size:15px;font-weight:800;color:#EF5350;margin-bottom:4px">التضخم</div>' +
-        '<div style="font-size:12px;color:rgba(255,255,255,0.65)">الأسعار ترتفع مع الوقت — نفس المال يشتري أقل</div>' +
+        '<div style="font-size:15px;color:rgba(255,255,255,0.65)">الأسعار ترتفع مع الوقت — نفس المال يشتري أقل</div>' +
       '</div>' +
       '<div style="background:rgba(100,181,246,0.1);border:1px solid rgba(100,181,246,0.25);border-radius:12px;padding:14px;text-align:center">' +
         '<div style="font-size:24px;margin-bottom:6px">🛒</div>' +
         '<div style="font-size:15px;font-weight:800;color:#64B5F6;margin-bottom:4px">القوة الشرائية</div>' +
-        '<div style="font-size:12px;color:rgba(255,255,255,0.65)">كمية الأشياء التي يمكنك شراؤها بمبلغ معين</div>' +
+        '<div style="font-size:15px;color:rgba(255,255,255,0.65)">كمية الأشياء التي يمكنك شراؤها بمبلغ معين</div>' +
       '</div>' +
     '</div>' +
 
@@ -5056,7 +5056,7 @@ function printGlossary() {
     '.term{border:1px solid #ddd;border-radius:8px;padding:10px 14px;margin-bottom:8px}' +
     '.term-head{display:flex;justify-content:space-between;margin-bottom:4px}' +
     '.term-ar{font-size:16px;font-weight:bold;color:#1a1a1a}' +
-    '.term-he{font-size:12px;color:#888;direction:ltr}' +
+    '.term-he{font-size:15px;color:#888;direction:ltr}' +
     '.term-def{font-size:13px;color:#555;line-height:1.6;border-top:1px solid #eee;padding-top:6px;margin-top:4px}' +
     '.gold{background:linear-gradient(135deg,#FFF8E1,#FFF3CD);border:1px solid #F9A825;border-radius:12px;padding:16px;text-align:center;margin-top:20px}' +
     '</style></head><body>' +
@@ -5630,7 +5630,7 @@ function renderBuckets() {
   // History
   const hist = document.getElementById('buckets-history');
   hist.innerHTML = b.history.length === 0
-    ? '<p style="font-size:12px;color:rgba(255,255,255,0.3)">لم تضف أي معاملات بعد</p>'
+    ? '<p style="font-size:15px;color:rgba(255,255,255,0.3)">لم تضف أي معاملات بعد</p>'
     : b.history.slice(0, 8).map(h => `
         <div class="hist-item">
           <span class="hist-date">${h.date}</span>
@@ -6714,7 +6714,7 @@ function renderStudentList() {
       background:rgba(255,255,255,0.06);border-radius:12px;padding:10px 14px">
       <button onclick="printCertificate('${name.replace(/'/g,"\\'")}','${new Date().toLocaleDateString('ar-SA')}')"
         style="background:linear-gradient(135deg,#F9A825,#E65100);border:none;border-radius:8px;
-        color:white;font-family:Noto Naskh Arabic,serif;font-size:12px;font-weight:700;
+        color:white;font-family:Noto Naskh Arabic,serif;font-size:15px;font-weight:700;
         padding:6px 12px;cursor:pointer">
         🏆 شهادة
       </button>
@@ -6724,7 +6724,7 @@ function renderStudentList() {
       </div>
       <button onclick="removeStudent('${name.replace(/'/g,"\\'")}' )"
         style="background:rgba(255,0,0,0.2);border:1px solid rgba(255,0,0,0.3);border-radius:6px;
-        color:rgba(255,100,100,0.9);font-size:12px;padding:4px 8px;cursor:pointer">
+        color:rgba(255,100,100,0.9);font-size:15px;padding:4px 8px;cursor:pointer">
         حذف
       </button>
     </div>
@@ -6757,13 +6757,13 @@ function printCertificate(studentName, dateStr) {
     <div style="border-bottom:2px solid #C8960C;padding-bottom:16px;margin-bottom:16px">
       <div style="font-size:36px;margin-bottom:4px">🎓</div>
       <div style="font-size:22px;font-weight:900;color:#C8960C;letter-spacing:1px">شهادة "الريادي الصغير"</div>
-      <div style="font-size:12px;color:#8B6914;letter-spacing:2px;margin-top:2px">برنامج رواد المال | الصف الخامس</div>
+      <div style="font-size:15px;color:#8B6914;letter-spacing:2px;margin-top:2px">برنامج رواد المال | الصف الخامس</div>
     </div>
 
     <!-- اسم الطالب -->
     <div style="font-size:13px;color:#666;margin-bottom:6px">تُمنح هذه الشهادة للفارس/ة الريادي/ة</div>
     <div style="font-size:32px;font-weight:900;color:#1A237E;border-bottom:3px solid #C8960C;display:inline-block;padding:4px 20px;margin-bottom:16px;min-width:220px">${studentName}</div>
-    <div style="font-size:12px;color:#888;margin-bottom:18px">بفضل إتمامه/ها بنجاح برنامج التثقيف المالي للصف الخامس الابتدائي</div>
+    <div style="font-size:15px;color:#888;margin-bottom:18px">بفضل إتمامه/ها بنجاح برنامج التثقيف المالي للصف الخامس الابتدائي</div>
 
     <!-- الوحدات المكتملة -->
     <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-bottom:18px">
@@ -6776,10 +6776,10 @@ function printCertificate(studentName, dateStr) {
     <!-- ميثاق الريادي -->
     <div style="background:linear-gradient(135deg,#FFFDE7,#FFF3CD);border:1.5px solid #F9A825;border-radius:12px;padding:16px;margin-bottom:18px;text-align:right">
       <div style="font-size:13px;font-weight:900;color:#E65100;text-align:center;margin-bottom:12px">🖋️ ميثاق الريادي الذكي</div>
-      <div style="font-size:12px;color:#5D4037;line-height:2;margin-bottom:10px;text-align:center;font-style:italic">
+      <div style="font-size:15px;color:#5D4037;line-height:2;margin-bottom:10px;text-align:center;font-style:italic">
         أنا الخريج/ة في برنامج "رواد المال"، أعدُ نفسي ومجتمعي بأنني:
       </div>
-      <ol style="font-size:12px;color:#4A3728;line-height:1.9;margin:0;padding-right:18px">
+      <ol style="font-size:15px;color:#4A3728;line-height:1.9;margin:0;padding-right:18px">
         <li><strong>أعرف قيمة المال:</strong> سأقارن الأسعار دائماً للحفاظ على قوتي الشرائية.</li>
         <li><strong>أدير ميزانيتي:</strong> سأخطط وأُفرّق بين ما أحتاجه وما أتمناه.</li>
         <li><strong>مستهلك ذكي:</strong> لن أقع في فخاخ الإعلانات وسأشتري بوعي.</li>
@@ -6864,7 +6864,7 @@ function printCertificate(studentName, dateStr) {
   tip.className = 'no-print';
   tip.innerHTML = `
     <div style="margin-bottom:6px">💡 للحصول على شهادة نظيفة بدون رأس أو تذييل:</div>
-    <div style="color:rgba(255,255,255,0.6);font-size:12px;line-height:2">
+    <div style="color:rgba(255,255,255,0.6);font-size:15px;line-height:2">
       🖨️ اضغط <b style="color:white">طباعة</b> ← في إعدادات الطباعة اختر
       <b style="color:white">مزيد من الإعدادات</b> ← أزل علامة
       <b style="color:white">الرؤوس والتذييلات</b> ← احفظ كـ PDF
@@ -6923,7 +6923,7 @@ function renderTGuide() {
           <span style="background:#1565C0;color:white;border-radius:50%;width:22px;height:22px;min-width:22px;
             display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800">${i+1}</span>
           <span style="font-family:Noto Naskh Arabic,serif;font-size:14px;color:rgba(255,255,255,0.88);flex:1">${s.text}
-            ${s.time ? `<span style="color:rgba(255,200,0,0.7);font-size:12px"> ⏱${s.time}</span>` : ''}</span>
+            ${s.time ? `<span style="color:rgba(255,200,0,0.7);font-size:15px"> ⏱${s.time}</span>` : ''}</span>
         </div>`).join('')}
       <div style="color:rgba(255,200,0,0.8);font-size:13px;margin-top:8px">⏱ المجموع: ${lesson.totalTime}</div>
     </div>
@@ -6966,7 +6966,7 @@ function renderTStudents() {
     
     const delBtn = document.createElement('button');
     delBtn.textContent = 'حذف';
-    delBtn.style.cssText = 'background:rgba(255,0,0,0.2);border:1px solid rgba(255,80,80,0.3);border-radius:6px;color:rgba(255,120,120,0.9);font-size:12px;padding:5px 10px;cursor:pointer';
+    delBtn.style.cssText = 'background:rgba(255,0,0,0.2);border:1px solid rgba(255,80,80,0.3);border-radius:6px;color:rgba(255,120,120,0.9);font-size:15px;padding:5px 10px;cursor:pointer';
     delBtn.onclick = () => { removeStudent(name); renderTStudents(); };
     
     const nameSpan = document.createElement('span');
