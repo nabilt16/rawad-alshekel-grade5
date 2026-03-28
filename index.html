@@ -3907,14 +3907,14 @@ function buildWassamParty(lid) {
   // المرحلة 1
   '<div class="amir-step active" id="wstep1">' +
     '<div class="amir-step-title"><span class="amir-step-num" style="background:rgba(67,160,71,0.2);color:#43A047">1</span>📋 المرحلة 1: اختر ما ستشتريه</div>' +
-    '<div style="font-size:15px;color:rgba(255,255,255,0.6);margin-bottom:14px;line-height:1.6">' +
+    '<div style="font-size:16px;color:rgba(255,255,255,0.6);margin-bottom:14px;line-height:1.6">' +
       'أمامك قائمة مشتريات وسام. انقر على كل غرض لإضافته أو حذفه — لا تتجاوز الـ <strong style="color:#43A047">200 ₪</strong>!' +
     '</div>' +
 
     // بار الميزانية المتحركة
     '<div style="background:rgba(255,255,255,0.06);border-radius:12px;padding:14px 16px;margin-bottom:16px">' +
       '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">' +
-        '<span style="font-size:15px;color:rgba(255,255,255,0.6)">الميزانية المستخدمة</span>' +
+        '<span style="font-size:16px;color:rgba(255,255,255,0.6)">الميزانية المستخدمة</span>' +
         '<span style="font-size:16px;font-weight:900" id="w-spent-display">0 ₪ / 200 ₪</span>' +
       '</div>' +
       '<div style="background:rgba(255,255,255,0.1);border-radius:8px;height:10px;overflow:hidden">' +
@@ -4152,7 +4152,7 @@ function buildMaryamDetective(lid) {
   // المرحلة 1 — فحص المنتجين
   '<div class="amir-step active" id="mstep1-' + lid + '">' +
     '<div class="amir-step-title"><span class="amir-step-num" style="background:rgba(0,137,123,0.2);color:#00897B">1</span>🔍 المرحلة 1: فحص المنتجين</div>' +
-    '<div style="font-size:15px;color:rgba(255,255,255,0.6);margin-bottom:14px">مريم تريد شراء رقائق ذرة. أمامها منتجان — ساعدها تقارن بينهما بدقة:</div>' +
+    '<div style="font-size:16px;color:rgba(255,255,255,0.6);margin-bottom:14px">مريم تريد شراء رقائق ذرة. أمامها منتجان — ساعدها تقارن بينهما بدقة:</div>' +
 
     // جدول المقارنة
     '<div style="overflow-x:auto;margin-bottom:16px">' +
@@ -4312,7 +4312,7 @@ function maryamQ3(lid) {
     input.classList.add('correct');
     fb.className = 'amir-feedback ok';
     fb.innerHTML = '✅ بالضبط! دفعت 30 ₪ بدل 12 ₪ — صرفت <strong>18 ₪ إضافية لم تكن تحتاجها</strong>!<br>' +
-      '<span style="font-size:15px;color:rgba(255,255,255,0.6)">هذا هو فخ "التوفير": تشتري أكثر بحجة أنك توفّر، لكنك في الواقع تصرف أكثر!</span>';
+      '<span style="font-size:16px;color:rgba(255,255,255,0.6)">هذا هو فخ "التوفير": تشتري أكثر بحجة أنك توفّر، لكنك في الواقع تصرف أكثر!</span>';
     document.getElementById('mstep2-' + lid).classList.replace('active','done');
     amirUnlock('mstep3-' + lid);
   } else {
@@ -4394,14 +4394,14 @@ function buildCityCouncil(lid) {
   // المرحلة 1 — اختيار المشاريع
   '<div class="amir-step active" id="city-step1-' + lid + '">' +
     '<div class="amir-step-title"><span class="amir-step-num" style="background:rgba(0,105,92,0.25);color:#00897B">1</span>📋 المرحلة 1: اختر مشاريع الحي</div>' +
-    '<div style="font-size:15px;color:rgba(255,255,255,0.6);margin-bottom:6px;line-height:1.6">' +
+    '<div style="font-size:16px;color:rgba(255,255,255,0.6);margin-bottom:6px;line-height:1.6">' +
       'صندوق الحي = <strong style="color:#00897B">1000 ₪</strong> (جُمعت من ضرائب السكان). المال لا يكفي للجميع — اختر المشاريع الأهم!' +
     '</div>' +
 
     // شريط الميزانية
     '<div style="background:rgba(255,255,255,0.06);border-radius:12px;padding:12px 16px;margin-bottom:14px">' +
       '<div style="display:flex;justify-content:space-between;margin-bottom:8px">' +
-        '<span style="font-size:15px;color:rgba(255,255,255,0.6)">المبلغ المخصص حتى الآن</span>' +
+        '<span style="font-size:16px;color:rgba(255,255,255,0.6)">المبلغ المخصص حتى الآن</span>' +
         '<span style="font-size:15px;font-weight:900" id="city-spent-' + lid + '">0 ₪ / 1000 ₪</span>' +
       '</div>' +
       '<div style="background:rgba(255,255,255,0.1);border-radius:8px;height:10px;overflow:hidden">' +
